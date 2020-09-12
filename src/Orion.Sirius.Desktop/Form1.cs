@@ -23,6 +23,7 @@ namespace Orion.Sirius.Desktop
         {
             try
             {
+                //test
                 CostumersDataGridView.DataSource = ContactService.GetContacts();
             }
             catch (Exception ex)
