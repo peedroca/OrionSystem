@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orion.Sirius.Desktop", "Orion.Sirius.Desktop.csproj", "{57E47304-E5F5-441C-8913-A7ABE1DF4808}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orion.Sirius.Shared", "..\Orion.Sirius.Shared\Orion.Sirius.Shared.csproj", "{3E253D17-D3F6-44BC-A2CE-10C05394CC28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57E47304-E5F5-441C-8913-A7ABE1DF4808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E47304-E5F5-441C-8913-A7ABE1DF4808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E47304-E5F5-441C-8913-A7ABE1DF4808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E47304-E5F5-441C-8913-A7ABE1DF4808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E253D17-D3F6-44BC-A2CE-10C05394CC28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E253D17-D3F6-44BC-A2CE-10C05394CC28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E253D17-D3F6-44BC-A2CE-10C05394CC28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E253D17-D3F6-44BC-A2CE-10C05394CC28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {43EE6972-C8F5-43C4-9531-DEDB1C567764}
+	EndGlobalSection
+EndGlobal
