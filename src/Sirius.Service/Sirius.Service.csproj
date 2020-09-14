@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sirius.Domain\Sirius.Domain.csproj" />
+    <ProjectReference Include="..\Sirius.Infra.Data\Sirius.Infra.Data.csproj" />
+  </ItemGroup>
+
+</Project>
