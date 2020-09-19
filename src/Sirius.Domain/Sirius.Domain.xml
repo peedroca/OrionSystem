@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sirius.Domain</name>
+    </assembly>
+    <members>
+        <member name="T:Sirius.Domain.Entities.SmartContractEntity">
+            <summary>
+            Entidade Contrato Inteligente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.Id">
+            <summary>
+            Identificação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.Title">
+            <summary>
+            Título do contrato inteligente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.Description">
+            <summary>
+            Descrição do contrato inteligente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.TerminationCondition">
+            <summary>
+            Motivos de rescisão do contrato.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.ConclusionCondition">
+            <summary>
+            Motivos de conclusão do contrato.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.DueDate">
+            <summary>
+            Data de vencimento.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.Value">
+            <summary>
+            Valor do contrato.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.AuthKey">
+            <summary>
+            Chave de autenticação do Contrato.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.CodePayment">
+            <summary>
+            Código para pagamento do Contrato.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.Status">
+            <summary>
+            Status do contratos inteligentes: Payed, AwaitingPayment, Terminated, Finished, Expired
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.ReasonTermination">
+            <summary>
+            Motivo da Rescisão
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.CreatedOn">
+            <summary>
+            Data de Criação do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.UpdatedOn">
+            <summary>
+            Data de Atualização do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.Deleted">
+            <summary>
+            Registro Apagado
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.Inactived">
+            <summary>
+            Inativo
+            </summary>
+        </member>
+        <member name="T:Sirius.Domain.Entities.UserEntity">
+            <summary>
+            Entidade Usuario
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.UserEntity.Id">
+            <summary>
+            Identificação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.UserEntity.Username">
+            <summary>
+            Nome do usuário
+            </summary>        
+        </member>
+        <member name="P:Sirius.Domain.Entities.UserEntity.Password">
+            <summary>
+            senha do usuário
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.UserEntity.TypeUser">
+            <summary>
+            Tipo de usuário
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.UserEntity.TypeAccess">
+            <summary>
+            Tipo de acesso
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.UserEntity.CreatedOn">
+            <summary>
+            Data de Criação do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.UserEntity.UpdatedOn">
+            <summary>
+            Data de Atualização do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.UserEntity.Deleted">
+            <summary>
+            Registro Apagado
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.UserEntity.Blocked">
+            <summary>
+            Bloqueado
+            </summary>
+        </member>
+        <member name="T:Sirius.Domain.Enums.EStatusSmartContract">
+            <summary>
+            Status do contrato inteligente 
+            </summary>
+        </member>
+        <member name="F:Sirius.Domain.Enums.EStatusSmartContract.Payed">
+            <summary>
+            Pago
+            </summary>
+        </member>
+        <member name="F:Sirius.Domain.Enums.EStatusSmartContract.AwaitingPayment">
+            <summary>
+            Aguardando pagamento
+            </summary>
+        </member>
+        <member name="F:Sirius.Domain.Enums.EStatusSmartContract.Terminated">
+            <summary>
+            Rescindido
+            </summary>
+        </member>
+        <member name="F:Sirius.Domain.Enums.EStatusSmartContract.Finished">
+            <summary>
+            Finalizado
+            </summary>
+        </member>
+        <member name="F:Sirius.Domain.Enums.EStatusSmartContract.Expired">
+            <summary>
+            Expirado
+            </summary>
+        </member>
+        <member name="T:Sirius.Domain.Enums.ETypeAccess">
+            <summary>
+            Tipo de Acesso
+            </summary>
+        </member>
+        <member name="F:Sirius.Domain.Enums.ETypeAccess.Admin">
+            <summary>
+            administrador
+            </summary>
+        </member>
+        <member name="F:Sirius.Domain.Enums.ETypeAccess.Comum">
+            <summary>
+            Usuário Comun
+            </summary>
+        </member>
+        <member name="T:Sirius.Domain.Enums.ETypeUser">
+            <summary>
+            Tipos de usuários
+            </summary>
+        </member>
+        <member name="F:Sirius.Domain.Enums.ETypeUser.Customer">
+            <summary>
+            Cliente
+            </summary>
+        </member>
+        <member name="F:Sirius.Domain.Enums.ETypeUser.Company">
+            <summary>
+             Empresa
+            </summary>
+        </member>
+        <member name="F:Sirius.Domain.Enums.ETypeUser.Employee">
+            <summary>
+            Funcionário
+            </summary>
+        </member>
+        <member name="T:Sirius.Domain.Interfaces.IUserRepository`1">
+            <summary>
+            Interface do repositorio de usuarios
+            </summary>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.IUserRepository`1.SaveUser(`0)">
+            <summary>
+            Metodo para salvar usuários
+            </summary>
+            <param name="user">objeto do tipo UserEntity que será salvo.</param>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.IUserRepository`1.Login(System.String,System.String)">
+            <summary>
+            Logar usuário 
+            </summary>
+            <param name="username">nome do usuário</param>
+            <param name="password">senha do usuário</param>
+            <returns>retorna um objeto do tipo UserEntity caso encontre o usuário </returns>
+        </member>
+    </members>
+</doc>
