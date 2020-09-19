@@ -85,5 +85,15 @@ namespace Sirius.Domain.Entities
         /// Inativo
         /// </summary>
         public bool Inactived { get; set; }
+
+        /// <summary>
+        /// Chave Estrangeira para Empresa
+        /// </summary>
+        public long CurrentCompanyEntityId { get; set; }
+
+        /// <summary>
+        /// Empresa dona do Contrato
+        /// </summary>
+        public CompanyEntity CompanyEntity { get; set; }
     }
 }

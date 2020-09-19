@@ -4,6 +4,71 @@
         <name>Sirius.Domain</name>
     </assembly>
     <members>
+        <member name="T:Sirius.Domain.Entities.CompanyEntity">
+            <summary>
+            Entidade Empresa
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CompanyEntity.Id">
+            <summary>
+            Identificação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CompanyEntity.Name">
+            <summary>
+            Razão Social    
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CompanyEntity.Nickname">
+            <summary>
+            Fantasia
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CompanyEntity.CNPJ">
+            <summary>
+            Cadastro nacional de Pessoa Jurídica
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CompanyEntity.Phone">
+            <summary>
+            Telefone principal da empresa
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CompanyEntity.Email">
+            <summary>
+            E-mail de contato com a empresa
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CompanyEntity.CreatedOn">
+            <summary>
+            Data de Criação do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CompanyEntity.UpdatedOn">
+            <summary>
+            Data de Atualização do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CompanyEntity.Deleted">
+            <summary>
+            Registro Apagado
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CompanyEntity.Blocked">
+            <summary>
+            Bloqueado
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CompanyEntity.SmartContracts">
+            <summary>
+            Lista com os contratos inteligentes da empresa.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CompanyEntity.User">
+            <summary>
+            Usuário utilizado pela empresa.
+            </summary>
+        </member>
         <member name="T:Sirius.Domain.Entities.SmartContractEntity">
             <summary>
             Entidade Contrato Inteligente
@@ -82,6 +147,16 @@
         <member name="P:Sirius.Domain.Entities.SmartContractEntity.Inactived">
             <summary>
             Inativo
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.CurrentCompanyEntityId">
+            <summary>
+            Chave Estrangeira para Empresa
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractEntity.CompanyEntity">
+            <summary>
+            Empresa dona do Contrato
             </summary>
         </member>
         <member name="T:Sirius.Domain.Entities.UserEntity">
@@ -198,6 +273,25 @@
             <summary>
             Funcionário
             </summary>
+        </member>
+        <member name="T:Sirius.Domain.Interfaces.ISmartContractRepository`1">
+            <summary>
+            Interface de repositorios de Contratos Inteligentes
+            </summary>
+            <typeparam name="SmartContract"></typeparam>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.ISmartContractRepository`1.SaveSmartContract(`0)">
+            <summary>
+            Salvar Contrato Inteligente
+            </summary>
+            <param name="contract">Objeto do tipo SmartContract que será salvo.</param>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.ISmartContractRepository`1.GetContract(System.Int64)">
+            <summary>
+            Obter contrato 
+            </summary>
+            <param name="id"> Id do contrato</param>
+            <returns></returns>
         </member>
         <member name="T:Sirius.Domain.Interfaces.IUserRepository`1">
             <summary>
