@@ -4,9 +4,6 @@ using Sirius.Domain.Mapper;
 using Sirius.Domain.Models;
 using Sirius.Infra.Data.Contexts;
 using Sirius.Infra.Data.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Sirius.Service
 {
