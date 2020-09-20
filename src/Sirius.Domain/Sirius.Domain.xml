@@ -274,6 +274,30 @@
             Funcionário
             </summary>
         </member>
+        <member name="T:Sirius.Domain.Interfaces.ICompanyRepository`1">
+            <summary>
+            Interface do repositorio da empresa
+            </summary>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.ICompanyRepository`1.SaveCompany(`0)">
+            <summary>
+            Salva empresa
+            </summary>
+            <param name="company">Objeto do tipo CompanyEntity será salvo </param>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.ICompanyRepository`1.GetCompanies">
+            <summary>
+            Listar empresas
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.ICompanyRepository`1.GetCompany(System.Int64)">
+            <summary>
+            Obter empresa pelo Id 
+            </summary>
+            <param name="id">Primary Key</param>
+            <returns></returns>
+        </member>
         <member name="T:Sirius.Domain.Interfaces.ISmartContractRepository`1">
             <summary>
             Interface de repositorios de Contratos Inteligentes
@@ -311,6 +335,140 @@
             <param name="username">nome do usuário</param>
             <param name="password">senha do usuário</param>
             <returns>retorna um objeto do tipo UserEntity caso encontre o usuário </returns>
+        </member>
+        <member name="T:Sirius.Domain.Mapper.UserMapper">
+            <summary>
+            Mapeamento do Usuário
+            </summary>
+        </member>
+        <member name="M:Sirius.Domain.Mapper.UserMapper.ToUserModel(Sirius.Domain.Entities.UserEntity)">
+            <summary>
+            Converter para objeto do tipo <see cref="T:Sirius.Domain.Models.UserModel"/>
+            </summary>
+            <param name="userEntity">Objeto que será convertido</param>
+            <returns>Objeto convertido.</returns>
+        </member>
+        <member name="M:Sirius.Domain.Mapper.UserMapper.ToUserEntity(Sirius.Domain.Models.CreateUserModel)">
+            <summary>
+            Converte para objeto do tipo <see cref="T:Sirius.Domain.Entities.UserEntity"/>
+            </summary>
+            <param name="createUserModel">Objeto que será convertido</param>
+            <returns>Objeto convertido.</returns>
+        </member>
+        <member name="T:Sirius.Domain.Models.CreateUserModel">
+            <summary>
+            Modelo de criação de usuário
+            </summary>
+        </member>
+        <member name="M:Sirius.Domain.Models.CreateUserModel.#ctor(System.String,System.String,Sirius.Domain.Enums.ETypeUser,Sirius.Domain.Enums.ETypeAccess)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="username">Nome do usuário</param>
+            <param name="password">Senha do usuário</param>
+            <param name="typeUser">Tipo de usuário</param>
+            <param name="typeAccess">Tipo de acesso do usuário</param>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateUserModel.Id">
+            <summary>
+            Identificação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateUserModel.Username">
+            <summary>
+            Nome do usuário
+            </summary>        
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateUserModel.Password">
+            <summary>
+            senha do usuário
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateUserModel.TypeUser">
+            <summary>
+            Tipo de usuário
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateUserModel.TypeAccess">
+            <summary>
+            Tipo de acesso
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateUserModel.CreatedOn">
+            <summary>
+            Data de Criação do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateUserModel.UpdatedOn">
+            <summary>
+            Data de Atualização do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateUserModel.Deleted">
+            <summary>
+            Registro Apagado
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateUserModel.Blocked">
+            <summary>
+            Bloqueado
+            </summary>
+        </member>
+        <member name="T:Sirius.Domain.Models.LoginUserModel">
+            <summary>
+            Modelo de Login de Usuário
+            </summary>
+        </member>
+        <member name="M:Sirius.Domain.Models.LoginUserModel.#ctor(System.String,System.String)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="username">Nome do usuário</param>
+            <param name="password">Senha do usuário</param>
+        </member>
+        <member name="P:Sirius.Domain.Models.LoginUserModel.Username">
+            <summary>
+            Nome do usuário
+            </summary>        
+        </member>
+        <member name="P:Sirius.Domain.Models.LoginUserModel.Password">
+            <summary>
+            senha do usuário
+            </summary>
+        </member>
+        <member name="T:Sirius.Domain.Models.UserModel">
+            <summary>
+            Modelo de Usuário
+            </summary>
+        </member>
+        <member name="M:Sirius.Domain.Models.UserModel.#ctor(System.String,System.String,Sirius.Domain.Enums.ETypeUser,Sirius.Domain.Enums.ETypeAccess)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="username">Nome do usuário</param>
+            <param name="password">Senha do usuário</param>
+            <param name="typeUser">Tipo de usuário</param>
+            <param name="typeAccess">Acesso do usuário</param>
+        </member>
+        <member name="P:Sirius.Domain.Models.UserModel.Username">
+            <summary>
+            Nome do usuário
+            </summary>        
+        </member>
+        <member name="P:Sirius.Domain.Models.UserModel.Password">
+            <summary>
+            senha do usuário
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UserModel.TypeUser">
+            <summary>
+            Tipo de usuário
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UserModel.TypeAccess">
+            <summary>
+            Tipo de acesso
+            </summary>
         </member>
     </members>
 </doc>

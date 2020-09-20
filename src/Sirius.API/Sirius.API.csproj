@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
@@ -20,6 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Sirius.Domain\Sirius.Domain.csproj" />
     <ProjectReference Include="..\Sirius.Infra.Data\Sirius.Infra.Data.csproj" />
+    <ProjectReference Include="..\Sirius.Service\Sirius.Service.csproj" />
   </ItemGroup>
 
 

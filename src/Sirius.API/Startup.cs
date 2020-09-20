@@ -11,7 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Sirius.Domain.Interfaces;
 using Sirius.Infra.Data.Contexts;
+using Sirius.Service;
 
 namespace Sirius.API
 {
@@ -27,13 +29,15 @@ namespace Sirius.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string dbpath = @"Server=localhost\SQLEXPRESS;Database=siriusdb;Trusted_Connection=True;";
+            string dbpath = @"Server=(localdb)\MSSQLLocalDB;Database=siriusdb;Trusted_Connection=True;";
 
             services.AddControllers();
             services.AddDbContext<SiriusDbContext>(o =>
             {
                 o.UseSqlServer(dbpath);
             });
+
+            services.AddScoped<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
