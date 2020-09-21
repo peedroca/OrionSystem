@@ -43,7 +43,12 @@ namespace Sirius.Infra.Data.Repositories
         /// <returns></returns>
         public CompanyEntity GetCompany(long id)
         {
-            return context.Companies.AsNoTracking().Where(w => w.Id == id).FirstOrDefault();
+            return context.Companies
+                .Where(w => w.Id == id)
+                .Include(i => i.SmartContracts)
+                .Include(i => i.User)
+                .AsNoTracking()
+                .FirstOrDefault();
         }
 
         /// <summary>

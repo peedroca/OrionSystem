@@ -47,10 +47,36 @@ namespace Sirius.Service
             return companyEntity.ToCompanyModel();
         }
 
+        public CompanyModel UpdateCompany(UpdateCompanyModel updateCompanyModel)
+        {
+            if (updateCompanyModel.Invalid)
+                return default;
+
+            var company = GetCompany(updateCompanyModel.Id);
+            
+            if (company == null)
+                return default;
+
+            updateCompanyModel.LoadCreationDate(company.CreatedOn);
+            updateCompanyModel.LoadSmartContracts(company.SmartContracts);
+            updateCompanyModel.LoadUser(company.User);
+
+            var companyEntity = updateCompanyModel.ToCompanyEntity();
+            companyRepository.SaveCompany(companyEntity);
+
+            return companyEntity?.ToCompanyModel();
+        }
+
         public IEnumerable<CompanyModel> GetCompanies()
         {
             var companies = companyRepository.GetCompanies();
-            return companies.ToCompanyModel();
+            return companies?.ToCompanyModel();
+        }
+
+        public CompanyModel GetCompany(long id)
+        {
+            var company = companyRepository.GetCompany(id);
+            return company?.ToCompanyModel();
         }
     }
 }

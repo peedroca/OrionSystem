@@ -35,6 +35,23 @@ namespace Sirius.Domain.Mapper
                 User = companyModel.User
             };
 
+        public static CompanyEntity ToCompanyEntity(this UpdateCompanyModel companyModel) =>
+            new CompanyEntity()
+            {
+                Id = companyModel.Id,
+                Blocked = companyModel.Blocked,
+                CNPJ = companyModel.CNPJ,
+                CreatedOn = companyModel.CreatedOn,
+                Deleted = companyModel.Deleted,
+                Email = companyModel.Email,
+                Name = companyModel.Name,
+                Phone = companyModel.Phone,
+                Nickname = companyModel.Nickname,
+                SmartContracts = companyModel.SmartContracts?.ToSmartContractEntity(),
+                UpdatedOn = companyModel.UpdatedOn,
+                User = companyModel.User?.ToUserEntity(),
+            };
+
         public static CompanyEntity ToCompanyEntity(this CompanyModel companyModel) =>
             new CompanyEntity()
             {
