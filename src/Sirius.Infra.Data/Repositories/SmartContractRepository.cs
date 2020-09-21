@@ -1,4 +1,5 @@
-﻿using Sirius.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Sirius.Domain.Entities;
 using Sirius.Domain.Interfaces;
 using Sirius.Infra.Data.Contexts;
 using Sirius.Infra.Data.Migrations;
@@ -32,7 +33,7 @@ namespace Sirius.Infra.Data.Repositories
         /// <returns></returns>
         public SmartContractEntity GetContract(long id)
         {
-            return context.SmartContracts.Find(id); //Busca pela chave primária
+            return context.SmartContracts.AsNoTracking().Where(w => w.Id == id).FirstOrDefault(); //Busca pela chave primária
         }
 
         /// <summary>

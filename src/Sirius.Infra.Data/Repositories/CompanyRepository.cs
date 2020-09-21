@@ -1,4 +1,5 @@
-﻿using Sirius.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Sirius.Domain.Entities;
 using Sirius.Domain.Interfaces;
 using Sirius.Infra.Data.Contexts;
 using Sirius.Infra.Data.Migrations;
@@ -32,7 +33,7 @@ namespace Sirius.Infra.Data.Repositories
         /// <returns></returns>
         public IEnumerable<CompanyEntity> GetCompanies()
         {
-            return context.Companies.ToList();
+            return context.Companies.AsNoTracking().ToList();
         }
                 
         /// <summary>
@@ -42,7 +43,7 @@ namespace Sirius.Infra.Data.Repositories
         /// <returns></returns>
         public CompanyEntity GetCompany(long id)
         {
-            return context.Companies.Find(id);
+            return context.Companies.AsNoTracking().Where(w => w.Id == id).FirstOrDefault();
         }
 
         /// <summary>

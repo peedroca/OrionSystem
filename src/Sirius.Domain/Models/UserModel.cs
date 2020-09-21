@@ -10,17 +10,24 @@ namespace Sirius.Domain.Models
         /// <summary>
         /// Construtor
         /// </summary>
+        /// <param name="id">Identificação do usuário</param>
         /// <param name="username">Nome do usuário</param>
         /// <param name="password">Senha do usuário</param>
         /// <param name="typeUser">Tipo de usuário</param>
         /// <param name="typeAccess">Acesso do usuário</param>
-        public UserModel(string username, string password, ETypeUser typeUser, ETypeAccess typeAccess)
+        public UserModel(long id, string username, string password, ETypeUser typeUser, ETypeAccess typeAccess)
         {
+            Id = id;
             Username = username;
             Password = password;
             TypeUser = typeUser;
             TypeAccess = typeAccess;
         }
+
+        /// <summary>
+        /// Identificação
+        /// </summary>
+        public long Id { get; set; }
 
         /// <summary>
         /// Nome do usuário

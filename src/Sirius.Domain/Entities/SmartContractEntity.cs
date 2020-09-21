@@ -1,7 +1,5 @@
 ﻿using Sirius.Domain.Enums;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Sirius.Domain.Entities
 {
@@ -44,7 +42,6 @@ namespace Sirius.Domain.Entities
         /// Valor do contrato.
         /// </summary>
         public decimal Value { get; set; }
-
 
         /// <summary>
         /// Chave de autenticação do Contrato.
