@@ -1,8 +1,9 @@
 # Sistema Sirius
 
-![image](https://img.shields.io/github/license/peedroca/sirius?style=for-the-badge)
-![image](https://img.shields.io/github/issues/peedroca/sirius?style=for-the-badge)
-![image](https://img.shields.io/github/contributors/peedroca/sirius?style=for-the-badge)
+![Licença](https://img.shields.io/github/license/peedroca/sirius?style=for-the-badge)
+![Questões](https://img.shields.io/github/issues/peedroca/sirius?style=for-the-badge)
+![Contribuidores](https://img.shields.io/github/contributors/peedroca/sirius?style=for-the-badge)
+![Versão](https://img.shields.io/github/v/release/peedroca/sirius?style=for-the-badge)
 
 ## O que é o sistema Sirius?
 
