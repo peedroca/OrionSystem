@@ -2,7 +2,7 @@
 
 ![image](https://img.shields.io/github/license/peedroca/sirius?style=for-the-badge)
 ![image](https://img.shields.io/github/issues/peedroca/sirius?style=for-the-badge)
-![image](https://img.shields.io/github/contributors/peedroca/sirius?label=Contribuidores&style=for-the-badge)
+![image](https://img.shields.io/github/contributors/peedroca/sirius?style=for-the-badge)
 
 ## O que é o sistema Sirius?
 
