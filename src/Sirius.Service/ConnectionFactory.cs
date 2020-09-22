@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Sirius.Service
 {
-    public class ConnectionFactory
+    internal class ConnectionFactory
     {
         public static SiriusDbContext SiriusDbContext;
 

@@ -35,7 +35,7 @@ namespace Sirius.API
         {
             services.AddControllers();
 
-            var key = Encoding.ASCII.GetBytes(Settings.Secret);
+            var key = Encoding.ASCII.GetBytes(Auth.Settings.Secret);
             services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -59,6 +59,7 @@ namespace Sirius.API
             });
 
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ICompanyService, CompanyService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
