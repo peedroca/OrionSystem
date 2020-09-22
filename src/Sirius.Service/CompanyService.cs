@@ -27,6 +27,11 @@ namespace Sirius.Service
             companyRepository = new CompanyRepository(siriusDbContext);
         }
 
+        /// <summary>
+        /// Cadastramento de Empresa
+        /// </summary>
+        /// <param name="createCompanyModel">Modelo de Criação de Empresa</param>
+        /// <returns>Empresa Criada</returns>
         public CompanyModel CreateCompany(CreateCompanyModel createCompanyModel)
         {
             if (createCompanyModel.Invalid)
@@ -47,6 +52,11 @@ namespace Sirius.Service
             return companyEntity.ToCompanyModel();
         }
 
+        /// <summary>
+        /// Atualização do cadastro da empresa
+        /// </summary>
+        /// <param name="updateCompanyModel">Modelo de atualização de empresa</param>
+        /// <returns>Empresa atualizada</returns>
         public CompanyModel UpdateCompany(UpdateCompanyModel updateCompanyModel)
         {
             if (updateCompanyModel.Invalid)
@@ -67,12 +77,21 @@ namespace Sirius.Service
             return companyEntity?.ToCompanyModel();
         }
 
+        /// <summary>
+        /// Listar Empresas
+        /// </summary>
+        /// <returns>Empresas encontradas</returns>
         public IEnumerable<CompanyModel> GetCompanies()
         {
             var companies = companyRepository.GetCompanies();
             return companies?.ToCompanyModel();
         }
 
+        /// <summary>
+        /// Obter empresa
+        /// </summary>
+        /// <param name="id">Chave de identificação da empresa</param>
+        /// <returns>Empresa encontrada</returns>
         public CompanyModel GetCompany(long id)
         {
             var company = companyRepository.GetCompany(id);
