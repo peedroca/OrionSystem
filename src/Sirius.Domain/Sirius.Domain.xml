@@ -693,6 +693,71 @@
             Empresa dona do Contrato
             </summary>
         </member>
+        <member name="T:Sirius.Domain.Models.UpdateCompanyModel">
+            <summary>
+            Modelo de Atualização de Empresa
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateCompanyModel.Id">
+            <summary>
+            Identificação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateCompanyModel.Name">
+            <summary>
+            Razão Social
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateCompanyModel.Nickname">
+            <summary>
+            Fantasia
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateCompanyModel.CNPJ">
+            <summary>
+            Cadastro nacional de Pessoa Jurídica
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateCompanyModel.Phone">
+            <summary>
+            Telefone principal da empresa
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateCompanyModel.Email">
+            <summary>
+            E-mail de contato com a empresa
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateCompanyModel.CreatedOn">
+            <summary>
+            Data de Criação do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateCompanyModel.UpdatedOn">
+            <summary>
+            Data de Atualização do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateCompanyModel.Deleted">
+            <summary>
+            Registro Apagado
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateCompanyModel.Blocked">
+            <summary>
+            Bloqueado
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateCompanyModel.SmartContracts">
+            <summary>
+            Lista com os contratos inteligentes da empresa.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateCompanyModel.User">
+            <summary>
+            Usuário utilizado pela empresa.
+            </summary>
+        </member>
         <member name="T:Sirius.Domain.Models.UserModel">
             <summary>
             Modelo de Usuário

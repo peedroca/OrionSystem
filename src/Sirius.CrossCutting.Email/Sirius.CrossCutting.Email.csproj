@@ -5,9 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Sirius.CrossCutting.Email\Sirius.CrossCutting.Email.csproj" />
     <ProjectReference Include="..\Sirius.Domain\Sirius.Domain.csproj" />
-    <ProjectReference Include="..\Sirius.Infra.Data\Sirius.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using Sirius.Domain.Entities;
+﻿using Sirius.CrossCutting.Email;
+using Sirius.Domain.Entities;
 using Sirius.Domain.Enums;
 using Sirius.Domain.Interfaces;
 using Sirius.Domain.Mapper;
@@ -48,6 +49,12 @@ namespace Sirius.Service
 
             var companyEntity = createCompanyModel.ToCompanyEntity();
             companyRepository.SaveCompany(companyEntity);
+
+            if (companyEntity != null && Settings.SenderEmail != null)
+            {
+                new IntegrationEmail(Settings.SenderEmail)
+                    .SendEmailToUser(newUser, companyEntity.Email, companyEntity.Name);
+            }
 
             return companyEntity.ToCompanyModel();
         }
