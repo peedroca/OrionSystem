@@ -8,7 +8,7 @@
 ## O que é o sistema Sirius?
 
 Sirius é um sistema desenvolvido pela Orion, com o objetivo de gerenciar os processos operacionais e táticos de empresas que atuam com `Contratos Inteligentes`.
-O projeto teve um tempo de desenvolvimento de 4 meses, tendo seu início no final de Agosto. Foi proposto então a criação de um único back-end que respondesse tanto as APIs, plataforma desktop, mobile e web. Desta forma tendo uma economia de tempo significativa na codificação das aplicações.
+O projeto teve um tempo de desenvolvimento de 4 meses, tendo seu início no final de Agosto/2020. Foi proposto então a criação de um único back-end que respondesse tanto as APIs, plataforma desktop, mobile e web. Desta forma tendo uma economia de tempo significativa na codificação das aplicações.
 
 ## Proposta de Negócio
 
