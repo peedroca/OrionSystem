@@ -28,15 +28,17 @@ namespace Sirius.Desktop.Views
             LoadCompanies();
         }
 
-        private void LoadCompanies()
+        private void LoadCompanies(string name = null, string cnpj = null)
         {
-            var companies = CompanyController.GetCompanies();
+            var companies = CompanyController.GetCompanies(name ,cnpj);
 
             if (companies != null && companies.Count() > 0)
             {
                 companiesDataGridView.AutoGenerateColumns = false;
                 companiesDataGridView.DataSource = companies;
             }
+            else
+                companiesDataGridView.DataSource = null;
         }
 
         private void newButton_Click(object sender, EventArgs e)
@@ -55,7 +57,7 @@ namespace Sirius.Desktop.Views
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            var company = companiesDataGridView.CurrentRow.DataBoundItem as CompanyView;
+            var company = companiesDataGridView?.CurrentRow?.DataBoundItem as CompanyView;
 
             if(company == null || company.Id == 0)
             {
@@ -70,7 +72,7 @@ namespace Sirius.Desktop.Views
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-            var company = companiesDataGridView.CurrentRow.DataBoundItem as CompanyView;
+            var company = companiesDataGridView?.CurrentRow?.DataBoundItem as CompanyView;
             if (company == null || company.Id == 0)
             {
                 return;
@@ -100,7 +102,7 @@ namespace Sirius.Desktop.Views
 
         private void inactivButton_Click(object sender, EventArgs e)
         {
-            var company = companiesDataGridView.CurrentRow.DataBoundItem as CompanyView;
+            var company = companiesDataGridView?.CurrentRow?.DataBoundItem as CompanyView;
             if (company == null || company.Id == 0)
             {
                 return;
@@ -124,6 +126,15 @@ namespace Sirius.Desktop.Views
 
                 LoadCompanies();
             }
+        }
+
+        private void filterButton_Click(object sender, EventArgs e)
+        {
+
+            if(string.IsNullOrEmpty(cnpjTextBox.Text.Replace(".", "").Replace(",", "").Replace("/", "").Replace("-", "").Trim()))
+                LoadCompanies(razaoSocialTextBox.Text);
+            else
+                LoadCompanies(razaoSocialTextBox.Text, cnpjTextBox.Text);
         }
     }
 }

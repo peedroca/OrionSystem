@@ -21,9 +21,15 @@ namespace Sirius.Desktop.Controllers
             companyService = new CompanyService(Settings.SiriusDbContext);     
         }
 
-        public IEnumerable<CompanyView> GetCompanies()
+        public IEnumerable<CompanyView> GetCompanies(string name = null, string cnpj = null)
         {
             var companies = companyService.GetCompanies().Where(w => !w.Deleted);
+
+            if (!string.IsNullOrEmpty(name))
+                companies = companies.Where(w => w.Name.ToLower().Contains(name.ToLower()));
+            if (!string.IsNullOrEmpty(cnpj))
+                companies = companies.Where(w => w.CNPJ.Equals(cnpj));
+
             return companies.ToCompanyView();
         }
 
