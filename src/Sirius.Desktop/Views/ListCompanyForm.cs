@@ -62,10 +62,68 @@ namespace Sirius.Desktop.Views
                 return;
             }
 
-            UpdateCompanyForm form = new UpdateCompanyForm(company.Id);
+            UpdateCompanyForm form = new UpdateCompanyForm(company);
             form.ShowDialog();
 
             LoadCompanies();
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            var company = companiesDataGridView.CurrentRow.DataBoundItem as CompanyView;
+            if (company == null || company.Id == 0)
+            {
+                return;
+            }
+
+            DialogResult delete = MessageBox.Show("Confirma exclusão da empresa?"
+                , "Exclusão"
+                , MessageBoxButtons.YesNo
+                , MessageBoxIcon.Question);
+
+            if (delete == DialogResult.Yes)
+            {
+                CompanyController.UpdateCompany(new Domain.Models.UpdateCompanyModel(company.Id
+                , company.Name
+                , company.Nickname
+                , company.CNPJ
+                , company.Phone
+                , company.Email
+                , true
+                , company.Blocked));
+
+                LoadCompanies();
+            }
+
+            
+        }
+
+        private void inactivButton_Click(object sender, EventArgs e)
+        {
+            var company = companiesDataGridView.CurrentRow.DataBoundItem as CompanyView;
+            if (company == null || company.Id == 0)
+            {
+                return;
+            }
+
+            DialogResult delete = MessageBox.Show("Confirma Bloqueio da empresa?"
+                , "Bloqueio"
+                , MessageBoxButtons.YesNo
+                , MessageBoxIcon.Question);
+
+            if (delete == DialogResult.Yes)
+            {
+                CompanyController.UpdateCompany(new Domain.Models.UpdateCompanyModel(company.Id
+                , company.Name
+                , company.Nickname
+                , company.CNPJ
+                , company.Phone
+                , company.Email
+                , company.Inactive
+                , true));
+
+                LoadCompanies();
+            }
         }
     }
 }

@@ -19,12 +19,12 @@ namespace Sirius.Desktop.Views
         private CompanyController CompanyController;
         private CompanyView CompanyView;
 
-        public UpdateCompanyForm(long id)
+        public UpdateCompanyForm(CompanyView companyView)
         {
             InitializeComponent();
 
             CompanyController = new CompanyController();
-            CompanyView = CompanyController.GetCompanyView(id);
+            CompanyView = companyView;
         }
 
         private void Form1_Load(object sender, EventArgs e)

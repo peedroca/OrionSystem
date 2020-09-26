@@ -23,7 +23,7 @@ namespace Sirius.Desktop.Controllers
 
         public IEnumerable<CompanyView> GetCompanies()
         {
-            var companies = companyService.GetCompanies();
+            var companies = companyService.GetCompanies().Where(w => !w.Deleted);
             return companies.ToCompanyView();
         }
 

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.companiesDataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,8 +60,8 @@
             this.companiesDataGridView.Name = "companiesDataGridView";
             this.companiesDataGridView.RowHeadersVisible = false;
             this.companiesDataGridView.RowHeadersWidth = 62;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.companiesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companiesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.companiesDataGridView.RowTemplate.Height = 28;
             this.companiesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.companiesDataGridView.Size = new System.Drawing.Size(989, 437);
@@ -134,8 +134,9 @@
             this.inactivButton.Name = "inactivButton";
             this.inactivButton.Size = new System.Drawing.Size(143, 46);
             this.inactivButton.TabIndex = 3;
-            this.inactivButton.Text = "Inativar";
+            this.inactivButton.Text = "Bloquear";
             this.inactivButton.UseVisualStyleBackColor = true;
+            this.inactivButton.Click += new System.EventHandler(this.inactivButton_Click);
             // 
             // deleteButton
             // 
@@ -145,6 +146,7 @@
             this.deleteButton.TabIndex = 4;
             this.deleteButton.Text = "Deletar";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // ListCompanyForm
             // 
