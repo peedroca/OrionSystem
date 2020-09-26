@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Sirius.CrossCutting.Email.Models;
+using Sirius.Desktop.Views;
+using Sirius.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +17,15 @@ namespace Sirius.Desktop
         [STAThread]
         static void Main()
         {
+            new Settings(Sirius.Desktop.Properties.Resources.dbPath, new SenderEmail("Sirius"
+                , "smtp.gmail.com"
+                , 587
+                , "orion.sirius.noreply@gmail.com"
+                , "4OnrL#TFM4Dz"));
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new ListCompanyForm());
         }
     }
 }

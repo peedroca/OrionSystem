@@ -9,6 +9,7 @@ namespace Sirius.Service
     public class Settings
     {
         internal static SenderEmail SenderEmail;
+        public static SiriusDbContext SiriusDbContext { get { return ConnectionFactory.SiriusDbContext; } }
 
         public Settings(string connectionString, SenderEmail senderEmail = null)
         {

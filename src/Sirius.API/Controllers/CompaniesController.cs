@@ -23,6 +23,12 @@ namespace Sirius.API.Controllers
             this.companyService = companyService;
         }
 
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok(companyService.GetCompanies());
+        }
+
         //[HttpPost]
         //public IActionResult Create([FromBody] Company company)
         //{
