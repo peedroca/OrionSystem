@@ -1,10 +1,12 @@
-﻿using Sirius.Desktop.Models;
+﻿using Sirius.Desktop.Extesions;
+using Sirius.Desktop.Models;
 using Sirius.Domain.Interfaces;
 using Sirius.Domain.Models;
 using Sirius.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,18 +24,16 @@ namespace Sirius.Desktop.Controllers
         public IEnumerable<CompanyView> GetCompanies()
         {
             var companies = companyService.GetCompanies();
-            var resp = companies.Select(s => new CompanyView()
-            {
-                Name = s.Name,
-                Nickname = s.Nickname,
-                CNPJ = s.CNPJ,
-                Phone = s.Phone,
-                Email = s.Email
-            }).ToList();
-
-            return resp;
+            return companies.ToCompanyView();
         }
+
         public void CreateCompany(CreateCompanyModel createCompanyModel) =>
             companyService.CreateCompany(createCompanyModel);
+
+        public CompanyView GetCompanyView(long id) =>
+            companyService.GetCompany(id).ToCompanyView();
+
+        public void UpdateCompany(UpdateCompanyModel updateCompanyModel) =>
+            companyService.UpdateCompany(updateCompanyModel);
     }
 }
