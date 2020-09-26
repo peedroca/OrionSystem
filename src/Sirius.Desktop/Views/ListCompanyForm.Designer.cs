@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.companiesDataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,6 +60,8 @@
             this.companiesDataGridView.Name = "companiesDataGridView";
             this.companiesDataGridView.RowHeadersVisible = false;
             this.companiesDataGridView.RowHeadersWidth = 62;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companiesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.companiesDataGridView.RowTemplate.Height = 28;
             this.companiesDataGridView.Size = new System.Drawing.Size(989, 437);
             this.companiesDataGridView.TabIndex = 0;
@@ -101,22 +104,23 @@
             this.Column5.HeaderText = "E-Mail";
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
-            this.Column5.Width = 150;
+            this.Column5.Width = 180;
             // 
             // newButton
             // 
             this.newButton.Location = new System.Drawing.Point(858, 455);
             this.newButton.Name = "newButton";
-            this.newButton.Size = new System.Drawing.Size(143, 87);
+            this.newButton.Size = new System.Drawing.Size(143, 46);
             this.newButton.TabIndex = 1;
             this.newButton.Text = "Novo";
             this.newButton.UseVisualStyleBackColor = true;
+            this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
             // editButton
             // 
             this.editButton.Location = new System.Drawing.Point(709, 455);
             this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(143, 87);
+            this.editButton.Size = new System.Drawing.Size(143, 46);
             this.editButton.TabIndex = 2;
             this.editButton.Text = "Editar";
             this.editButton.UseVisualStyleBackColor = true;
@@ -125,7 +129,7 @@
             // 
             this.inactivButton.Location = new System.Drawing.Point(411, 455);
             this.inactivButton.Name = "inactivButton";
-            this.inactivButton.Size = new System.Drawing.Size(143, 87);
+            this.inactivButton.Size = new System.Drawing.Size(143, 46);
             this.inactivButton.TabIndex = 3;
             this.inactivButton.Text = "Inativar";
             this.inactivButton.UseVisualStyleBackColor = true;
@@ -134,16 +138,16 @@
             // 
             this.deleteButton.Location = new System.Drawing.Point(560, 455);
             this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(143, 87);
+            this.deleteButton.Size = new System.Drawing.Size(143, 46);
             this.deleteButton.TabIndex = 4;
             this.deleteButton.Text = "Deletar";
             this.deleteButton.UseVisualStyleBackColor = true;
             // 
             // ListCompanyForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 548);
+            this.ClientSize = new System.Drawing.Size(1010, 505);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.inactivButton);
             this.Controls.Add(this.editButton);
@@ -165,14 +169,14 @@
         #endregion
 
         private System.Windows.Forms.DataGridView companiesDataGridView;
+        private System.Windows.Forms.Button newButton;
+        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Button inactivButton;
+        private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Button newButton;
-        private System.Windows.Forms.Button editButton;
-        private System.Windows.Forms.Button inactivButton;
-        private System.Windows.Forms.Button deleteButton;
     }
 }

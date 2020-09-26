@@ -1,9 +1,11 @@
-﻿using Sirius.Domain.Interfaces;
+﻿using Sirius.Desktop.Controllers;
+using Sirius.Domain.Interfaces;
 using Sirius.Domain.Models;
 using Sirius.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -15,7 +17,7 @@ namespace Sirius.Desktop.Views
 {
     public partial class SaveCompanyForm : Form
     {
-        private ICompanyService companyService;
+        private CompanyController CompanyController;
 
         public SaveCompanyForm()
         {
@@ -24,10 +26,36 @@ namespace Sirius.Desktop.Views
 
         private void SaveCompanyForm_Load(object sender, EventArgs e)
         {
-            companyService = new CompanyService(Settings.SiriusDbContext);
+            CompanyController = new CompanyController();
+            ClearLabels();
+        }
+
+        private void ClearLabels()
+        {
+            nameLabel.Text = string.Empty;
+            nickNameLabel.Text = string.Empty;
+            phoneLabel.Text = string.Empty;
+            emailLabel.Text = string.Empty;
+            cnpjLabel.Text = string.Empty;
         }
 
         private void saveButton_Click(object sender, EventArgs e)
+        {
+            ClearLabels();
+            SaveCompany();
+            
+        }
+
+        private void ClearFields()
+        {
+            fantasiaTextBox.Text = string.Empty;
+            cnpjTextBox.Text = string.Empty;
+            telefoneTextBox.Text = string.Empty;
+            razaoSocialTextBox.Text = string.Empty;
+            emailTextBox.Text = string.Empty;
+        }
+
+        private void SaveCompany()
         {
             CreateCompanyModel createCompanyModel = new CreateCompanyModel(razaoSocialTextBox.Text
                 , fantasiaTextBox.Text
@@ -37,20 +65,28 @@ namespace Sirius.Desktop.Views
 
             if (createCompanyModel.Invalid)
             {
-                MessageBox.Show(createCompanyModel.Notifications.First().Message);
-                return;
-            }
-            
-            var companyModel = companyService.CreateCompany(createCompanyModel);
-            if (companyModel == null)
-            {
-                MessageBox.Show("Erro!");
+                foreach (var item in createCompanyModel.Notifications)
+                {
+                    switch (item.Property)
+                    {
+                        case "Email":
+                            emailLabel.Text = item.Message;
+                            break;
+                        case "CNPJ":
+                            cnpjLabel.Text = item.Message;
+                            break;
+                        case "Razão Social":
+                            nameLabel.Text = item.Message;
+                            break;
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("Empressa criada com sucesso!");
+                CompanyController.CreateCompany(createCompanyModel);
+                ClearFields();
+                this.Close();
             }
-
         }
     }
 }

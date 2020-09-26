@@ -24,7 +24,11 @@ namespace Sirius.Desktop.Views
         private void ListCompanyForm_Load(object sender, EventArgs e)
         {
             CompanyController = new CompanyController();
+            LoadCompanies();
+        }
 
+        private void LoadCompanies()
+        {
             var companies = CompanyController.GetCompanies();
 
             if (companies != null && companies.Count() > 0)
@@ -33,5 +37,15 @@ namespace Sirius.Desktop.Views
                 companiesDataGridView.DataSource = companies;
             }
         }
+
+        private void newButton_Click(object sender, EventArgs e)
+        {
+            SaveCompanyForm form = new SaveCompanyForm();
+            form.ShowDialog();
+
+            LoadCompanies();
+
+        }
+       
     }
 }

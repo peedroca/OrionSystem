@@ -1,5 +1,6 @@
 ﻿using Sirius.Desktop.Models;
 using Sirius.Domain.Interfaces;
+using Sirius.Domain.Models;
 using Sirius.Service;
 using System;
 using System.Collections.Generic;
@@ -32,5 +33,7 @@ namespace Sirius.Desktop.Controllers
 
             return resp;
         }
+        public void CreateCompany(CreateCompanyModel createCompanyModel) =>
+            companyService.CreateCompany(createCompanyModel);
     }
 }

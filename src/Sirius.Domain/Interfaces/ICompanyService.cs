@@ -12,5 +12,6 @@ namespace Sirius.Domain.Interfaces
     {
         CompanyModel CreateCompany(CreateCompanyModel createCompanyModel);
         IEnumerable<CompanyModel> GetCompanies();
+        CompanyModel UpdateCompany(UpdateCompanyModel updateCompanyModel);
     }
 }

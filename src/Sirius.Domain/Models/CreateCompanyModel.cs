@@ -37,6 +37,7 @@ namespace Sirius.Domain.Models
 
             AddNotifications(new Contract()
                 .IsNotNullOrEmpty(Email, "Email", "O e-mail é obrigatório.")
+                .IsEmail(Email, "Email", "E-mail incorreto.")
                 .IsNotNullOrEmpty(CNPJ, "CNPJ", "O CNPJ é obrigatório.")
                 .IsNotNullOrEmpty(Name, "Razão Social", "A razão social é obrigatória."));
         }
