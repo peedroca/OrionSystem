@@ -55,7 +55,7 @@ namespace Sirius.API
 
             services.AddDbContext<SiriusDbContext>(o =>
             {
-                o.UseSqlServer(Configuration.GetConnectionString("LocalPedro"));
+                o.UseSqlServer(Configuration.GetConnectionString("LocalBruno"));
             });
 
             services.AddScoped<IUserService, UserService>();
