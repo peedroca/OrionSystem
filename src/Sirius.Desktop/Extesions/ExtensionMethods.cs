@@ -24,7 +24,9 @@ namespace Sirius.Desktop.Extesions
                 Nickname = companyModel.Nickname,
                 CNPJ = companyModel.CNPJ,
                 Phone = companyModel.Phone,
-                Email = companyModel.Email
+                Email = companyModel.Email,
+                Blocked = companyModel.Blocked,
+                Inactive = companyModel.Deleted
             };
         }
 

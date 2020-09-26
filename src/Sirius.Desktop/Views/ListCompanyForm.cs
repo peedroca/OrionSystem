@@ -1,4 +1,5 @@
 ﻿using Sirius.Desktop.Controllers;
+using Sirius.Desktop.Models;
 using Sirius.Domain.Interfaces;
 using Sirius.Service;
 using System;
@@ -46,6 +47,25 @@ namespace Sirius.Desktop.Views
             LoadCompanies();
 
         }
-       
+
+        private void companiesDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            var company = companiesDataGridView.CurrentRow.DataBoundItem as CompanyView;
+
+            if(company == null || company.Id == 0)
+            {
+                return;
+            }
+
+            UpdateCompanyForm form = new UpdateCompanyForm(company.Id);
+            form.ShowDialog();
+
+            LoadCompanies();
+        }
     }
 }

@@ -44,6 +44,8 @@
             this.razaoSocialTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.inactiveCheckBox = new System.Windows.Forms.CheckBox();
+            this.blockedCheckBox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // telefoneTextBox
@@ -121,12 +123,13 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(198, 279);
+            this.saveButton.Location = new System.Drawing.Point(199, 279);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(104, 36);
             this.saveButton.TabIndex = 31;
             this.saveButton.Text = "Salvar";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // emailTextBox
             // 
@@ -194,11 +197,33 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "CNPJ";
             // 
+            // inactiveCheckBox
+            // 
+            this.inactiveCheckBox.AutoSize = true;
+            this.inactiveCheckBox.Location = new System.Drawing.Point(15, 279);
+            this.inactiveCheckBox.Name = "inactiveCheckBox";
+            this.inactiveCheckBox.Size = new System.Drawing.Size(89, 22);
+            this.inactiveCheckBox.TabIndex = 32;
+            this.inactiveCheckBox.Text = "Inativado";
+            this.inactiveCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // blockedCheckBox
+            // 
+            this.blockedCheckBox.AutoSize = true;
+            this.blockedCheckBox.Location = new System.Drawing.Point(15, 307);
+            this.blockedCheckBox.Name = "blockedCheckBox";
+            this.blockedCheckBox.Size = new System.Drawing.Size(103, 22);
+            this.blockedCheckBox.TabIndex = 33;
+            this.blockedCheckBox.Text = "Bloqueado";
+            this.blockedCheckBox.UseVisualStyleBackColor = true;
+            // 
             // UpdateCompanyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 323);
+            this.ClientSize = new System.Drawing.Size(315, 336);
+            this.Controls.Add(this.blockedCheckBox);
+            this.Controls.Add(this.inactiveCheckBox);
             this.Controls.Add(this.telefoneTextBox);
             this.Controls.Add(this.cnpjTextBox);
             this.Controls.Add(this.emailLabel);
@@ -217,7 +242,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "UpdateCompanyForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -246,5 +271,7 @@
         private System.Windows.Forms.TextBox razaoSocialTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox inactiveCheckBox;
+        private System.Windows.Forms.CheckBox blockedCheckBox;
     }
 }

@@ -14,5 +14,8 @@ namespace Sirius.Desktop.Models
         public string CNPJ { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
+
+        public bool Inactive { get; set; }
+        public bool Blocked { get; set; }
     }
 }

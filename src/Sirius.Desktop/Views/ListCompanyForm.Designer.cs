@@ -63,8 +63,10 @@
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.companiesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.companiesDataGridView.RowTemplate.Height = 28;
+            this.companiesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.companiesDataGridView.Size = new System.Drawing.Size(989, 437);
             this.companiesDataGridView.TabIndex = 0;
+            this.companiesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.companiesDataGridView_CellContentClick);
             // 
             // Column1
             // 
@@ -124,6 +126,7 @@
             this.editButton.TabIndex = 2;
             this.editButton.Text = "Editar";
             this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // inactivButton
             // 
