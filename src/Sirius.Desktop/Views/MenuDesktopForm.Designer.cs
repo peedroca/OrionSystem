@@ -49,6 +49,8 @@
             // 
             // btnContracts
             // 
+            this.btnContracts.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnContracts.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnContracts.Location = new System.Drawing.Point(13, 30);
             this.btnContracts.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -57,6 +59,7 @@
             this.btnContracts.TabIndex = 15;
             this.btnContracts.Text = "Contratos";
             this.btnContracts.UseVisualStyleBackColor = true;
+            this.btnContracts.Click += new System.EventHandler(this.btnContracts_Click);
             // 
             // btnUser
             // 
@@ -79,6 +82,7 @@
             this.btnReport.TabIndex = 19;
             this.btnReport.Text = "Relatórios";
             this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnClient
             // 
@@ -94,6 +98,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Location = new System.Drawing.Point(197, 30);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
@@ -149,7 +155,7 @@
             this.label6.Location = new System.Drawing.Point(9, 148);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(270, 27);
+            this.label6.Size = new System.Drawing.Size(175, 18);
             this.label6.TabIndex = 5;
             this.label6.Text = "suporte@orionst.com.br";
             // 
@@ -160,7 +166,7 @@
             this.label5.Location = new System.Drawing.Point(9, 128);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 27);
+            this.label5.Size = new System.Drawing.Size(53, 18);
             this.label5.TabIndex = 4;
             this.label5.Text = "E-Mail";
             // 
@@ -171,7 +177,7 @@
             this.label4.Location = new System.Drawing.Point(9, 98);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 27);
+            this.label4.Size = new System.Drawing.Size(127, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "(11)9*8765-3456";
             // 
@@ -182,7 +188,7 @@
             this.label3.Location = new System.Drawing.Point(9, 78);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 27);
+            this.label3.Size = new System.Drawing.Size(79, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Whatsapp";
             // 
@@ -193,7 +199,7 @@
             this.label2.Location = new System.Drawing.Point(9, 45);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 27);
+            this.label2.Size = new System.Drawing.Size(112, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "(11)5566-7788";
             // 
@@ -204,13 +210,13 @@
             this.label1.Location = new System.Drawing.Point(9, 25);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 27);
+            this.label1.Size = new System.Drawing.Size(74, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Telefone: ";
             // 
             // MenuDesktopForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 505);
             this.Controls.Add(this.groupBox3);

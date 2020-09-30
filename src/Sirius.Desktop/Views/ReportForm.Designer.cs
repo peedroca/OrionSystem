@@ -1,6 +1,6 @@
 ﻿namespace Sirius.Desktop.Views
 {
-    partial class SmartContractForm
+    partial class ReportForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.backSContractsButton = new System.Windows.Forms.Button();
+            this.backReportButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // backSContractsButton
+            // backReportButton
             // 
-            this.backSContractsButton.Location = new System.Drawing.Point(12, 12);
-            this.backSContractsButton.Name = "backSContractsButton";
-            this.backSContractsButton.Size = new System.Drawing.Size(117, 55);
-            this.backSContractsButton.TabIndex = 0;
-            this.backSContractsButton.Text = "Voltar";
-            this.backSContractsButton.UseVisualStyleBackColor = true;
-            this.backSContractsButton.Click += new System.EventHandler(this.backSContractsButton_Click);
+            this.backReportButton.Location = new System.Drawing.Point(12, 12);
+            this.backReportButton.Name = "backReportButton";
+            this.backReportButton.Size = new System.Drawing.Size(117, 55);
+            this.backReportButton.TabIndex = 1;
+            this.backReportButton.Text = "Voltar";
+            this.backReportButton.UseVisualStyleBackColor = true;
+            this.backReportButton.Click += new System.EventHandler(this.backReportButton_Click);
             // 
-            // SmartContractForm
+            // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 505);
-            this.Controls.Add(this.backSContractsButton);
+            this.Controls.Add(this.backReportButton);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.Name = "SmartContractForm";
+            this.Name = "ReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Contratos Inteligentes";
+            this.Text = "Relatorios";
+            this.Load += new System.EventHandler(this.ReportForm_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button backSContractsButton;
+        private System.Windows.Forms.Button backReportButton;
     }
 }

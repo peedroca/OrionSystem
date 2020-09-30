@@ -136,5 +136,13 @@ namespace Sirius.Desktop.Views
             else
                 LoadCompanies(razaoSocialTextBox.Text, cnpjTextBox.Text);
         }
+
+        private void backCompanyButton_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            MenuDesktopForm form1 = new MenuDesktopForm();
+            form1.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Sirius.Desktop.Views
 {
-    public partial class SmartContractForm : Form
+    public partial class ReportForm : Form
     {
-        public SmartContractForm()
+        public ReportForm()
         {
             InitializeComponent();
         }
 
-        private void backSContractsButton_Click(object sender, EventArgs e)
+        private void ReportForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backReportButton_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             MenuDesktopForm form1 = new MenuDesktopForm();

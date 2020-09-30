@@ -44,6 +44,7 @@
             this.cnpjTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.filterButton = new System.Windows.Forms.Button();
+            this.backCompanyButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.companiesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,7 +156,7 @@
             // 
             // razaoSocialTextBox
             // 
-            this.razaoSocialTextBox.Location = new System.Drawing.Point(12, 31);
+            this.razaoSocialTextBox.Location = new System.Drawing.Point(209, 31);
             this.razaoSocialTextBox.Name = "razaoSocialTextBox";
             this.razaoSocialTextBox.Size = new System.Drawing.Size(287, 26);
             this.razaoSocialTextBox.TabIndex = 23;
@@ -163,7 +164,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 9);
+            this.label2.Location = new System.Drawing.Point(206, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 18);
             this.label2.TabIndex = 22;
@@ -171,7 +172,7 @@
             // 
             // cnpjTextBox
             // 
-            this.cnpjTextBox.Location = new System.Drawing.Point(305, 31);
+            this.cnpjTextBox.Location = new System.Drawing.Point(502, 30);
             this.cnpjTextBox.Mask = "99.999.999/9999-99";
             this.cnpjTextBox.Name = "cnpjTextBox";
             this.cnpjTextBox.Size = new System.Drawing.Size(287, 26);
@@ -181,7 +182,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(302, 8);
+            this.label1.Location = new System.Drawing.Point(499, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 18);
             this.label1.TabIndex = 24;
@@ -189,7 +190,7 @@
             // 
             // filterButton
             // 
-            this.filterButton.Location = new System.Drawing.Point(786, 30);
+            this.filterButton.Location = new System.Drawing.Point(858, 30);
             this.filterButton.Name = "filterButton";
             this.filterButton.Size = new System.Drawing.Size(102, 26);
             this.filterButton.TabIndex = 26;
@@ -197,11 +198,22 @@
             this.filterButton.UseVisualStyleBackColor = true;
             this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
             // 
+            // backCompanyButton
+            // 
+            this.backCompanyButton.Location = new System.Drawing.Point(12, 9);
+            this.backCompanyButton.Name = "backCompanyButton";
+            this.backCompanyButton.Size = new System.Drawing.Size(113, 56);
+            this.backCompanyButton.TabIndex = 27;
+            this.backCompanyButton.Text = "Voltar";
+            this.backCompanyButton.UseVisualStyleBackColor = true;
+            this.backCompanyButton.Click += new System.EventHandler(this.backCompanyButton_Click);
+            // 
             // ListCompanyForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 505);
+            this.Controls.Add(this.backCompanyButton);
             this.Controls.Add(this.filterButton);
             this.Controls.Add(this.cnpjTextBox);
             this.Controls.Add(this.label1);
@@ -243,5 +255,6 @@
         private System.Windows.Forms.MaskedTextBox cnpjTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button filterButton;
+        private System.Windows.Forms.Button backCompanyButton;
     }
 }
