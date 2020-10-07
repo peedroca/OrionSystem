@@ -68,5 +68,15 @@ namespace Sirius.Desktop.Properties {
                 return ResourceManager.GetString("dbPath", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoSiriuss {
+            get {
+                object obj = ResourceManager.GetObject("logoSiriuss", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -25,7 +25,7 @@ namespace Sirius.Desktop
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuDesktopForm());
+            Application.Run(new LoginForm());
         }
     }
 }

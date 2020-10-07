@@ -47,7 +47,7 @@ namespace Sirius.Desktop.Views
         private void btnReport_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            ReportForm form1 = new ReportForm();
+            ClientForm form1 = new ClientForm();
             form1.ShowDialog();
             this.Close();
         }
@@ -73,6 +73,21 @@ namespace Sirius.Desktop.Views
 
             
         }
-        
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            UserForm form1 = new UserForm();
+            form1.ShowDialog();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            ReportForm form1 = new ReportForm();
+            form1.ShowDialog();
+            this.Close();
+        }
     }
 }

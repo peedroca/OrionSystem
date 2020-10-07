@@ -196,6 +196,12 @@
     <Compile Include="Models\SmartContractView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\MenuDesktopForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,6 +213,12 @@
     </Compile>
     <Compile Include="Views\ReportForm.Designer.cs">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\SmartContractForm.cs">
       <SubType>Form</SubType>
@@ -232,6 +244,12 @@
     <Compile Include="Views\SaveCompanyForm.Designer.cs">
       <DependentUpon>SaveCompanyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -242,11 +260,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\MenuDesktopForm.resx">
       <DependentUpon>MenuDesktopForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SmartContractForm.resx">
       <DependentUpon>SmartContractForm.cs</DependentUpon>
@@ -259,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SaveCompanyForm.resx">
       <DependentUpon>SaveCompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -299,6 +326,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoSiriuss.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
