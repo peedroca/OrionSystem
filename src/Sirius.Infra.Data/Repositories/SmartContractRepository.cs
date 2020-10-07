@@ -2,11 +2,8 @@
 using Sirius.Domain.Entities;
 using Sirius.Domain.Interfaces;
 using Sirius.Infra.Data.Contexts;
-using Sirius.Infra.Data.Migrations;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Sirius.Infra.Data.Repositories
 {
@@ -25,7 +22,7 @@ namespace Sirius.Infra.Data.Repositories
         {
             this.context = context;
         }
-        
+
         /// <summary>
         /// Obter contrato 
         /// </summary>
@@ -33,7 +30,21 @@ namespace Sirius.Infra.Data.Repositories
         /// <returns></returns>
         public SmartContractEntity GetContract(long id)
         {
-            return context.SmartContracts.AsNoTracking().Where(w => w.Id == id).FirstOrDefault(); //Busca pela chave primária
+            return context.SmartContracts.AsNoTracking()
+                .Where(w => w.Id == id)
+                .FirstOrDefault(); //Busca pela chave primária
+        }
+
+        /// <summary>
+        /// Obter contrato por empresa
+        /// </summary>
+        /// <param name="id"> Id da empresa</param>
+        /// <returns></returns>
+        public IEnumerable<SmartContractEntity> GetContracts(long id)
+        {
+            return context.SmartContracts.AsNoTracking()
+                .Where(w => w.CurrentCompanyEntityId == id)
+                .ToList(); //Busca pela chave primária
         }
 
         /// <summary>

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.Sockets;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Sirius.Domain.Interfaces
 {
@@ -23,5 +20,12 @@ namespace Sirius.Domain.Interfaces
         /// <param name="id"> Id do contrato</param>
         /// <returns></returns>
         SmartContract GetContract(long id);
+
+        /// <summary>
+        /// Obter Contratos
+        /// </summary>
+        /// <param name="id">Id da empresa</param>
+        /// <returns></returns>
+        IEnumerable<SmartContract> GetContracts(long id);
     }
 }

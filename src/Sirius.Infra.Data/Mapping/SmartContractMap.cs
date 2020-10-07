@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Sirius.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Sirius.Infra.Data.Mapping
 {
@@ -26,15 +23,6 @@ namespace Sirius.Infra.Data.Mapping
 
             builder.Property(p => p.Value)
                    .HasMaxLength(10);//.HasColumnType("2");
-
-            builder.Property(p => p.AuthKey)
-                   .HasMaxLength(255);
-
-            builder.Property(p => p.CodePayment)
-                   .HasMaxLength(255);
-
-            builder.Property(p => p.ReasonTermination)
-                   .HasMaxLength(400);
         }
     }
 }

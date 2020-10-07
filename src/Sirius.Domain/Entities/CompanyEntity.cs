@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Sirius.Domain.Entities
 {
@@ -38,7 +37,7 @@ namespace Sirius.Domain.Entities
         /// E-mail de contato com a empresa
         /// </summary>
         public string Email { get; set; }
-                
+
         /// <summary>
         /// Data de Criação do Registro
         /// </summary>

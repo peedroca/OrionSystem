@@ -2,7 +2,6 @@
 using Flunt.Validations;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Sirius.Domain.Models
 {
@@ -11,6 +10,17 @@ namespace Sirius.Domain.Models
     /// </summary>
     public class UpdateCompanyModel : Notifiable
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="nickname"></param>
+        /// <param name="cNPJ"></param>
+        /// <param name="phone"></param>
+        /// <param name="email"></param>
+        /// <param name="deleted"></param>
+        /// <param name="blocked"></param>
         public UpdateCompanyModel(long id, string name, string nickname, string cNPJ, string phone, string email, bool deleted, bool blocked)
         {
             Id = id;
@@ -26,7 +36,9 @@ namespace Sirius.Domain.Models
             AddNotifications(new Contract()
                 .IsGreaterThan(Id, 0, "Id", "Id inválido")
                 .IsNotNullOrEmpty(Email, "Email", "O e-mail é obrigatório.")
+                .IsEmail(Email, "Email", "E-mail incorreto.")
                 .IsNotNullOrEmpty(CNPJ, "CNPJ", "O CNPJ é obrigatório.")
+                .IsNotNullOrEmpty(Nickname, "Fantasia", "O nome fantasia é obrigatório.")
                 .IsNotNullOrEmpty(Name, "Razão Social", "A razão social é obrigatória."));
         }
 
