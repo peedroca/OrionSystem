@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Sirius.API.Models;
-using Sirius.CrossCutting.Email.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using Sirius.Domain.Interfaces;
-using Sirius.Domain.Models;
-using Sirius.Service;
 
 namespace Sirius.API.Controllers
 {

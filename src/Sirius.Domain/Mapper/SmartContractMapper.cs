@@ -3,7 +3,6 @@ using Sirius.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Sirius.Domain.Mapper
 {
@@ -13,7 +12,7 @@ namespace Sirius.Domain.Mapper
     public static class SmartContractMapper
     {
         public static SmartContractModel ToSmartContractModel(this SmartContractEntity smartContractEntity) =>
-            new SmartContractModel(smartContractEntity.Id, smartContractEntity.Title, smartContractEntity.Description, smartContractEntity.TerminationCondition, smartContractEntity.ConclusionCondition, smartContractEntity.DueDate, smartContractEntity.Value, smartContractEntity.AuthKey, smartContractEntity.CompanyEntity?.ToCompanyModel());
+            new SmartContractModel(smartContractEntity.Id, smartContractEntity.Title, smartContractEntity.Description, smartContractEntity.TerminationCondition, smartContractEntity.ConclusionCondition, smartContractEntity.Value, smartContractEntity.CompanyEntity?.ToCompanyModel());
 
         public static IEnumerable<SmartContractModel> ToSmartContractModel(this IEnumerable<SmartContractEntity> smartContractEntities) =>
             smartContractEntities.Select(s => s.ToSmartContractModel());
@@ -22,11 +21,9 @@ namespace Sirius.Domain.Mapper
             new SmartContractEntity()
             {
                 Id = smartContractModel.Id,
-                AuthKey = smartContractModel.AuthKey,
                 CompanyEntity = smartContractModel.CompanyModel?.ToCompanyEntity(),
                 ConclusionCondition = smartContractModel.ConclusionCondition,
                 Description = smartContractModel.Description,
-                DueDate = smartContractModel.DueDate,
                 TerminationCondition = smartContractModel.TerminationCondition,
                 Title = smartContractModel.Title,
                 Value = smartContractModel.Value
@@ -34,5 +31,37 @@ namespace Sirius.Domain.Mapper
 
         public static IEnumerable<SmartContractEntity> ToSmartContractEntity(this IEnumerable<SmartContractModel> smartContractModels) =>
             smartContractModels.Select(s => s.ToSmartContractEntity());
+
+        public static SmartContractEntity ToSmartContractEntity(this CreateSmartContractModel smartContractModel) =>
+            new SmartContractEntity()
+            {
+                Id = smartContractModel.Id,
+                CompanyEntity = smartContractModel.CompanyModel?.ToCompanyEntity(),
+                ConclusionCondition = smartContractModel.ConclusionCondition,
+                Description = smartContractModel.Description,
+                TerminationCondition = smartContractModel.TerminationCondition,
+                Title = smartContractModel.Title,
+                Value = smartContractModel.Value,
+                CreatedOn = DateTime.Now,
+                UpdatedOn = DateTime.Now,
+                Deleted = false,
+                Inactived = false
+            };
+
+        public static SmartContractEntity ToSmartContractEntity(this UpdateSmartContractModel smartContractModel) =>
+            new SmartContractEntity()
+            {
+                Id = smartContractModel.Id,
+                CompanyEntity = smartContractModel.CompanyModel?.ToCompanyEntity(),
+                ConclusionCondition = smartContractModel.ConclusionCondition,
+                Description = smartContractModel.Description,
+                TerminationCondition = smartContractModel.TerminationCondition,
+                Title = smartContractModel.Title,
+                Value = smartContractModel.Value,
+                CreatedOn = DateTime.Now,
+                UpdatedOn = smartContractModel.UpdatedOn,
+                Deleted = smartContractModel.Deleted,
+                Inactived = smartContractModel.Inactived
+            };
     }
 }

@@ -45,6 +45,17 @@ namespace Sirius.CrossCutting.Email
             SendingEmail(receiver, content);
         }
 
+        public void SendEmailToUser(string message, string email, string name)
+        {
+            var receiver = new ReceiverEmail(name, email);
+            var content = new ContentEmail("Conta Sirius Criada Com Sucesso!"
+                , message
+                , false
+                , true);
+
+            SendingEmail(receiver, content);
+        }
+
         public void SendingEmail(List<ReceiverEmail> receivers, ContentEmail content)
         {
             Parallel.ForEach(receivers, i =>

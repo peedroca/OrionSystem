@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sirius.Infra.Data.Contexts;
 
-namespace Sirius.Infra.Data.Migrations
+namespace Sirius.API.Migrations
 {
     [DbContext(typeof(SiriusDbContext))]
-    [Migration("20200919220243_Company")]
-    partial class Company
+    [Migration("20201007023237_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -72,12 +72,6 @@ namespace Sirius.Infra.Data.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("AuthKey")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CodePayment")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ConclusionCondition")
                         .HasColumnType("nvarchar(max)");
 
@@ -93,17 +87,8 @@ namespace Sirius.Infra.Data.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DueDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<bool>("Inactived")
                         .HasColumnType("bit");
-
-                    b.Property<string>("ReasonTermination")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
 
                     b.Property<string>("TerminationCondition")
                         .HasColumnType("nvarchar(max)");

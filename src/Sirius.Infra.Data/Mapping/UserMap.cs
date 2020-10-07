@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Sirius.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Sirius.Infra.Data.Mapping
 {
@@ -21,7 +18,7 @@ namespace Sirius.Infra.Data.Mapping
                    .IsRequired(); //Campo obrigatório (not null)
             builder.Property(p => p.Password)
                    .HasMaxLength(50)
-                   .IsRequired();                    
+                   .IsRequired();
         }
     }
 }
