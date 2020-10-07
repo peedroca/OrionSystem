@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Sirius.Desktop.Controllers;
+using Sirius.Desktop.Models;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,11 +16,12 @@ namespace Sirius.Desktop.Views
 {
     public partial class MenuDesktopForm : Form
     {
+        private CompanyController CompanyController;
         public MenuDesktopForm()
         {
             InitializeComponent();
         }
-       
+        
 
                
         
@@ -47,5 +51,28 @@ namespace Sirius.Desktop.Views
             form1.ShowDialog();
             this.Close();
         }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuDesktopForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+        ArrayList companies = new ArrayList();
+
+        private void ChartTest (string name = null, string cnpj = null)
+        {
+
+
+            
+            
+        
+
+            
+        }
+        
     }
 }

@@ -28,11 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnContracts = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
-            this.btnReport = new System.Windows.Forms.Button();
-            this.btnClient = new System.Windows.Forms.Button();
+            this.clientButton = new System.Windows.Forms.Button();
+            this.companyButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -42,9 +49,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
             // 
             // btnContracts
@@ -52,10 +66,10 @@
             this.btnContracts.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnContracts.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnContracts.Location = new System.Drawing.Point(13, 30);
+            this.btnContracts.Location = new System.Drawing.Point(13, 392);
             this.btnContracts.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnContracts.Name = "btnContracts";
-            this.btnContracts.Size = new System.Drawing.Size(176, 108);
+            this.btnContracts.Size = new System.Drawing.Size(176, 80);
             this.btnContracts.TabIndex = 15;
             this.btnContracts.Text = "Contratos";
             this.btnContracts.UseVisualStyleBackColor = true;
@@ -64,42 +78,43 @@
             // btnUser
             // 
             this.btnUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnUser.Location = new System.Drawing.Point(13, 266);
+            this.btnUser.Location = new System.Drawing.Point(13, 210);
             this.btnUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(176, 108);
+            this.btnUser.Size = new System.Drawing.Size(176, 82);
             this.btnUser.TabIndex = 18;
             this.btnUser.Text = "Usuários";
             this.btnUser.UseVisualStyleBackColor = true;
             // 
-            // btnReport
+            // clientButton
             // 
-            this.btnReport.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnReport.Location = new System.Drawing.Point(13, 384);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(176, 108);
-            this.btnReport.TabIndex = 19;
-            this.btnReport.Text = "Relatórios";
-            this.btnReport.UseVisualStyleBackColor = true;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            this.clientButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.clientButton.Location = new System.Drawing.Point(13, 118);
+            this.clientButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.clientButton.Name = "clientButton";
+            this.clientButton.Size = new System.Drawing.Size(176, 82);
+            this.clientButton.TabIndex = 19;
+            this.clientButton.Text = "Clientes";
+            this.clientButton.UseVisualStyleBackColor = true;
+            this.clientButton.Click += new System.EventHandler(this.btnReport_Click);
             // 
-            // btnClient
+            // companyButton
             // 
-            this.btnClient.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnClient.Location = new System.Drawing.Point(13, 148);
-            this.btnClient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnClient.Name = "btnClient";
-            this.btnClient.Size = new System.Drawing.Size(176, 108);
-            this.btnClient.TabIndex = 20;
-            this.btnClient.Text = "Cliente ";
-            this.btnClient.UseVisualStyleBackColor = true;
-            this.btnClient.Click += new System.EventHandler(this.btnClient_Click_1);
+            this.companyButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.companyButton.Location = new System.Drawing.Point(13, 30);
+            this.companyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.companyButton.Name = "companyButton";
+            this.companyButton.Size = new System.Drawing.Size(176, 80);
+            this.companyButton.TabIndex = 20;
+            this.companyButton.Text = "Empresas";
+            this.companyButton.UseVisualStyleBackColor = true;
+            this.companyButton.Click += new System.EventHandler(this.btnClient_Click_1);
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.chart1);
             this.groupBox1.Location = new System.Drawing.Point(197, 30);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
@@ -107,7 +122,24 @@
             this.groupBox1.Size = new System.Drawing.Size(407, 226);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Situação dos Contratos ";
+            this.groupBox1.Text = "Clientes";
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(9, 27);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(391, 191);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // groupBox2
             // 
@@ -214,28 +246,73 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Telefone: ";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.chart2);
+            this.groupBox4.Location = new System.Drawing.Point(611, 30);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(394, 226);
+            this.groupBox4.TabIndex = 24;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Situaçãode Contratos";
+            // 
+            // chart2
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
+            this.chart2.Location = new System.Drawing.Point(6, 25);
+            this.chart2.Name = "chart2";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
+            this.chart2.Size = new System.Drawing.Size(381, 193);
+            this.chart2.TabIndex = 0;
+            this.chart2.Text = "chart2";
+            // 
+            // button1
+            // 
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(13, 300);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(176, 82);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Relatórios";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MenuDesktopForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 505);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnContracts);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.companyButton);
+            this.Controls.Add(this.btnUser);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnClient);
-            this.Controls.Add(this.btnReport);
-            this.Controls.Add(this.btnUser);
-            this.Controls.Add(this.btnContracts);
+            this.Controls.Add(this.clientButton);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MenuDesktopForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
+            this.Load += new System.EventHandler(this.MenuDesktopForm_Load);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -244,8 +321,8 @@
 
         private System.Windows.Forms.Button btnContracts;
         private System.Windows.Forms.Button btnUser;
-        private System.Windows.Forms.Button btnReport;
-        private System.Windows.Forms.Button btnClient;
+        private System.Windows.Forms.Button clientButton;
+        private System.Windows.Forms.Button companyButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -256,5 +333,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -54,6 +54,8 @@ namespace Sirius.Domain.Models
         /// </summary>
         public string TerminationCondition { get; }
 
+        
+
         /// <summary>
         /// Motivos de conclusão do contrato.
         /// </summary>
