@@ -1,35 +1,44 @@
-﻿namespace Sirius.Domain.Models
+﻿using Flunt.Notifications;
+using Flunt.Validations;
+
+namespace Sirius.Domain.Models
 {
     /// <summary>
-    /// Modelo de Contrato Inteligente
+    /// Modelo de criação de contrato inteligente
     /// </summary>
-    public class SmartContractModel
+    public class CreateSmartContractModel : Notifiable
     {
         /// <summary>
         /// Construtor
         /// </summary>
-        /// <param name="id">Identificação do contrato</param>
         /// <param name="title">Título do contrato</param>
         /// <param name="description">Descrição do contrato</param>
         /// <param name="terminationCondition">Condições para termino do contrato</param>
         /// <param name="conclusionCondition">Condições para conclusão do contrato</param>
         /// <param name="value">Valor do contrato</param>
-        /// <param name="companyModel">Modelo da Empresa</param>
-        public SmartContractModel(long id
-            , string title
+        /// <param name="companyModel">Empresa dona do contrato</param>
+        public CreateSmartContractModel(string title
             , string description
             , string terminationCondition
             , string conclusionCondition
             , decimal value
             , CompanyModel companyModel)
         {
-            Id = id;
+            Id = 0;
             Title = title;
             Description = description;
             TerminationCondition = terminationCondition;
             ConclusionCondition = conclusionCondition;
             Value = value;
             CompanyModel = companyModel;
+
+            AddNotifications(new Contract()
+                .IsNotNullOrEmpty(Title, "Título", "O contrato deve ter um título.")
+                .IsNotNullOrEmpty(Description, "Descrição", "O contrato deve ter uma descrição.")
+                .IsNotNullOrEmpty(TerminationCondition, "Condição de Término", "A condição de término é obrigatória.")
+                .IsGreaterThan(Value, 0, "Valor", "O valor do contrato não pode ser igual a 0 (zero).")
+                .IsNull(CompanyModel, "Empresa", "Informe a empresa")
+                .IsNotNullOrEmpty(ConclusionCondition, "Condição de Conclusão", "A condição de conclusão é obrigatória."));
         }
 
         /// <summary>
@@ -52,8 +61,6 @@
         /// </summary>
         public string TerminationCondition { get; }
 
-        
-
         /// <summary>
         /// Motivos de conclusão do contrato.
         /// </summary>
@@ -63,11 +70,6 @@
         /// Valor do contrato.
         /// </summary>
         public decimal Value { get; }
-
-        /// <summary>
-        /// Chave de autenticação do Contrato.
-        /// </summary>
-        public string AuthKey { get; }
 
         /// <summary>
         /// Empresa dona do Contrato

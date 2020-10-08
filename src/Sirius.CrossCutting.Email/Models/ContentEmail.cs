@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Sirius.CrossCutting.Email.Models
+﻿namespace Sirius.CrossCutting.Email.Models
 {
     /// <summary>
     /// Conteúdo do Email

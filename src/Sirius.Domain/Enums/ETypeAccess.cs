@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Sirius.Domain.Enums
+﻿namespace Sirius.Domain.Enums
 {
     /// <summary>
     /// Tipo de Acesso

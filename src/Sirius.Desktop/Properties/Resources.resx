@@ -128,7 +128,7 @@
     <value>..\Resources\ícone-preto-da-impressão-digital-no-fundo-branco-ilustração-do-vetor-115636742.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="dbPath" xml:space="preserve">
-    <value>Server=DESKTOP-NJGRATC\SQLEXPRESS;Database=dbSirius;Trusted_Connection=True;</value>
+    <value>Server=bd.asp.hostazul.com.br,3433;Database=20447_siriusdb;User Id=20447_siriusdba;Password=Qaj7zj!NspMj;</value>
   </data>
   <data name="Windows-Turn-Off-icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Windows-Turn-Off-icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -1,12 +1,10 @@
 ﻿using Sirius.CrossCutting.Email;
-using Sirius.Domain.Entities;
 using Sirius.Domain.Enums;
 using Sirius.Domain.Interfaces;
 using Sirius.Domain.Mapper;
 using Sirius.Domain.Models;
 using Sirius.Infra.Data.Contexts;
 using Sirius.Infra.Data.Repositories;
-using System;
 using System.Collections.Generic;
 
 namespace Sirius.Service
@@ -70,7 +68,7 @@ namespace Sirius.Service
                 return default;
 
             var company = GetCompany(updateCompanyModel.Id);
-            
+
             if (company == null)
                 return default;
 

@@ -1,9 +1,7 @@
 ﻿using Sirius.Domain.Entities;
 using Sirius.Domain.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Sirius.Domain.Mapper
 {
@@ -19,8 +17,8 @@ namespace Sirius.Domain.Mapper
             companyEntities.Select(s => s.ToCompanyModel());
 
         public static CompanyEntity ToCompanyEntity(this CreateCompanyModel companyModel) =>
-            new CompanyEntity() 
-            { 
+            new CompanyEntity()
+            {
                 Id = companyModel.Id,
                 Blocked = companyModel.Blocked,
                 CNPJ = companyModel.CNPJ,

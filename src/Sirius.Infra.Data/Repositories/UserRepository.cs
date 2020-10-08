@@ -2,10 +2,7 @@
 using Sirius.Domain.Entities;
 using Sirius.Domain.Interfaces;
 using Sirius.Infra.Data.Contexts;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Sirius.Infra.Data.Repositories
 {

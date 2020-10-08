@@ -1,15 +1,7 @@
 ﻿using Sirius.Desktop.Controllers;
 using Sirius.Desktop.Models;
-using Sirius.Domain.Interfaces;
-using Sirius.Service;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sirius.Desktop.Views
@@ -30,7 +22,7 @@ namespace Sirius.Desktop.Views
 
         private void LoadCompanies(string name = null, string cnpj = null)
         {
-            var companies = CompanyController.GetCompanies(name ,cnpj);
+            var companies = CompanyController.GetCompanies(name, cnpj);
 
             if (companies != null && companies.Count() > 0)
             {
@@ -59,7 +51,7 @@ namespace Sirius.Desktop.Views
         {
             var company = companiesDataGridView?.CurrentRow?.DataBoundItem as CompanyView;
 
-            if(company == null || company.Id == 0)
+            if (company == null || company.Id == 0)
             {
                 return;
             }
@@ -97,7 +89,7 @@ namespace Sirius.Desktop.Views
                 LoadCompanies();
             }
 
-            
+
         }
 
         private void inactivButton_Click(object sender, EventArgs e)
@@ -131,7 +123,7 @@ namespace Sirius.Desktop.Views
         private void filterButton_Click(object sender, EventArgs e)
         {
 
-            if(string.IsNullOrEmpty(cnpjTextBox.Text.Replace(".", "").Replace(",", "").Replace("/", "").Replace("-", "").Trim()))
+            if (string.IsNullOrEmpty(cnpjTextBox.Text.Replace(".", "").Replace(",", "").Replace("/", "").Replace("-", "").Trim()))
                 LoadCompanies(razaoSocialTextBox.Text);
             else
                 LoadCompanies(razaoSocialTextBox.Text, cnpjTextBox.Text);
