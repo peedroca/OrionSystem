@@ -12,8 +12,7 @@ O projeto teve um tempo de desenvolvimento de 4 meses, tendo seu início no fina
 
 ## Proposta de Negócio
 
-É um sistema utilizado internamente (plataforma desktop) para o gerenciamento de clientes, empresas e contratos, além de tomada de decisões baseado nos gráficos apresentados pelo sistema.
-E também utilizado por clientes para a visualização de gráficos e controle de seus contratos firmados com diversas empresas (plataforma mobile/web).
+Este projeto é uma gestão integrada de Contratos Inteligentes. A ideia principal é cadastrar clientes, empresas e contratos e apoiar a tomada de decições baseado na apresentação dos dados. Além disso, este sistema disponibliza uma interface (plataforma: web/mobile) que permite aos clientes a manutenção e gerenciamento de seus respctivos contratos, com as empresas cadastradas no sistema.
 
 ## Tecnologias implementadas:
 
