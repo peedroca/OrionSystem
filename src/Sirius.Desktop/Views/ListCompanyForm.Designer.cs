@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListCompanyForm));
             this.companiesDataGridView = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +55,7 @@
             this.companiesDataGridView.AllowUserToDeleteRows = false;
             this.companiesDataGridView.AllowUserToResizeColumns = false;
             this.companiesDataGridView.AllowUserToResizeRows = false;
+            this.companiesDataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
             this.companiesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.companiesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -62,6 +64,7 @@
             this.Column4,
             this.Column5});
             this.companiesDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.companiesDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
             this.companiesDataGridView.Location = new System.Drawing.Point(12, 85);
             this.companiesDataGridView.Name = "companiesDataGridView";
             this.companiesDataGridView.RowHeadersVisible = false;
@@ -116,42 +119,50 @@
             // 
             // newButton
             // 
+            this.newButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
+            this.newButton.ForeColor = System.Drawing.SystemColors.Window;
             this.newButton.Location = new System.Drawing.Point(858, 455);
             this.newButton.Name = "newButton";
             this.newButton.Size = new System.Drawing.Size(143, 46);
             this.newButton.TabIndex = 1;
             this.newButton.Text = "Novo";
-            this.newButton.UseVisualStyleBackColor = true;
+            this.newButton.UseVisualStyleBackColor = false;
             this.newButton.Click += new System.EventHandler(this.newButton_Click);
             // 
             // editButton
             // 
+            this.editButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
+            this.editButton.ForeColor = System.Drawing.SystemColors.Window;
             this.editButton.Location = new System.Drawing.Point(709, 455);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(143, 46);
             this.editButton.TabIndex = 2;
             this.editButton.Text = "Editar";
-            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.UseVisualStyleBackColor = false;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // inactivButton
             // 
+            this.inactivButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
+            this.inactivButton.ForeColor = System.Drawing.SystemColors.Window;
             this.inactivButton.Location = new System.Drawing.Point(411, 455);
             this.inactivButton.Name = "inactivButton";
             this.inactivButton.Size = new System.Drawing.Size(143, 46);
             this.inactivButton.TabIndex = 3;
             this.inactivButton.Text = "Bloquear";
-            this.inactivButton.UseVisualStyleBackColor = true;
+            this.inactivButton.UseVisualStyleBackColor = false;
             this.inactivButton.Click += new System.EventHandler(this.inactivButton_Click);
             // 
             // deleteButton
             // 
+            this.deleteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
+            this.deleteButton.ForeColor = System.Drawing.SystemColors.Window;
             this.deleteButton.Location = new System.Drawing.Point(560, 455);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(143, 46);
             this.deleteButton.TabIndex = 4;
             this.deleteButton.Text = "Deletar";
-            this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.UseVisualStyleBackColor = false;
             this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // razaoSocialTextBox
@@ -190,22 +201,26 @@
             // 
             // filterButton
             // 
+            this.filterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
+            this.filterButton.ForeColor = System.Drawing.SystemColors.Window;
             this.filterButton.Location = new System.Drawing.Point(858, 30);
             this.filterButton.Name = "filterButton";
             this.filterButton.Size = new System.Drawing.Size(102, 26);
             this.filterButton.TabIndex = 26;
             this.filterButton.Text = "Filtrar";
-            this.filterButton.UseVisualStyleBackColor = true;
+            this.filterButton.UseVisualStyleBackColor = false;
             this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
             // 
             // backCompanyButton
             // 
+            this.backCompanyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
+            this.backCompanyButton.ForeColor = System.Drawing.SystemColors.Window;
             this.backCompanyButton.Location = new System.Drawing.Point(12, 9);
             this.backCompanyButton.Name = "backCompanyButton";
             this.backCompanyButton.Size = new System.Drawing.Size(113, 56);
             this.backCompanyButton.TabIndex = 27;
             this.backCompanyButton.Text = "Voltar";
-            this.backCompanyButton.UseVisualStyleBackColor = true;
+            this.backCompanyButton.UseVisualStyleBackColor = false;
             this.backCompanyButton.Click += new System.EventHandler(this.backCompanyButton_Click);
             // 
             // ListCompanyForm
@@ -226,6 +241,7 @@
             this.Controls.Add(this.companiesDataGridView);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.Name = "ListCompanyForm";

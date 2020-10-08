@@ -330,6 +330,33 @@
   <ItemGroup>
     <None Include="Resources\logoSiriuss.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_account_circle_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ícone-preto-da-impressão-digital-no-fundo-branco-ilustração-do-vetor-115636742.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Interface-Login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Interface-Login-icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows-Turn-Off-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows-Turn-Off-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finger-Print-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finger-Print-icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\city-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

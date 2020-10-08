@@ -61,6 +61,16 @@ namespace Sirius.Desktop.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap city_icon {
+            get {
+                object obj = ResourceManager.GetObject("city-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Server=DESKTOP-NJGRATC\SQLEXPRESS;Database=dbSirius;Trusted_Connection=True;.
         /// </summary>
         internal static string dbPath {
@@ -72,9 +82,89 @@ namespace Sirius.Desktop.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Finger_Print_icon {
+            get {
+                object obj = ResourceManager.GetObject("Finger-Print-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Finger_Print_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Finger-Print-icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_account_circle_red {
+            get {
+                object obj = ResourceManager.GetObject("ic_account_circle_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ícone_preto_da_impressão_digital_no_fundo_branco_ilustração_do_vetor_115636742 {
+            get {
+                object obj = ResourceManager.GetObject("ícone-preto-da-impressão-digital-no-fundo-branco-ilustração-do-vetor-115636742", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logoSiriuss {
             get {
                 object obj = ResourceManager.GetObject("logoSiriuss", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Interface_Login_icon {
+            get {
+                object obj = ResourceManager.GetObject("User-Interface-Login-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Interface_Login_icon2 {
+            get {
+                object obj = ResourceManager.GetObject("User-Interface-Login-icon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Windows_Turn_Off_icon {
+            get {
+                object obj = ResourceManager.GetObject("Windows-Turn-Off-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Windows_Turn_Off_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Windows-Turn-Off-icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
