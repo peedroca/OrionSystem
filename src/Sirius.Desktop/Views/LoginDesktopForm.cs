@@ -16,5 +16,23 @@ namespace Sirius.Desktop.Views
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainMenuForm form1 = new MainMenuForm();
+            form1.ShowDialog();
+            this.Close(); //Abrir Form
+        }
     }
 }
