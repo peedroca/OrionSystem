@@ -61,7 +61,7 @@ namespace Sirius.Desktop.Properties {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Server=DESKTOP-NJGRATC\SQLEXPRESS;Database=dbSirius;Trusted_Connection=True;.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Server=\tbd.asp.hostazul.com.br,3433;Database=20447_siriusdb;User Id=20447_siriusdba;Password=Qaj7zj!NspMj;.
         /// </summary>
         internal static string dbPath {
             get {

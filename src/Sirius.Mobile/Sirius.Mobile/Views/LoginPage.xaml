@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sirius.Mobile.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="logo_contracts_side"/>
+            <StackLayout Margin="10">
+                <Label Text="Username"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Image Source="ic_supervised_user_circle" Aspect="AspectFit" HeightRequest="30" />
+                    <Entry Text="{Binding User.Username}" HorizontalOptions="FillAndExpand" />
+                </StackLayout >
+                <Label Text="Password"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Image Source="ic_lock_outline.png" Aspect="AspectFit" HeightRequest="30" />
+                    <Entry Text="{Binding User.Password}" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+                                   
+
+                <Button Text="ENTER" Command="{Binding LoginCommand}" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
