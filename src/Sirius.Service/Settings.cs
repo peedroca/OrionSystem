@@ -1,8 +1,5 @@
 ﻿using Sirius.CrossCutting.Email.Models;
 using Sirius.Infra.Data.Contexts;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Sirius.Service
 {

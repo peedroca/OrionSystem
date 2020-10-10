@@ -99,34 +99,9 @@
             Motivos de conclusão do contrato.
             </summary>
         </member>
-        <member name="P:Sirius.Domain.Entities.SmartContractEntity.DueDate">
-            <summary>
-            Data de vencimento.
-            </summary>
-        </member>
         <member name="P:Sirius.Domain.Entities.SmartContractEntity.Value">
             <summary>
             Valor do contrato.
-            </summary>
-        </member>
-        <member name="P:Sirius.Domain.Entities.SmartContractEntity.AuthKey">
-            <summary>
-            Chave de autenticação do Contrato.
-            </summary>
-        </member>
-        <member name="P:Sirius.Domain.Entities.SmartContractEntity.CodePayment">
-            <summary>
-            Código para pagamento do Contrato.
-            </summary>
-        </member>
-        <member name="P:Sirius.Domain.Entities.SmartContractEntity.Status">
-            <summary>
-            Status do contratos inteligentes: Payed, AwaitingPayment, Terminated, Finished, Expired
-            </summary>
-        </member>
-        <member name="P:Sirius.Domain.Entities.SmartContractEntity.ReasonTermination">
-            <summary>
-            Motivo da Rescisão
             </summary>
         </member>
         <member name="P:Sirius.Domain.Entities.SmartContractEntity.CreatedOn">
@@ -212,6 +187,11 @@
         <member name="T:Sirius.Domain.Enums.EStatusSmartContract">
             <summary>
             Status do contrato inteligente 
+            </summary>
+        </member>
+        <member name="F:Sirius.Domain.Enums.EStatusSmartContract.None">
+            <summary>
+            Nenhum
             </summary>
         </member>
         <member name="F:Sirius.Domain.Enums.EStatusSmartContract.Payed">
@@ -321,6 +301,18 @@
             </summary>
             <param name="id"> Id do contrato</param>
             <returns></returns>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.ISmartContractRepository`1.GetContracts(System.Int64)">
+            <summary>
+            Obter Contratos
+            </summary>
+            <param name="id">Id da empresa</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sirius.Domain.Interfaces.ISmartContractService">
+            <summary>
+            Interface do Serviço de Contrato inteligente
+            </summary>
         </member>
         <member name="T:Sirius.Domain.Interfaces.IUserRepository`1">
             <summary>
@@ -548,6 +540,57 @@
             </summary>
             <param name="userModel"></param>
         </member>
+        <member name="T:Sirius.Domain.Models.CreateSmartContractModel">
+            <summary>
+            Modelo de criação de contrato inteligente
+            </summary>
+        </member>
+        <member name="M:Sirius.Domain.Models.CreateSmartContractModel.#ctor(System.String,System.String,System.String,System.String,System.Decimal,Sirius.Domain.Models.CompanyModel)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="title">Título do contrato</param>
+            <param name="description">Descrição do contrato</param>
+            <param name="terminationCondition">Condições para termino do contrato</param>
+            <param name="conclusionCondition">Condições para conclusão do contrato</param>
+            <param name="value">Valor do contrato</param>
+            <param name="companyModel">Empresa dona do contrato</param>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateSmartContractModel.Id">
+            <summary>
+            Identificação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateSmartContractModel.Title">
+            <summary>
+            Título do contrato inteligente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateSmartContractModel.Description">
+            <summary>
+            Descrição do contrato inteligente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateSmartContractModel.TerminationCondition">
+            <summary>
+            Motivos de rescisão do contrato.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateSmartContractModel.ConclusionCondition">
+            <summary>
+            Motivos de conclusão do contrato.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateSmartContractModel.Value">
+            <summary>
+            Valor do contrato.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateSmartContractModel.CompanyModel">
+            <summary>
+            Empresa dona do Contrato
+            </summary>
+        </member>
         <member name="T:Sirius.Domain.Models.CreateUserModel">
             <summary>
             Modelo de criação de usuário
@@ -634,7 +677,7 @@
             Modelo de Contrato Inteligente
             </summary>
         </member>
-        <member name="M:Sirius.Domain.Models.SmartContractModel.#ctor(System.Int64,System.String,System.String,System.String,System.String,System.DateTime,System.Decimal,System.String,Sirius.Domain.Models.CompanyModel)">
+        <member name="M:Sirius.Domain.Models.SmartContractModel.#ctor(System.Int64,System.String,System.String,System.String,System.String,System.Decimal,Sirius.Domain.Models.CompanyModel)">
             <summary>
             Construtor
             </summary>
@@ -643,9 +686,7 @@
             <param name="description">Descrição do contrato</param>
             <param name="terminationCondition">Condições para termino do contrato</param>
             <param name="conclusionCondition">Condições para conclusão do contrato</param>
-            <param name="dueDate">Data de validade</param>
             <param name="value">Valor do contrato</param>
-            <param name="authKey">Chave de autenticação</param>
             <param name="companyModel">Modelo da Empresa</param>
         </member>
         <member name="P:Sirius.Domain.Models.SmartContractModel.Id">
@@ -673,11 +714,6 @@
             Motivos de conclusão do contrato.
             </summary>
         </member>
-        <member name="P:Sirius.Domain.Models.SmartContractModel.DueDate">
-            <summary>
-            Data de vencimento.
-            </summary>
-        </member>
         <member name="P:Sirius.Domain.Models.SmartContractModel.Value">
             <summary>
             Valor do contrato.
@@ -697,6 +733,19 @@
             <summary>
             Modelo de Atualização de Empresa
             </summary>
+        </member>
+        <member name="M:Sirius.Domain.Models.UpdateCompanyModel.#ctor(System.Int64,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="name"></param>
+            <param name="nickname"></param>
+            <param name="cNPJ"></param>
+            <param name="phone"></param>
+            <param name="email"></param>
+            <param name="deleted"></param>
+            <param name="blocked"></param>
         </member>
         <member name="P:Sirius.Domain.Models.UpdateCompanyModel.Id">
             <summary>
@@ -757,6 +806,90 @@
             <summary>
             Usuário utilizado pela empresa.
             </summary>
+        </member>
+        <member name="T:Sirius.Domain.Models.UpdateSmartContractModel">
+            <summary>
+            Modelo de criação de contrato inteligente
+            </summary>
+        </member>
+        <member name="M:Sirius.Domain.Models.UpdateSmartContractModel.#ctor(System.Int64,System.String,System.String,System.String,System.String,System.Decimal,System.Boolean,System.Boolean)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="id">Identificação do Cliente</param>
+            <param name="title">Título do contrato</param>
+            <param name="description">Descrição do contrato</param>
+            <param name="terminationCondition">Condições para termino do contrato</param>
+            <param name="conclusionCondition">Condições para conclusão do contrato</param>
+            <param name="value">Valor do contrato</param>
+            <param name="deleted">Contrato deletado</param>
+            <param name="inactived">Contrato inativado</param>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractModel.Id">
+            <summary>
+            Identificação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractModel.Title">
+            <summary>
+            Título do contrato inteligente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractModel.Description">
+            <summary>
+            Descrição do contrato inteligente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractModel.TerminationCondition">
+            <summary>
+            Motivos de rescisão do contrato.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractModel.ConclusionCondition">
+            <summary>
+            Motivos de conclusão do contrato.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractModel.Value">
+            <summary>
+            Valor do contrato.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractModel.AuthKey">
+            <summary>
+            Chave de autenticação do Contrato.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractModel.CompanyModel">
+            <summary>
+            Empresa dona do Contrato
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractModel.CreatedOn">
+            <summary>
+            Data de Criação do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractModel.UpdatedOn">
+            <summary>
+            Data de Atualização do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractModel.Deleted">
+            <summary>
+            Registro Apagado
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractModel.Inactived">
+            <summary>
+            Inativo
+            </summary>
+        </member>
+        <member name="M:Sirius.Domain.Models.UpdateSmartContractModel.LoadCompanyModel(Sirius.Domain.Models.CompanyModel)">
+            <summary>
+            Carrega a empresa dona do contrato
+            </summary>
+            <param name="company">Empresa dona do contrato</param>
         </member>
         <member name="T:Sirius.Domain.Models.UserModel">
             <summary>

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Sirius.Domain.Interfaces
 {
@@ -8,7 +6,7 @@ namespace Sirius.Domain.Interfaces
     /// Interface do repositorio da empresa
     /// </summary>
     public interface ICompanyRepository<Company>
-    {        
+    {
         /// <summary>
         /// Salva empresa
         /// </summary>

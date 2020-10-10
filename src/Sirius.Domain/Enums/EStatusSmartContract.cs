@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Sirius.Domain.Enums
+﻿namespace Sirius.Domain.Enums
 {
     /// <summary>
     /// Status do contrato inteligente 
@@ -10,9 +6,14 @@ namespace Sirius.Domain.Enums
     public enum EStatusSmartContract
     {
         /// <summary>
+        /// Nenhum
+        /// </summary>
+        None,
+
+        /// <summary>
         /// Pago
         /// </summary>
-        Payed, 
+        Payed,
 
         /// <summary>
         /// Aguardando pagamento
@@ -22,13 +23,13 @@ namespace Sirius.Domain.Enums
         /// <summary>
         /// Rescindido
         /// </summary>
-        Terminated, 
+        Terminated,
 
         /// <summary>
         /// Finalizado
         /// </summary>
-        Finished, 
-        
+        Finished,
+
         /// <summary>
         /// Expirado
         /// </summary>

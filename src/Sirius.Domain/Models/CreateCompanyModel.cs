@@ -3,7 +3,6 @@ using Flunt.Validations;
 using Sirius.Domain.Entities;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Sirius.Domain.Models
 {
@@ -39,6 +38,7 @@ namespace Sirius.Domain.Models
                 .IsNotNullOrEmpty(Email, "Email", "O e-mail é obrigatório.")
                 .IsEmail(Email, "Email", "E-mail incorreto.")
                 .IsNotNullOrEmpty(CNPJ, "CNPJ", "O CNPJ é obrigatório.")
+                .IsNotNullOrEmpty(Nickname, "Fantasia", "O nome fantasia é obrigatório.")
                 .IsNotNullOrEmpty(Name, "Razão Social", "A razão social é obrigatória."));
         }
 

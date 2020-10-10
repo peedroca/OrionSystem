@@ -1,23 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
-using Sirius.API.Auth;
 using Sirius.Domain.Interfaces;
 using Sirius.Infra.Data.Contexts;
 using Sirius.Service;
+using System.Text;
 
 namespace Sirius.API
 {
@@ -55,7 +47,8 @@ namespace Sirius.API
 
             services.AddDbContext<SiriusDbContext>(o =>
             {
-                o.UseSqlServer(Configuration.GetConnectionString("LocalVinicius"));
+                o.UseSqlServer(Configuration.GetConnectionString("LocalServer"),
+                    b => b.MigrationsAssembly("Sirius.API"));
             });
 
             services.AddScoped<IUserService, UserService>();
