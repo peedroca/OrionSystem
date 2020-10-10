@@ -61,6 +61,16 @@ namespace Sirius.Desktop.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _3507749_account_balance_bank_business_finance_iconoteka_money_107683__2_ {
+            get {
+                object obj = ResourceManager.GetObject("3507749-account-balance-bank-business-finance-iconoteka-money_107683 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Server=DESKTOP-NJGRATC\SQLEXPRESS;Database=dbSirius;Trusted_Connection=True;.
         /// </summary>
         internal static string dbPath {
