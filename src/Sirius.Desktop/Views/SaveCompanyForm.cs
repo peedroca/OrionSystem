@@ -1,16 +1,6 @@
 ﻿using Sirius.Desktop.Controllers;
-using Sirius.Domain.Interfaces;
 using Sirius.Domain.Models;
-using Sirius.Service;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sirius.Desktop.Views
@@ -43,7 +33,7 @@ namespace Sirius.Desktop.Views
         {
             ClearLabels();
             SaveCompany();
-            
+
         }
 
         private void ClearFields()

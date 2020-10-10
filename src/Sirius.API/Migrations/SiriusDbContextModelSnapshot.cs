@@ -3,17 +3,15 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sirius.Infra.Data.Contexts;
 
-namespace Sirius.Infra.Data.Migrations
+namespace Sirius.API.Migrations
 {
     [DbContext(typeof(SiriusDbContext))]
-    [Migration("20200919203305_SmartContract")]
-    partial class SmartContract
+    partial class SiriusDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,20 +19,17 @@ namespace Sirius.Infra.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Sirius.Domain.Entities.SmartContractEntity", b =>
+            modelBuilder.Entity("Sirius.Domain.Entities.CompanyEntity", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("AuthKey")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<bool>("Blocked")
+                        .HasColumnType("bit");
 
-                    b.Property<string>("CodePayment")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ConclusionCondition")
+                    b.Property<string>("CNPJ")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedOn")
@@ -43,20 +38,55 @@ namespace Sirius.Infra.Data.Migrations
                     b.Property<bool>("Deleted")
                         .HasColumnType("bit");
 
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Nickname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long?>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Companies");
+                });
+
+            modelBuilder.Entity("Sirius.Domain.Entities.SmartContractEntity", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ConclusionCondition")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("CurrentCompanyEntityId")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("Deleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DueDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<bool>("Inactived")
                         .HasColumnType("bit");
-
-                    b.Property<string>("ReasonTermination")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
 
                     b.Property<string>("TerminationCondition")
                         .HasColumnType("nvarchar(max)");
@@ -71,6 +101,8 @@ namespace Sirius.Infra.Data.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CurrentCompanyEntityId");
 
                     b.ToTable("SmartContracts");
                 });
@@ -109,6 +141,22 @@ namespace Sirius.Infra.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("Sirius.Domain.Entities.CompanyEntity", b =>
+                {
+                    b.HasOne("Sirius.Domain.Entities.UserEntity", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Sirius.Domain.Entities.SmartContractEntity", b =>
+                {
+                    b.HasOne("Sirius.Domain.Entities.CompanyEntity", "CompanyEntity")
+                        .WithMany("SmartContracts")
+                        .HasForeignKey("CurrentCompanyEntityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

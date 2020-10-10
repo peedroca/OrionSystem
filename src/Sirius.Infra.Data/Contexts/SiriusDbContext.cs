@@ -1,11 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Sirius.Domain.Entities;
-using Sirius.Infra.Data.Migrations;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Sirius.Infra.Data.Contexts 
+namespace Sirius.Infra.Data.Contexts
 {
     /// <summary>
     /// Contexto do banco de dados
