@@ -175,8 +175,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Controllers\SmartContractController.cs" />
     <Compile Include="Extesions\ExtensionMethods.cs" />
     <Compile Include="Models\CompanyView.cs" />
+    <Compile Include="Models\SmartContractViews.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\ChartFormControl.cs">

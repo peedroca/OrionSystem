@@ -33,5 +33,27 @@ namespace Sirius.Desktop.Extesions
         }
 
         #endregion Conversão CompanyModel
+
+        #region Conversão SmartContractModel
+        public static SmartContractViews ToSmartContractView(this SmartContractModel smartContractModel)
+        {
+            return new SmartContractViews()
+            {
+                Id = smartContractModel.Id,
+                Title = smartContractModel.Title,
+                Description = smartContractModel.Description,
+                TerminationCondition = smartContractModel.TerminationCondition,
+                ConclusionCondition = smartContractModel.ConclusionCondition,
+                Value = smartContractModel.Value,
+                AuthKey = smartContractModel.AuthKey,
+                CompanyModel = smartContractModel.CompanyModel
+            };
+        }
+
+        public static IEnumerable<SmartContractViews> ToSmartContractView(this IEnumerable<SmartContractModel> smartContractModels)
+        {
+            return smartContractModels.Select(s => s.ToSmartContractView()).ToList();
+        }
+        #endregion Conversão SmartContractModel
     }
 }
