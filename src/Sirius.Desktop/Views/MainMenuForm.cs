@@ -15,12 +15,7 @@ namespace Sirius.Desktop.Views
         public MainMenuForm()
         {
             InitializeComponent();
-            listCompanyControl1.BringToFront();
-            clientFormControl1.BringToFront();
-            smartContractsFormControl1.BringToFront();
-            reportFormControl1.BringToFront();
-            userFormControl1.BringToFront();
-            chartFormControl1.BringToFront();
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -61,6 +56,11 @@ namespace Sirius.Desktop.Views
         private void chartButton_Click_1(object sender, EventArgs e)
         {
             chartFormControl1.BringToFront();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
