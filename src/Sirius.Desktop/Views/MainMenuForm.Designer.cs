@@ -30,14 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenuForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.chartButton = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.ReportButton = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.smartContractsButton = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.userButton = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.clientButton = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.companyButton = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -48,13 +40,21 @@
             this.smartContractsFormControl1 = new Sirius.Desktop.Views.SmartContractsFormControl();
             this.clientFormControl1 = new Sirius.Desktop.Views.ClientFormControl();
             this.listCompanyControl1 = new Sirius.Desktop.Views.ListCompanyControl();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.companyButton = new System.Windows.Forms.Button();
+            this.clientButton = new System.Windows.Forms.Button();
+            this.SmartContractButton = new System.Windows.Forms.Button();
+            this.reportButton = new System.Windows.Forms.Button();
+            this.userButton = new System.Windows.Forms.Button();
+            this.chartButton = new System.Windows.Forms.Button();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
-            this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,263 +62,13 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.bunifuGradientPanel1);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(32)))));
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.flowLayoutPanel1);
             this.panel1.Location = new System.Drawing.Point(3, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(170, 540);
             this.panel1.TabIndex = 0;
-            // 
-            // bunifuGradientPanel1
-            // 
-            this.bunifuGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.Controls.Add(this.chartButton);
-            this.bunifuGradientPanel1.Controls.Add(this.pictureBox3);
-            this.bunifuGradientPanel1.Controls.Add(this.ReportButton);
-            this.bunifuGradientPanel1.Controls.Add(this.smartContractsButton);
-            this.bunifuGradientPanel1.Controls.Add(this.userButton);
-            this.bunifuGradientPanel1.Controls.Add(this.clientButton);
-            this.bunifuGradientPanel1.Controls.Add(this.companyButton);
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(39)))), ((int)(((byte)(61)))));
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(2)))));
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(3, 3);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(158, 534);
-            this.bunifuGradientPanel1.TabIndex = 0;
-            // 
-            // chartButton
-            // 
-            this.chartButton.Activecolor = System.Drawing.Color.Transparent;
-            this.chartButton.BackColor = System.Drawing.Color.Transparent;
-            this.chartButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.chartButton.BorderRadius = 0;
-            this.chartButton.ButtonText = "Graficos";
-            this.chartButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chartButton.DisabledColor = System.Drawing.Color.Gray;
-            this.chartButton.Iconcolor = System.Drawing.Color.Transparent;
-            this.chartButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("chartButton.Iconimage")));
-            this.chartButton.Iconimage_right = null;
-            this.chartButton.Iconimage_right_Selected = null;
-            this.chartButton.Iconimage_Selected = null;
-            this.chartButton.IconMarginLeft = 0;
-            this.chartButton.IconMarginRight = 0;
-            this.chartButton.IconRightVisible = true;
-            this.chartButton.IconRightZoom = 0D;
-            this.chartButton.IconVisible = true;
-            this.chartButton.IconZoom = 60D;
-            this.chartButton.IsTab = false;
-            this.chartButton.Location = new System.Drawing.Point(4, 442);
-            this.chartButton.Margin = new System.Windows.Forms.Padding(4);
-            this.chartButton.Name = "chartButton";
-            this.chartButton.Normalcolor = System.Drawing.Color.Transparent;
-            this.chartButton.OnHovercolor = System.Drawing.Color.Transparent;
-            this.chartButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.chartButton.selected = false;
-            this.chartButton.Size = new System.Drawing.Size(144, 62);
-            this.chartButton.TabIndex = 6;
-            this.chartButton.Text = "Graficos";
-            this.chartButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.chartButton.Textcolor = System.Drawing.Color.White;
-            this.chartButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chartButton.Click += new System.EventHandler(this.chartButton_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(-3, -3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(161, 76);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            // 
-            // ReportButton
-            // 
-            this.ReportButton.Activecolor = System.Drawing.Color.Transparent;
-            this.ReportButton.BackColor = System.Drawing.Color.Transparent;
-            this.ReportButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ReportButton.BorderRadius = 0;
-            this.ReportButton.ButtonText = "Relatórios";
-            this.ReportButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ReportButton.DisabledColor = System.Drawing.Color.Gray;
-            this.ReportButton.Iconcolor = System.Drawing.Color.Transparent;
-            this.ReportButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("ReportButton.Iconimage")));
-            this.ReportButton.Iconimage_right = null;
-            this.ReportButton.Iconimage_right_Selected = null;
-            this.ReportButton.Iconimage_Selected = null;
-            this.ReportButton.IconMarginLeft = 0;
-            this.ReportButton.IconMarginRight = 0;
-            this.ReportButton.IconRightVisible = true;
-            this.ReportButton.IconRightZoom = 0D;
-            this.ReportButton.IconVisible = true;
-            this.ReportButton.IconZoom = 60D;
-            this.ReportButton.IsTab = false;
-            this.ReportButton.Location = new System.Drawing.Point(4, 302);
-            this.ReportButton.Margin = new System.Windows.Forms.Padding(4);
-            this.ReportButton.Name = "ReportButton";
-            this.ReportButton.Normalcolor = System.Drawing.Color.Transparent;
-            this.ReportButton.OnHovercolor = System.Drawing.Color.Transparent;
-            this.ReportButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.ReportButton.selected = false;
-            this.ReportButton.Size = new System.Drawing.Size(144, 62);
-            this.ReportButton.TabIndex = 4;
-            this.ReportButton.Text = "Relatórios";
-            this.ReportButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ReportButton.Textcolor = System.Drawing.Color.White;
-            this.ReportButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReportButton.Click += new System.EventHandler(this.ReportButton_Click);
-            // 
-            // smartContractsButton
-            // 
-            this.smartContractsButton.Activecolor = System.Drawing.Color.Transparent;
-            this.smartContractsButton.BackColor = System.Drawing.Color.Transparent;
-            this.smartContractsButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.smartContractsButton.BorderRadius = 0;
-            this.smartContractsButton.ButtonText = "Contratos";
-            this.smartContractsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.smartContractsButton.DisabledColor = System.Drawing.Color.Transparent;
-            this.smartContractsButton.Iconcolor = System.Drawing.Color.Transparent;
-            this.smartContractsButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("smartContractsButton.Iconimage")));
-            this.smartContractsButton.Iconimage_right = null;
-            this.smartContractsButton.Iconimage_right_Selected = null;
-            this.smartContractsButton.Iconimage_Selected = null;
-            this.smartContractsButton.IconMarginLeft = 0;
-            this.smartContractsButton.IconMarginRight = 0;
-            this.smartContractsButton.IconRightVisible = true;
-            this.smartContractsButton.IconRightZoom = 0D;
-            this.smartContractsButton.IconVisible = true;
-            this.smartContractsButton.IconZoom = 60D;
-            this.smartContractsButton.IsTab = false;
-            this.smartContractsButton.Location = new System.Drawing.Point(4, 232);
-            this.smartContractsButton.Margin = new System.Windows.Forms.Padding(4);
-            this.smartContractsButton.Name = "smartContractsButton";
-            this.smartContractsButton.Normalcolor = System.Drawing.Color.Transparent;
-            this.smartContractsButton.OnHovercolor = System.Drawing.Color.Transparent;
-            this.smartContractsButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.smartContractsButton.selected = false;
-            this.smartContractsButton.Size = new System.Drawing.Size(144, 62);
-            this.smartContractsButton.TabIndex = 2;
-            this.smartContractsButton.Text = "Contratos";
-            this.smartContractsButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.smartContractsButton.Textcolor = System.Drawing.Color.White;
-            this.smartContractsButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.smartContractsButton.Click += new System.EventHandler(this.smartContractsButton_Click);
-            // 
-            // userButton
-            // 
-            this.userButton.Activecolor = System.Drawing.Color.Transparent;
-            this.userButton.BackColor = System.Drawing.Color.Transparent;
-            this.userButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userButton.BorderRadius = 0;
-            this.userButton.ButtonText = "Usuários";
-            this.userButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.userButton.DisabledColor = System.Drawing.Color.Gray;
-            this.userButton.Iconcolor = System.Drawing.Color.Transparent;
-            this.userButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("userButton.Iconimage")));
-            this.userButton.Iconimage_right = null;
-            this.userButton.Iconimage_right_Selected = null;
-            this.userButton.Iconimage_Selected = null;
-            this.userButton.IconMarginLeft = 0;
-            this.userButton.IconMarginRight = 0;
-            this.userButton.IconRightVisible = true;
-            this.userButton.IconRightZoom = 0D;
-            this.userButton.IconVisible = true;
-            this.userButton.IconZoom = 60D;
-            this.userButton.IsTab = false;
-            this.userButton.Location = new System.Drawing.Point(4, 372);
-            this.userButton.Margin = new System.Windows.Forms.Padding(4);
-            this.userButton.Name = "userButton";
-            this.userButton.Normalcolor = System.Drawing.Color.Transparent;
-            this.userButton.OnHovercolor = System.Drawing.Color.Transparent;
-            this.userButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.userButton.selected = false;
-            this.userButton.Size = new System.Drawing.Size(144, 62);
-            this.userButton.TabIndex = 3;
-            this.userButton.Text = "Usuários";
-            this.userButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.userButton.Textcolor = System.Drawing.Color.White;
-            this.userButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userButton.Click += new System.EventHandler(this.userButton_Click);
-            // 
-            // clientButton
-            // 
-            this.clientButton.Activecolor = System.Drawing.Color.Transparent;
-            this.clientButton.BackColor = System.Drawing.Color.Transparent;
-            this.clientButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.clientButton.BorderRadius = 0;
-            this.clientButton.ButtonText = "Clientes";
-            this.clientButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clientButton.DisabledColor = System.Drawing.Color.Gray;
-            this.clientButton.Iconcolor = System.Drawing.Color.Transparent;
-            this.clientButton.Iconimage = ((System.Drawing.Image)(resources.GetObject("clientButton.Iconimage")));
-            this.clientButton.Iconimage_right = null;
-            this.clientButton.Iconimage_right_Selected = null;
-            this.clientButton.Iconimage_Selected = null;
-            this.clientButton.IconMarginLeft = 0;
-            this.clientButton.IconMarginRight = 0;
-            this.clientButton.IconRightVisible = true;
-            this.clientButton.IconRightZoom = 0D;
-            this.clientButton.IconVisible = true;
-            this.clientButton.IconZoom = 60D;
-            this.clientButton.IsTab = false;
-            this.clientButton.Location = new System.Drawing.Point(4, 162);
-            this.clientButton.Margin = new System.Windows.Forms.Padding(4);
-            this.clientButton.Name = "clientButton";
-            this.clientButton.Normalcolor = System.Drawing.Color.Transparent;
-            this.clientButton.OnHovercolor = System.Drawing.Color.Transparent;
-            this.clientButton.OnHoverTextColor = System.Drawing.Color.White;
-            this.clientButton.selected = false;
-            this.clientButton.Size = new System.Drawing.Size(144, 62);
-            this.clientButton.TabIndex = 1;
-            this.clientButton.Text = "Clientes";
-            this.clientButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.clientButton.Textcolor = System.Drawing.Color.White;
-            this.clientButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clientButton.Click += new System.EventHandler(this.clientButton_Click_1);
-            // 
-            // companyButton
-            // 
-            this.companyButton.Activecolor = System.Drawing.Color.Transparent;
-            this.companyButton.BackColor = System.Drawing.Color.Transparent;
-            this.companyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.companyButton.BorderRadius = 0;
-            this.companyButton.ButtonText = "Empresas";
-            this.companyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.companyButton.DisabledColor = System.Drawing.Color.Transparent;
-            this.companyButton.ForeColor = System.Drawing.Color.Black;
-            this.companyButton.Iconcolor = System.Drawing.Color.Transparent;
-            this.companyButton.Iconimage = global::Sirius.Desktop.Properties.Resources._3507749_account_balance_bank_business_finance_iconoteka_money_107683__2_;
-            this.companyButton.Iconimage_right = null;
-            this.companyButton.Iconimage_right_Selected = null;
-            this.companyButton.Iconimage_Selected = null;
-            this.companyButton.IconMarginLeft = 0;
-            this.companyButton.IconMarginRight = 0;
-            this.companyButton.IconRightVisible = true;
-            this.companyButton.IconRightZoom = 0D;
-            this.companyButton.IconVisible = true;
-            this.companyButton.IconZoom = 60D;
-            this.companyButton.IsTab = false;
-            this.companyButton.Location = new System.Drawing.Point(4, 92);
-            this.companyButton.Margin = new System.Windows.Forms.Padding(4);
-            this.companyButton.Name = "companyButton";
-            this.companyButton.Normalcolor = System.Drawing.Color.Transparent;
-            this.companyButton.OnHovercolor = System.Drawing.Color.Transparent;
-            this.companyButton.OnHoverTextColor = System.Drawing.Color.Transparent;
-            this.companyButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.companyButton.selected = false;
-            this.companyButton.Size = new System.Drawing.Size(144, 62);
-            this.companyButton.TabIndex = 0;
-            this.companyButton.Text = "Empresas";
-            this.companyButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.companyButton.Textcolor = System.Drawing.Color.White;
-            this.companyButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.companyButton.Click += new System.EventHandler(this.companyButton_Click);
             // 
             // panel2
             // 
@@ -433,6 +183,146 @@
             this.listCompanyControl1.Size = new System.Drawing.Size(834, 472);
             this.listCompanyControl1.TabIndex = 0;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(161, 86);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
+            // companyButton
+            // 
+            this.companyButton.BackColor = System.Drawing.Color.Transparent;
+            this.companyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.companyButton.FlatAppearance.BorderSize = 0;
+            this.companyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.companyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.companyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.companyButton.ForeColor = System.Drawing.Color.Transparent;
+            this.companyButton.Image = global::Sirius.Desktop.Properties.Resources._3507749_account_balance_bank_business_finance_iconoteka_money_107683__2_;
+            this.companyButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.companyButton.Location = new System.Drawing.Point(3, 3);
+            this.companyButton.Name = "companyButton";
+            this.companyButton.Size = new System.Drawing.Size(144, 62);
+            this.companyButton.TabIndex = 7;
+            this.companyButton.Text = "Empresas";
+            this.companyButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.companyButton.UseVisualStyleBackColor = false;
+            this.companyButton.Click += new System.EventHandler(this.companyButton_Click_1);
+            // 
+            // clientButton
+            // 
+            this.clientButton.BackColor = System.Drawing.Color.Transparent;
+            this.clientButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clientButton.FlatAppearance.BorderSize = 0;
+            this.clientButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.clientButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clientButton.ForeColor = System.Drawing.Color.Transparent;
+            this.clientButton.Image = ((System.Drawing.Image)(resources.GetObject("clientButton.Image")));
+            this.clientButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clientButton.Location = new System.Drawing.Point(3, 71);
+            this.clientButton.Name = "clientButton";
+            this.clientButton.Size = new System.Drawing.Size(144, 62);
+            this.clientButton.TabIndex = 8;
+            this.clientButton.Text = "Clientes";
+            this.clientButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.clientButton.UseVisualStyleBackColor = false;
+            this.clientButton.Click += new System.EventHandler(this.clientButton_Click_2);
+            // 
+            // SmartContractButton
+            // 
+            this.SmartContractButton.BackColor = System.Drawing.Color.Transparent;
+            this.SmartContractButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SmartContractButton.FlatAppearance.BorderSize = 0;
+            this.SmartContractButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.SmartContractButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SmartContractButton.ForeColor = System.Drawing.Color.Transparent;
+            this.SmartContractButton.Image = ((System.Drawing.Image)(resources.GetObject("SmartContractButton.Image")));
+            this.SmartContractButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SmartContractButton.Location = new System.Drawing.Point(3, 139);
+            this.SmartContractButton.Name = "SmartContractButton";
+            this.SmartContractButton.Size = new System.Drawing.Size(144, 62);
+            this.SmartContractButton.TabIndex = 9;
+            this.SmartContractButton.Text = "Contratos";
+            this.SmartContractButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.SmartContractButton.UseVisualStyleBackColor = false;
+            this.SmartContractButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // reportButton
+            // 
+            this.reportButton.BackColor = System.Drawing.Color.Transparent;
+            this.reportButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reportButton.FlatAppearance.BorderSize = 0;
+            this.reportButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.reportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reportButton.ForeColor = System.Drawing.Color.Transparent;
+            this.reportButton.Image = ((System.Drawing.Image)(resources.GetObject("reportButton.Image")));
+            this.reportButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reportButton.Location = new System.Drawing.Point(3, 207);
+            this.reportButton.Name = "reportButton";
+            this.reportButton.Size = new System.Drawing.Size(144, 62);
+            this.reportButton.TabIndex = 10;
+            this.reportButton.Text = "Relatórios";
+            this.reportButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.reportButton.UseVisualStyleBackColor = false;
+            this.reportButton.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // userButton
+            // 
+            this.userButton.BackColor = System.Drawing.Color.Transparent;
+            this.userButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.userButton.FlatAppearance.BorderSize = 0;
+            this.userButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.userButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.userButton.ForeColor = System.Drawing.Color.Transparent;
+            this.userButton.Image = ((System.Drawing.Image)(resources.GetObject("userButton.Image")));
+            this.userButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.userButton.Location = new System.Drawing.Point(3, 275);
+            this.userButton.Name = "userButton";
+            this.userButton.Size = new System.Drawing.Size(144, 62);
+            this.userButton.TabIndex = 11;
+            this.userButton.Text = "Usuários";
+            this.userButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.userButton.UseVisualStyleBackColor = false;
+            this.userButton.Click += new System.EventHandler(this.userButton_Click_1);
+            // 
+            // chartButton
+            // 
+            this.chartButton.BackColor = System.Drawing.Color.Transparent;
+            this.chartButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chartButton.FlatAppearance.BorderSize = 0;
+            this.chartButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.chartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chartButton.ForeColor = System.Drawing.Color.Transparent;
+            this.chartButton.Image = ((System.Drawing.Image)(resources.GetObject("chartButton.Image")));
+            this.chartButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.chartButton.Location = new System.Drawing.Point(3, 343);
+            this.chartButton.Name = "chartButton";
+            this.chartButton.Size = new System.Drawing.Size(144, 62);
+            this.chartButton.TabIndex = 12;
+            this.chartButton.Text = "Graficos";
+            this.chartButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chartButton.UseVisualStyleBackColor = false;
+            this.chartButton.Click += new System.EventHandler(this.chartButton_Click_1);
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(45)))), ((int)(((byte)(66)))));
+            this.flowLayoutPanel1.Controls.Add(this.companyButton);
+            this.flowLayoutPanel1.Controls.Add(this.clientButton);
+            this.flowLayoutPanel1.Controls.Add(this.SmartContractButton);
+            this.flowLayoutPanel1.Controls.Add(this.reportButton);
+            this.flowLayoutPanel1.Controls.Add(this.userButton);
+            this.flowLayoutPanel1.Controls.Add(this.chartButton);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(9, 95);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(152, 435);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
             // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -449,12 +339,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenuForm";
             this.panel1.ResumeLayout(false);
-            this.bunifuGradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -466,19 +356,19 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private ListCompanyControl listCompanyControl1;
-        private Bunifu.Framework.UI.BunifuFlatButton ReportButton;
-        private Bunifu.Framework.UI.BunifuFlatButton smartContractsButton;
-        private Bunifu.Framework.UI.BunifuFlatButton userButton;
-        private Bunifu.Framework.UI.BunifuFlatButton clientButton;
-        private Bunifu.Framework.UI.BunifuFlatButton companyButton;
         private ClientFormControl clientFormControl1;
         private SmartContractsFormControl smartContractsFormControl1;
         private ReportFormControl reportFormControl1;
         private UserFormControl userFormControl1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private Bunifu.Framework.UI.BunifuFlatButton chartButton;
         private ChartFormControl chartFormControl1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button companyButton;
+        private System.Windows.Forms.Button clientButton;
+        private System.Windows.Forms.Button SmartContractButton;
+        private System.Windows.Forms.Button reportButton;
+        private System.Windows.Forms.Button userButton;
+        private System.Windows.Forms.Button chartButton;
     }
 }

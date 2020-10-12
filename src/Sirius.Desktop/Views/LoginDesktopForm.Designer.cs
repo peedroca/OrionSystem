@@ -30,30 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginDesktopForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LoginButton = new System.Windows.Forms.Button();
+            this.RememberCheckBox = new System.Windows.Forms.CheckBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
+            this.userTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.userTextBox = new System.Windows.Forms.TextBox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.RememberCheckBox = new System.Windows.Forms.CheckBox();
-            this.LoginButton = new System.Windows.Forms.Button();
-            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.RememberButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.bunifuFlatButton1);
-            this.panel1.Controls.Add(this.bunifuSeparator1);
+            this.panel1.Controls.Add(this.RememberButton);
             this.panel1.Controls.Add(this.LoginButton);
             this.panel1.Controls.Add(this.RememberCheckBox);
             this.panel1.Controls.Add(this.passwordTextBox);
@@ -66,6 +64,82 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 389);
             this.panel1.TabIndex = 0;
+            // 
+            // LoginButton
+            // 
+            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
+            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.LoginButton.Location = new System.Drawing.Point(67, 260);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(177, 34);
+            this.LoginButton.TabIndex = 9;
+            this.LoginButton.Text = "Conectar-Se";
+            this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            // 
+            // RememberCheckBox
+            // 
+            this.RememberCheckBox.AutoSize = true;
+            this.RememberCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RememberCheckBox.Location = new System.Drawing.Point(38, 232);
+            this.RememberCheckBox.Name = "RememberCheckBox";
+            this.RememberCheckBox.Size = new System.Drawing.Size(135, 22);
+            this.RememberCheckBox.TabIndex = 8;
+            this.RememberCheckBox.Text = "Lembrar Senha";
+            this.RememberCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(97)))), ((int)(((byte)(113)))));
+            this.passwordTextBox.Location = new System.Drawing.Point(38, 200);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(243, 26);
+            this.passwordTextBox.TabIndex = 7;
+            // 
+            // userTextBox
+            // 
+            this.userTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(97)))), ((int)(((byte)(113)))));
+            this.userTextBox.Location = new System.Drawing.Point(38, 140);
+            this.userTextBox.Name = "userTextBox";
+            this.userTextBox.Size = new System.Drawing.Size(243, 26);
+            this.userTextBox.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(35, 179);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 18);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Senha:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(35, 119);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 18);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Usuário:";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(67, 7);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(177, 105);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(46)))));
+            this.panel3.Location = new System.Drawing.Point(0, 378);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(310, 10);
+            this.panel3.TabIndex = 2;
             // 
             // panel2
             // 
@@ -101,129 +175,18 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // panel3
+            // RememberButton
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(23)))), ((int)(((byte)(46)))));
-            this.panel3.Location = new System.Drawing.Point(0, 378);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(310, 10);
-            this.panel3.TabIndex = 2;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(67, 7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(177, 105);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 119);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 18);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Usuário:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 179);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 18);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Senha:";
-            // 
-            // userTextBox
-            // 
-            this.userTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(97)))), ((int)(((byte)(113)))));
-            this.userTextBox.Location = new System.Drawing.Point(38, 140);
-            this.userTextBox.Name = "userTextBox";
-            this.userTextBox.Size = new System.Drawing.Size(243, 26);
-            this.userTextBox.TabIndex = 6;
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(97)))), ((int)(((byte)(113)))));
-            this.passwordTextBox.Location = new System.Drawing.Point(38, 200);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(243, 26);
-            this.passwordTextBox.TabIndex = 7;
-            // 
-            // RememberCheckBox
-            // 
-            this.RememberCheckBox.AutoSize = true;
-            this.RememberCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RememberCheckBox.Location = new System.Drawing.Point(38, 232);
-            this.RememberCheckBox.Name = "RememberCheckBox";
-            this.RememberCheckBox.Size = new System.Drawing.Size(135, 22);
-            this.RememberCheckBox.TabIndex = 8;
-            this.RememberCheckBox.Text = "Lembrar Senha";
-            this.RememberCheckBox.UseVisualStyleBackColor = true;
-            // 
-            // LoginButton
-            // 
-            this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
-            this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.LoginButton.Location = new System.Drawing.Point(67, 260);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(177, 34);
-            this.LoginButton.TabIndex = 9;
-            this.LoginButton.Text = "Conectar-Se";
-            this.LoginButton.UseVisualStyleBackColor = false;
-            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
-            // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.DimGray;
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(38, 301);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(243, 10);
-            this.bunifuSeparator1.TabIndex = 10;
-            this.bunifuSeparator1.Transparency = 255;
-            this.bunifuSeparator1.Vertical = false;
-            // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "              Esqueceu a Senha";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(67, 319);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(177, 34);
-            this.bunifuFlatButton1.TabIndex = 11;
-            this.bunifuFlatButton1.Text = "              Esqueceu a Senha";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RememberButton.BackColor = System.Drawing.Color.Transparent;
+            this.RememberButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RememberButton.FlatAppearance.BorderSize = 0;
+            this.RememberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RememberButton.Location = new System.Drawing.Point(67, 309);
+            this.RememberButton.Name = "RememberButton";
+            this.RememberButton.Size = new System.Drawing.Size(177, 34);
+            this.RememberButton.TabIndex = 10;
+            this.RememberButton.Text = "Esqueceu a Senha";
+            this.RememberButton.UseVisualStyleBackColor = false;
             // 
             // LoginDesktopForm
             // 
@@ -245,10 +208,10 @@
             this.Text = "Sirius";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,13 +224,12 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
         private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.CheckBox RememberCheckBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox userTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button RememberButton;
     }
 }

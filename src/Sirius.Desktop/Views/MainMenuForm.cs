@@ -33,42 +33,32 @@ namespace Sirius.Desktop.Views
             WindowState = FormWindowState.Minimized;
         }
 
-        private void smartContractButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void clientButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void companyButton_Click(object sender, EventArgs e)
+        private void companyButton_Click_1(object sender, EventArgs e)
         {
             listCompanyControl1.BringToFront();
         }
 
-        private void clientButton_Click_1(object sender, EventArgs e)
+        private void clientButton_Click_2(object sender, EventArgs e)
         {
             clientFormControl1.BringToFront();
         }
 
-        private void ReportButton_Click(object sender, EventArgs e)
-        {
-            reportFormControl1.BringToFront();
-        }
-
-        private void smartContractsButton_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             smartContractsFormControl1.BringToFront();
         }
 
-        private void userButton_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            reportFormControl1.BringToFront();
+        }
+
+        private void userButton_Click_1(object sender, EventArgs e)
         {
             userFormControl1.BringToFront();
         }
 
-        private void chartButton_Click(object sender, EventArgs e)
+        private void chartButton_Click_1(object sender, EventArgs e)
         {
             chartFormControl1.BringToFront();
         }
