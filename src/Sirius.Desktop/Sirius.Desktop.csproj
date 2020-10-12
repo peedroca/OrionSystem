@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
     <Reference Include="Flunt, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Flunt.1.0.5\lib\netstandard2.0\Flunt.dll</HintPath>
     </Reference>
@@ -114,6 +117,7 @@
     <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.IdentityModel.Tokens.5.5.0\lib\net461\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -145,6 +149,7 @@
     <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.5.5.0\lib\net461\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
+    <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -174,6 +179,48 @@
     <Compile Include="Models\CompanyView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\ChartFormControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ChartFormControl.Designer.cs">
+      <DependentUpon>ChartFormControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClientFormControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ClientFormControl.Designer.cs">
+      <DependentUpon>ClientFormControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListCompanyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ListCompanyControl.Designer.cs">
+      <DependentUpon>ListCompanyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginDesktopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoginDesktopForm.Designer.cs">
+      <DependentUpon>LoginDesktopForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReportFormControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ReportFormControl.Designer.cs">
+      <DependentUpon>ReportFormControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SmartContractsFormControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SmartContractsFormControl.Designer.cs">
+      <DependentUpon>SmartContractsFormControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\UpdateCompanyForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +239,12 @@
     <Compile Include="Views\SaveCompanyForm.Designer.cs">
       <DependentUpon>SaveCompanyForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserFormControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\UserFormControl.Designer.cs">
+      <DependentUpon>UserFormControl.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -202,6 +255,27 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\ChartFormControl.resx">
+      <DependentUpon>ChartFormControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ClientFormControl.resx">
+      <DependentUpon>ClientFormControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ListCompanyControl.resx">
+      <DependentUpon>ListCompanyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginDesktopForm.resx">
+      <DependentUpon>LoginDesktopForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportFormControl.resx">
+      <DependentUpon>ReportFormControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SmartContractsFormControl.resx">
+      <DependentUpon>SmartContractsFormControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\UpdateCompanyForm.resx">
       <DependentUpon>UpdateCompanyForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SaveCompanyForm.resx">
       <DependentUpon>SaveCompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserFormControl.resx">
+      <DependentUpon>UserFormControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -239,7 +316,9 @@
       <Name>Sirius.Service</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\3507749-account-balance-bank-business-finance-iconoteka-money_107683 %282%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
