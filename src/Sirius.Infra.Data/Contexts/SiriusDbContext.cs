@@ -38,5 +38,11 @@ namespace Sirius.Infra.Data.Contexts
         /// Tabela Empresas
         /// </summary>
         public DbSet<CompanyEntity> Companies { get; set; }
+
+        /// <summary>
+        /// Tabela Cliente
+        /// </summary>
+
+        public DbSet<CustomerEntity> Customers{ get; set; }
     }
 }
