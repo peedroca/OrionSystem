@@ -17,6 +17,12 @@ namespace Sirius.Domain.Interfaces
         void SaveCustomer(Customer customer);
 
         /// <summary>
+        /// Deletar Cliente
+        /// </summary>
+        /// <param name="customer"></param>
+        void DeleteCustomer(Customer customer);
+
+        /// <summary>
         /// Obter cliente
         /// </summary>
         /// <param name="id"> Id do customer</param>

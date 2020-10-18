@@ -42,7 +42,7 @@ namespace Sirius.Infra.Data.Contexts
         /// <summary>
         /// Tabela Cliente
         /// </summary>
-
+            
         public DbSet<CustomerEntity> Customers{ get; set; }
     }
 }
