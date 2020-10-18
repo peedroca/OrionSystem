@@ -5,12 +5,16 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>C:\Users\Glauber\Source\Repos\Sirius\src\Sirius.Domain\Sirius.Domain.xml</DocumentationFile>
+    <DocumentationFile></DocumentationFile>
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Flunt" Version="1.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sirius.CrossCutting.Validations\Sirius.CrossCutting.Validations.csproj" />
   </ItemGroup>
 
 </Project>

@@ -39,7 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sirius.Mobile", "Sirius.Mob
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sirius.Web", "Sirius.Web\Sirius.Web.csproj", "{EE8C053D-DC6E-44CF-A1AC-C8BAC729E600}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.CrossCutting.Email", "Sirius.CrossCutting.Email\Sirius.CrossCutting.Email.csproj", "{69D5B68A-1E29-4D45-9BD8-4A0F42FAFEA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sirius.CrossCutting.Email", "Sirius.CrossCutting.Email\Sirius.CrossCutting.Email.csproj", "{69D5B68A-1E29-4D45-9BD8-4A0F42FAFEA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.CrossCutting.Validations", "Sirius.CrossCutting.Validations\Sirius.CrossCutting.Validations.csproj", "{388DBA33-4A92-47AF-B3CC-AA1273B20ADE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -85,6 +87,10 @@ Global
 		{69D5B68A-1E29-4D45-9BD8-4A0F42FAFEA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69D5B68A-1E29-4D45-9BD8-4A0F42FAFEA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69D5B68A-1E29-4D45-9BD8-4A0F42FAFEA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{388DBA33-4A92-47AF-B3CC-AA1273B20ADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{388DBA33-4A92-47AF-B3CC-AA1273B20ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{388DBA33-4A92-47AF-B3CC-AA1273B20ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{388DBA33-4A92-47AF-B3CC-AA1273B20ADE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +111,7 @@ Global
 		{A78698A6-9F36-4D37-9290-1766E922386B} = {7CDFE51F-4DC2-471B-A54B-400F3EFC3494}
 		{EE8C053D-DC6E-44CF-A1AC-C8BAC729E600} = {860B7F52-A5EA-458F-B2C3-0653CA79B0D3}
 		{69D5B68A-1E29-4D45-9BD8-4A0F42FAFEA7} = {1405F647-4270-40B2-99D9-9553C11788B4}
+		{388DBA33-4A92-47AF-B3CC-AA1273B20ADE} = {1405F647-4270-40B2-99D9-9553C11788B4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A47DA3CB-5223-4910-B540-062C273F6422}

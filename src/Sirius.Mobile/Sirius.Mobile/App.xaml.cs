@@ -1,4 +1,7 @@
-﻿using Xamarin.Forms;
+﻿using Sirius.Mobile.Views;
+using System;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace Sirius.Mobile
 {
@@ -8,7 +11,7 @@ namespace Sirius.Mobile
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()
