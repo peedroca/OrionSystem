@@ -69,6 +69,72 @@
             Usuário utilizado pela empresa.
             </summary>
         </member>
+        <member name="T:Sirius.Domain.Entities.CustomerEntity">
+            <summary>
+            Entidade Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerEntity.Id">
+            <summary>
+            id Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerEntity.FirstName">
+            <summary>
+             Primeiro Nome de cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerEntity.LastName">
+            <summary>
+            Ultimo nome de cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerEntity.Nickname">
+            <summary>
+            Apelido de Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerEntity.Cpf">
+            <summary>
+            Cpf de Cliente
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Sirius.Domain.Entities.CustomerEntity.CNPJ" -->
+        <member name="P:Sirius.Domain.Entities.CustomerEntity.Phone">
+            <summary>
+            Telefone do cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerEntity.Email">
+            <summary>
+            E-mail do cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerEntity.BirthDate">
+            <summary>
+            Data de nascimento
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerEntity.CreatedOn">
+            <summary>
+            Data de Criação do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerEntity.UpdatedOn">
+            <summary>
+            Data de Atualização do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerEntity.Blocked">
+            <summary>
+            Cliente Bloqueado
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerEntity.User">
+            <summary>
+            Usuário utilizado pelo cliente.
+            </summary>
+        </member>
         <member name="T:Sirius.Domain.Entities.SmartContractEntity">
             <summary>
             Entidade Contrato Inteligente
@@ -282,6 +348,27 @@
             <summary>
             Interface do Serviço de Empresa
             </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Sirius.Domain.Interfaces.ICustomerRepository`1" -->
+        <member name="M:Sirius.Domain.Interfaces.ICustomerRepository`1.SaveCustomer(`0)">
+            <summary>
+            Salvar Cliente
+            </summary>
+            <param name="customer">Objeto do tipo Customer que será salvo.</param>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.ICustomerRepository`1.GetCustomer(System.Int64)">
+            <summary>
+            Obter cliente
+            </summary>
+            <param name="id"> Id do customer</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.ICustomerRepository`1.Getcustomer(System.Int64)">
+            <summary>
+            Obter Clientes
+            </summary>
+            <param name="id">Id do cliente</param>
+            <returns></returns>
         </member>
         <member name="T:Sirius.Domain.Interfaces.ISmartContractRepository`1">
             <summary>
