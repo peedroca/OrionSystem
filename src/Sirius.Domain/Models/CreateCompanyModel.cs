@@ -1,5 +1,6 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
+using Sirius.CrossCutting.Validations;
 using Sirius.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -37,9 +38,10 @@ namespace Sirius.Domain.Models
             AddNotifications(new Contract()
                 .IsNotNullOrEmpty(Email, "Email", "O e-mail é obrigatório.")
                 .IsEmail(Email, "Email", "E-mail incorreto.")
+                .IsTrue(CpfCnpjUtils.IsValid(CNPJ), "CNPJ", "O CNPJ informado não é válido")
                 .IsNotNullOrEmpty(CNPJ, "CNPJ", "O CNPJ é obrigatório.")
-                .IsNotNullOrEmpty(Nickname, "Fantasia", "O nome fantasia é obrigatório.")
-                .IsNotNullOrEmpty(Name, "Razão Social", "A razão social é obrigatória."));
+                .IsNotNullOrEmpty(Nickname, "Nickname", "O nome fantasia é obrigatório.")
+                .IsNotNullOrEmpty(Name, "Name", "A razão social é obrigatória."));
         }
 
         /// <summary>

@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    overflow-x: hidden;
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    background-color: #B28756;
+    color: #FFF;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
+
+.header {
+    max-width: 1140px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+}
+
+.logoimg {
+    width: 100px;
+    height: 77PX;
+    background-color: #B28756;
+    border-radius: 40px;
+}
+
+.menu-opener {
+    display: none;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+    .menu ul,
+    .menu li {
+        list-style: none;
+    }
+
+    .menu ul {
+        display: flex;
+    }
+
+    .menu li a {
+        color: #FFF;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-decoration: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        border-bottom: 5px solid #B28756;
+    }
+
+        .menu li a:hover,
+        .menu .active a {
+            border-bottom: 5px solid #B28756;
+            color: #CCC;
+        }
+
+.button {
+    display: inline-block;
+    background-color: #B28756;
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+.button--dark {
+    background-color: #000;
+}
+
+    .button--dark:hover {
+        background-color: #B28756;
+    }
+
+.banner {
+    height: calc(100vh + 100px);
+    background-color: #333;
+    background-image: url('../images/bgsmart-contract.jpg');
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+}
+
+    .banner .sliders {
+        width: 1000vw;
+        height: 100%;
+    }
+
+    .banner .slide {
+        width: 100vw;
+        height: 100%;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .banner .slidearea {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+    }
+
+    .banner h1 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 50px;
+    }
+
+    .banner p {
+        font-size: 13px;
+    }
+
+    .banner h1 span {
+        color: #B28756;
+    }
+
+    .banner h2 {
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+
+    .banner .sliders-pointers {
+        width: 100vw;
+        height: 20px;
+        position: absolute;
+        margin-top: -50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner .pointer {
+        width: 15px;
+        height: 15px;
+        border: 2px solid #B28756;
+        border-radius: 8px;
+        margin-left: 5px;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+        .banner .pointer.active {
+            background-color: #B28756;
+        }
+
+.default {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+    .default .section-title,
+    .default .section-desc {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .default .section-title {
+        font-size: 20px;
+    }
+
+    .default .section-desc {
+        font-size: 12px;
+        color: #CCC;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+
+    .default .section-body {
+        max-width: 1140px;
+        margin: auto;
+    }
+
+    .default.light {
+        background-color: #F7F7F7;
+    }
+
+    .default.lightmin {
+        background-color: rgb(109, 107, 107);
+    }
+
+    .default.light .section-title,
+    .default.light .section-body {
+        color: rgb(141, 137, 137);
+    }
+
+#name::placeholder {
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#email::placeholder {
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#assunto::placeholder {
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#message::placeholder {
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.default.dark {
+    background-color: #000;
+}
+
+    .default.dark .section-title,
+    .default.dark .section-body {
+        color: #FFF;
+    }
+
+footer {
+    background-color: #000;
+    padding: 20px;
+}
+
+.footer--area {
+    max-width: 1140px;
+    margin: auto;
+    color: #FFF;
+    display: flex;
+}
+
+.footer--item {
+    flex: 1;
+}
+
+.footer-social {
+    display: flex;
+}
+
+    .footer-social a {
+        display: block;
+        width: 25px;
+        height: 25px;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 13px;
+        margin-right: 10px;
+    }
+
+        .footer-social a:hover {
+            background-color: #B28756;
+        }
+
+    .footer-social img {
+        height: 10px;
+    }
+
+.footer--item.area2 {
+    color: #999;
+    line-height: 20px;
+    font-size: 13px;
+    padding: 0 10px 10px 10px;
+}
+
+.footer--item.area3 form {
+    background-color: #333;
+    text-align: center;
+    padding: 30px;
+}
+
+.footer--item.area3 input {
+    width: 100%;
+    height: 40px;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #CCC;
+    outline: 0;
+    color: #FFF;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/*
+CSS DE ÁREAS ESPECÍFICAS
+*/
+
+.section-aboutus {
+    display: flex;
+}
+
+.section-aboutus--left {
+    flex: 1;
+}
+
+    .section-aboutus--left p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+.section-aboutus--right {
+    width: 520px;
+    text-align: center;
+}
+
+    .section-aboutus--right img {
+        width: 300px;
+        box-shadow: 0px 5px 10px #333;
+    }
+
+.section-contact {
+    max-width: 450px;
+    margin: auto;
+    text-align: center;
+}
+
+    .section-contact input[type=text],
+    .section-contact textarea {
+        display: block;
+        width: 100%;
+        height: 40px;
+        border: 0;
+        background: transparent;
+        border-bottom: 1px solid #CCC;
+        outline: 0;
+        margin-top: 10px;
+    }
+
+    .section-contact textarea {
+        height: 100px;
+        resize: none;
+    }
+
+.section-contact--split {
+    display: flex;
+}
+
+    .section-contact--split input:first-child {
+        margin-right: 20px;
+    }
+
+#footer {
+    font-weight: bold;
+}
+
+@media (min-width:450px) and (max-width:800px) {
+    .logo {
+        margin-left: 30px;
+    }
+
+    .menu-opener {
+        display: block;
+        width: 45px;
+        margin-right: 30px;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li a {
+        font-weight: bold;
+        height: 80px;
+        font-size: 27px;
+        margin-left: 50px;
+        border: 0;
+    }
+
+    .menu li.active a {
+        border: 0;
+        color: #B28756;
+    }
+
+    .section-aboutus {
+        flex-direction: column;
+    }
+
+    .section-aboutus--left {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    .section-aboutus--right {
+        width: auto;
+    }
+}
+
+@media (max-width:450px) {
+    .logo {
+        margin-left: 30px;
+    }
+
+    .menu-opener {
+        display: block;
+        width: 45px;
+        margin-right: 30px;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 80vw;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li a {
+        font-weight: bold;
+        height: 60px;
+        font-size: 20px;
+        margin-left: 30px;
+        border: 0;
+    }
+
+    .menu li.active a {
+        border: 0;
+        color: #B28756;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+    }
+
+    .banner h2 {
+        font-size: 17px;
+    }
+
+    .section-aboutus {
+        flex-direction: column;
+    }
+
+    .section-aboutus--left {
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    .section-aboutus--right {
+        width: auto;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+        .section-aboutus--right img {
+            width: 100%;
+        }
+
+    .section-contact {
+        max-width: 100vw;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .section-contact--split {
+        flex-direction: column;
+    }
+
+    .footer--area {
+        flex-direction: column;
+    }
+
+    .footer--item {
+        margin-bottom: 20px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
