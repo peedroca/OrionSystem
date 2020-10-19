@@ -45,7 +45,6 @@ namespace Sirius.Desktop.Extesions
                 TerminationCondition = smartContractModel.TerminationCondition,
                 ConclusionCondition = smartContractModel.ConclusionCondition,
                 Value = smartContractModel.Value,
-                AuthKey = smartContractModel.AuthKey,
                 CompanyModel = smartContractModel.CompanyModel
             };
         }

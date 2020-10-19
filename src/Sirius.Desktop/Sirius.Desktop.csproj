@@ -193,11 +193,29 @@
     <Compile Include="Views\ClientFormControl.Designer.cs">
       <DependentUpon>ClientFormControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ListCompanyControl.cs">
+    <Compile Include="Views\ConsultContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConsultContractForm.Designer.cs">
+      <DependentUpon>ConsultContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\CreateContractForm.Designer.cs">
+      <DependentUpon>CreateContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListCompanyFormControl1.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ListCompanyControl.Designer.cs">
-      <DependentUpon>ListCompanyControl.cs</DependentUpon>
+    <Compile Include="Views\ListCompanyFormControl1.Designer.cs">
+      <DependentUpon>ListCompanyFormControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListSmartContractsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ListSmartContractsForm.Designer.cs">
+      <DependentUpon>ListSmartContractsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginDesktopForm.cs">
       <SubType>Form</SubType>
@@ -210,6 +228,12 @@
     </Compile>
     <Compile Include="Views\MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MenuForm.Designer.cs">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ReportFormControl.cs">
       <SubType>UserControl</SubType>
@@ -263,14 +287,26 @@
     <EmbeddedResource Include="Views\ClientFormControl.resx">
       <DependentUpon>ClientFormControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ListCompanyControl.resx">
-      <DependentUpon>ListCompanyControl.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ConsultContractForm.resx">
+      <DependentUpon>ConsultContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CreateContractForm.resx">
+      <DependentUpon>CreateContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ListCompanyFormControl1.resx">
+      <DependentUpon>ListCompanyFormControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ListSmartContractsForm.resx">
+      <DependentUpon>ListSmartContractsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginDesktopForm.resx">
       <DependentUpon>LoginDesktopForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ReportFormControl.resx">
       <DependentUpon>ReportFormControl.cs</DependentUpon>

@@ -24,16 +24,7 @@ namespace Sirius.Desktop.Controllers
         public IEnumerable<SmartContractViews> GetSmartContracts (long id , string title = null)
         {
             var contract = smartContractService.GetSmartContracts(id);
-
-            if (id == 0)
-            {
-                contract = contract.Where(w => w.Id.Equals(id));
-            }
-            if (!string.IsNullOrEmpty(title))
-            {
-                contract = contract.Where(w => w.Title.ToLower().Contains(title.ToLower()));
-            }
-            return contract.ToSmartContractView();
+            return contract?.ToSmartContractView();
         }
 
         public void CreateSmartContract(CreateSmartContractModel createSmartContractModel) =>

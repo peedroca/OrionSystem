@@ -15,7 +15,6 @@ namespace Sirius.Desktop.Models
         public string TerminationCondition { get; set; }
         public string ConclusionCondition { get; set; }
         public decimal Value { get; set; }
-        public string AuthKey { get; set; }
         public CompanyModel CompanyModel { get; set; } 
     }
 }

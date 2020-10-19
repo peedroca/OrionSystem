@@ -1,6 +1,6 @@
 ﻿namespace Sirius.Desktop.Views
 {
-    partial class ListCompanyControl
+    partial class ListCompanyFormControl1
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.contractsButton = new System.Windows.Forms.Button();
             this.filterButton = new System.Windows.Forms.Button();
             this.cnpjTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,16 +48,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.companiesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
+            // contractsButton
+            // 
+            this.contractsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.contractsButton.Location = new System.Drawing.Point(100, 417);
+            this.contractsButton.Name = "contractsButton";
+            this.contractsButton.Size = new System.Drawing.Size(143, 46);
+            this.contractsButton.TabIndex = 69;
+            this.contractsButton.Text = "Contratos";
+            this.contractsButton.UseVisualStyleBackColor = true;
+            this.contractsButton.Click += new System.EventHandler(this.contractsButton_Click_1);
+            // 
             // filterButton
             // 
             this.filterButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.filterButton.Location = new System.Drawing.Point(737, 48);
+            this.filterButton.Location = new System.Drawing.Point(696, 36);
             this.filterButton.Name = "filterButton";
-            this.filterButton.Size = new System.Drawing.Size(102, 26);
-            this.filterButton.TabIndex = 46;
+            this.filterButton.Size = new System.Drawing.Size(143, 48);
+            this.filterButton.TabIndex = 68;
             this.filterButton.Text = "Filtrar";
             this.filterButton.UseVisualStyleBackColor = true;
-            this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
+            this.filterButton.Click += new System.EventHandler(this.filterButton_Click_1);
             // 
             // cnpjTextBox
             // 
@@ -64,16 +76,17 @@
             this.cnpjTextBox.Mask = "99.999.999/9999-99";
             this.cnpjTextBox.Name = "cnpjTextBox";
             this.cnpjTextBox.Size = new System.Drawing.Size(287, 26);
-            this.cnpjTextBox.TabIndex = 45;
+            this.cnpjTextBox.TabIndex = 67;
             this.cnpjTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(310, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 18);
-            this.label1.TabIndex = 44;
+            this.label1.TabIndex = 66;
             this.label1.Text = "CNPJ";
             // 
             // razaoSocialTextBox
@@ -81,15 +94,17 @@
             this.razaoSocialTextBox.Location = new System.Drawing.Point(20, 48);
             this.razaoSocialTextBox.Name = "razaoSocialTextBox";
             this.razaoSocialTextBox.Size = new System.Drawing.Size(287, 26);
-            this.razaoSocialTextBox.TabIndex = 43;
+            this.razaoSocialTextBox.TabIndex = 65;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(17, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 18);
-            this.label2.TabIndex = 42;
+            this.label2.TabIndex = 64;
             this.label2.Text = "Razão Social";
             // 
             // deleteButton
@@ -98,10 +113,10 @@
             this.deleteButton.Location = new System.Drawing.Point(398, 417);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(143, 46);
-            this.deleteButton.TabIndex = 41;
+            this.deleteButton.TabIndex = 63;
             this.deleteButton.Text = "Deletar";
             this.deleteButton.UseVisualStyleBackColor = true;
-            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click_1);
             // 
             // inactivButton
             // 
@@ -109,10 +124,10 @@
             this.inactivButton.Location = new System.Drawing.Point(249, 417);
             this.inactivButton.Name = "inactivButton";
             this.inactivButton.Size = new System.Drawing.Size(143, 46);
-            this.inactivButton.TabIndex = 40;
+            this.inactivButton.TabIndex = 62;
             this.inactivButton.Text = "Bloquear";
             this.inactivButton.UseVisualStyleBackColor = true;
-            this.inactivButton.Click += new System.EventHandler(this.inactivButton_Click);
+            this.inactivButton.Click += new System.EventHandler(this.inactivButton_Click_1);
             // 
             // editButton
             // 
@@ -120,10 +135,10 @@
             this.editButton.Location = new System.Drawing.Point(547, 417);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(143, 46);
-            this.editButton.TabIndex = 39;
+            this.editButton.TabIndex = 61;
             this.editButton.Text = "Editar";
             this.editButton.UseVisualStyleBackColor = true;
-            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            this.editButton.Click += new System.EventHandler(this.editButton_Click_1);
             // 
             // newButton
             // 
@@ -131,10 +146,10 @@
             this.newButton.Location = new System.Drawing.Point(696, 417);
             this.newButton.Name = "newButton";
             this.newButton.Size = new System.Drawing.Size(143, 46);
-            this.newButton.TabIndex = 38;
+            this.newButton.TabIndex = 60;
             this.newButton.Text = "Novo";
             this.newButton.UseVisualStyleBackColor = true;
-            this.newButton.Click += new System.EventHandler(this.newButton_Click);
+            this.newButton.Click += new System.EventHandler(this.newButton_Click_1);
             // 
             // companiesDataGridView
             // 
@@ -157,13 +172,12 @@
             this.companiesDataGridView.Name = "companiesDataGridView";
             this.companiesDataGridView.RowHeadersVisible = false;
             this.companiesDataGridView.RowHeadersWidth = 62;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.companiesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companiesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.companiesDataGridView.RowTemplate.Height = 28;
             this.companiesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.companiesDataGridView.Size = new System.Drawing.Size(819, 309);
-            this.companiesDataGridView.TabIndex = 37;
-            this.companiesDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.companiesDataGridView_CellContentClick_1);
+            this.companiesDataGridView.TabIndex = 59;
             // 
             // Column1
             // 
@@ -205,11 +219,12 @@
             this.Column5.Name = "Column5";
             this.Column5.Width = 180;
             // 
-            // ListCompanyControl
+            // ListCompanyFormControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(92)))));
+            this.Controls.Add(this.contractsButton);
             this.Controls.Add(this.filterButton);
             this.Controls.Add(this.cnpjTextBox);
             this.Controls.Add(this.label1);
@@ -222,9 +237,9 @@
             this.Controls.Add(this.companiesDataGridView);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "ListCompanyControl";
+            this.Name = "ListCompanyFormControl1";
             this.Size = new System.Drawing.Size(856, 489);
-            this.Load += new System.EventHandler(this.ListCompanyControl_Load);
+            this.Load += new System.EventHandler(this.ListCompanyFormControl1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.companiesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -233,6 +248,7 @@
 
         #endregion
 
+        private System.Windows.Forms.Button contractsButton;
         private System.Windows.Forms.Button filterButton;
         private System.Windows.Forms.MaskedTextBox cnpjTextBox;
         private System.Windows.Forms.Label label1;

@@ -95,7 +95,7 @@ namespace Sirius.Domain.Models
         /// <summary>
         /// Lista com os contratos inteligentes da empresa.
         /// </summary>
-        public IEnumerable<SmartContractModel> SmartContracts { get; private set; }
+        public ICollection<SmartContractModel> SmartContracts { get; private set; }
 
         /// <summary>
         /// Usuário utilizado pela empresa.
@@ -105,7 +105,7 @@ namespace Sirius.Domain.Models
         public void LoadCreationDate(DateTime createdOn) =>
             this.CreatedOn = CreatedOn;
 
-        public void LoadSmartContracts(IEnumerable<SmartContractModel> smartContracts) =>
+        public void LoadSmartContracts(ICollection<SmartContractModel> smartContracts) =>
             this.SmartContracts = smartContracts;
 
         public void LoadUser(UserModel user) =>
