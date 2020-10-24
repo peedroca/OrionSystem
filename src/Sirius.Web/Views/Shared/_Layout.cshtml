@@ -25,6 +25,12 @@
                         <li><a href="#contatenos">Contate-nos</a></li>
                         <li><a href="#cadastrese">Cadastre-se</a></li>
                     </ul>
+                    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+                    <script type="text/javascript">
+                        $(document).on('click', 'ul li', function () {
+                            $(this).addClass('active').siblings().removeClass('active')
+                        })
+                    </script>
                 </nav>
             </div>
         </div>
@@ -69,7 +75,7 @@
                 <div class="section-contact">
                     <form method="POST">
                         <div class="section-contact--split">
-                            <input type="text" name="name" id="name" placeholder="NAME" />
+                            <input type="text" name="name" id="name" placeholder="NOME" />
                             <input type="text" name="email" id="email" placeholder="EMAIL" />
                         </div>
                         <input type="text" name="assunto" id="assunto" placeholder="ASSUNTO" />
@@ -87,7 +93,7 @@
                 <div class="section-contact">
                     <form method="POST">
                         <div class="section-contact--split">
-                            <input type="text" name="name" placeholder="NAME" />
+                            <input type="text" name="name" placeholder="NOME" />
                             <input type="text" name="sobrenome" placeholder="SOBRENOME" />
                         </div>
                         <div class="section-contact--split">
