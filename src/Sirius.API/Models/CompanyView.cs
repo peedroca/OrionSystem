@@ -1,7 +1,20 @@
-﻿namespace Sirius.API.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Sirius.API.Models
 {
-    public class Company
+    /// <summary>
+    /// Visualização de Empresa
+    /// </summary>
+    public class CompanyView
     {
+        /// <summary>
+        /// Identificação
+        /// </summary>
+        public long Id { get; set; }
+
         /// <summary>
         /// Razão Social
         /// </summary>
@@ -21,10 +34,5 @@
         /// Telefone principal da empresa
         /// </summary>
         public string Phone { get; set; }
-
-        /// <summary>
-        /// E-mail de contato com a empresa
-        /// </summary>
-        public string Email { get; set; }
     }
 }

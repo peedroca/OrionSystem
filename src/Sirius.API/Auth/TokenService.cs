@@ -1,4 +1,5 @@
 ﻿using Microsoft.IdentityModel.Tokens;
+using Sirius.API.Models;
 using Sirius.Domain.Models;
 using System;
 using System.IdentityModel.Tokens.Jwt;
@@ -9,7 +10,7 @@ namespace Sirius.API.Auth
 {
     public static class TokenService
     {
-        public static string GenerateToken(UserModel user)
+        public static string GenerateToken(UserView user)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(Settings.Secret);

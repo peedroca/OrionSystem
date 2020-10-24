@@ -27,5 +27,7 @@ namespace Sirius.Domain.Interfaces
         /// <param name="id">Id da empresa</param>
         /// <returns></returns>
         IEnumerable<SmartContract> GetContracts(long id);
+
+        IEnumerable<SmartContract> GetContracts();
     }
 }
