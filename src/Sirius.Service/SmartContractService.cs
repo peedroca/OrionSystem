@@ -54,6 +54,12 @@ namespace Sirius.Service
             return smartContract?.ToSmartContractModel();
         }
 
+        public IEnumerable<SmartContractModel> GetSmartContracts()
+        {
+            var smartContract = smartContractRepository.GetContracts();
+            return smartContract?.ToSmartContractModel();
+        }
+
         public SmartContractModel UpdateSmartContract(UpdateSmartContractModel updateSmartContract)
         {
             if (updateSmartContract.Invalid)

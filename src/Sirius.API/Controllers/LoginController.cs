@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Sirius.API.Auth;
 using Sirius.API.Models;
 using Sirius.Domain.Interfaces;
@@ -10,22 +11,31 @@ namespace Sirius.API.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private IUserService userService;
+        private IUserService _userService;
+        private IMapper _mapper;
 
-        public LoginController(IUserService userService)
+        public LoginController(IUserService userService, IMapper mapper)
         {
-            this.userService = userService;
+            _userService = userService;
+            _mapper = mapper;
         }
 
+        /// <summary>
+        /// Autenticação com a API.
+        /// </summary>
+        /// <param name="model">Modelo de usuário.</param>
+        /// <returns>Informações do usuário e token de acesso.</returns>
         [HttpPost]
         public ActionResult<dynamic> Authenticate([FromBody] User model)
         {
             // Recupera o usuário
-            var user = userService.LogarUser(new LoginUserModel(model.Username, model.Password));
+            var userModel = _userService.LogarUser(new LoginUserModel(model.Username, model.Password));
 
             // Verifica se o usuário existe
-            if (user == null)
+            if (userModel == null)
                 return NotFound(new { message = "Usuário ou senha inválidos" });
+
+            var user = _mapper.Map<UserView>(userModel);
 
             // Gera o Token
             var token = TokenService.GenerateToken(user);

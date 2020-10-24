@@ -47,6 +47,14 @@ namespace Sirius.Infra.Data.Repositories
                 .ToList(); //Busca pela chave primária
         }
 
+        public IEnumerable<SmartContractEntity> GetContracts()
+        {
+            return context.SmartContracts
+                .AsNoTracking()
+                .Include(i => i.CompanyEntity)
+                .ToList();
+        }
+
         /// <summary>
         /// Salvar Contrato Inteligente
         /// </summary>

@@ -12,6 +12,8 @@ namespace Sirius.Domain.Interfaces
 
         IEnumerable<SmartContractModel> GetSmartContracts(long idCompany);
 
+        IEnumerable<SmartContractModel> GetSmartContracts();
+
         SmartContractModel CreateSmartContract(CreateSmartContractModel createSmartContract);
 
         SmartContractModel UpdateSmartContract(UpdateSmartContractModel createSmartContract);
