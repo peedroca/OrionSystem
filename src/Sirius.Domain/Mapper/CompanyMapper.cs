@@ -28,7 +28,7 @@ namespace Sirius.Domain.Mapper
                 Name = companyModel.Name,
                 Phone = companyModel.Phone,
                 Nickname = companyModel.Nickname,
-                SmartContracts = companyModel.SmartContracts?.ToSmartContractEntity(),
+                SmartContracts = companyModel.SmartContracts?.ToSmartContractEntity()?.ToList(),
                 UpdatedOn = companyModel.UpdatedOn,
                 User = companyModel.User
             };
@@ -45,7 +45,7 @@ namespace Sirius.Domain.Mapper
                 Name = companyModel.Name,
                 Phone = companyModel.Phone,
                 Nickname = companyModel.Nickname,
-                SmartContracts = companyModel.SmartContracts?.ToSmartContractEntity(),
+                SmartContracts = companyModel.SmartContracts?.ToSmartContractEntity()?.ToList(),
                 UpdatedOn = companyModel.UpdatedOn,
                 User = companyModel.User?.ToUserEntity(),
             };
@@ -62,7 +62,7 @@ namespace Sirius.Domain.Mapper
                 Name = companyModel.Name,
                 Phone = companyModel.Phone,
                 Nickname = companyModel.Nickname,
-                SmartContracts = companyModel.SmartContracts?.ToSmartContractEntity(),
+                SmartContracts = companyModel.SmartContracts?.ToSmartContractEntity()?.ToList(),
                 UpdatedOn = companyModel.UpdatedOn,
                 User = companyModel.User?.ToUserEntity()
             };

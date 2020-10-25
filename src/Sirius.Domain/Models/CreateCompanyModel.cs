@@ -97,7 +97,7 @@ namespace Sirius.Domain.Models
         /// <summary>
         /// Lista com os contratos inteligentes da empresa.
         /// </summary>
-        public IEnumerable<SmartContractModel> SmartContracts { get; }
+        public ICollection<SmartContractModel> SmartContracts { get; }
 
         /// <summary>
         /// Usuário utilizado pela empresa.

@@ -15,52 +15,52 @@ namespace Sirius.Desktop.Views
         public MainMenuForm()
         {
             InitializeComponent();
-            
+            clientFormControl1.BringToFront();
+            //smartContractsFormControl1.BringToFront();
+            reportFormControl1.BringToFront();
+            userFormControl1.BringToFront();
+            chartFormControl1.BringToFront();
+            listCompanyFormControl11.BringToFront();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void closePictureBox_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void companyButton_Click_1(object sender, EventArgs e)
-        {
-            listCompanyControl1.BringToFront();
-        }
-
-        private void clientButton_Click_2(object sender, EventArgs e)
-        {
-            clientFormControl1.BringToFront();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            smartContractsFormControl1.BringToFront();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            reportFormControl1.BringToFront();
-        }
-
-        private void userButton_Click_1(object sender, EventArgs e)
-        {
-            userFormControl1.BringToFront();
-        }
-
-        private void chartButton_Click_1(object sender, EventArgs e)
-        {
-            chartFormControl1.BringToFront();
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void minimizePictureBox_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void clientButton_Click(object sender, EventArgs e)
+        {
+            clientFormControl1.BringToFront();
+        }
+
+        private void reportButton_Click(object sender, EventArgs e)
+        {
+            reportFormControl1.BringToFront();
+        }
+
+        private void userButton_Click(object sender, EventArgs e)
+        {
+            userFormControl1.BringToFront();
+        }
+
+        private void chartButton_Click(object sender, EventArgs e)
+        {
+            chartFormControl1.BringToFront();
+        }
+
+        private void companyButton_Click(object sender, EventArgs e)
+        {
+            listCompanyFormControl11.BringToFront();
         }
     }
 }

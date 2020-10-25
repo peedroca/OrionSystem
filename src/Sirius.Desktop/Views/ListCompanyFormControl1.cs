@@ -12,15 +12,15 @@ using Sirius.Desktop.Models;
 
 namespace Sirius.Desktop.Views
 {
-    public partial class ListCompanyControl : UserControl
+    public partial class ListCompanyFormControl1 : UserControl
     {
         private CompanyController CompanyController;
-        public ListCompanyControl()
+        public ListCompanyFormControl1()
         {
             InitializeComponent();
         }
 
-        private void ListCompanyControl_Load(object sender, EventArgs e)
+        private void ListCompanyFormControl1_Load(object sender, EventArgs e)
         {
             CompanyController = new CompanyController();
             LoadCompanies();
@@ -46,13 +46,7 @@ namespace Sirius.Desktop.Views
 
         }
 
- 
-        private void companiesDataGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void newButton_Click(object sender, EventArgs e)
+        private void newButton_Click_1(object sender, EventArgs e)
         {
             SaveCompanyForm form = new SaveCompanyForm();
             form.ShowDialog();
@@ -60,7 +54,7 @@ namespace Sirius.Desktop.Views
             LoadCompanies();
         }
 
-        private void editButton_Click(object sender, EventArgs e)
+        private void editButton_Click_1(object sender, EventArgs e)
         {
             var company = companiesDataGridView?.CurrentRow?.DataBoundItem as CompanyView;
 
@@ -75,7 +69,7 @@ namespace Sirius.Desktop.Views
             LoadCompanies();
         }
 
-        private void deleteButton_Click(object sender, EventArgs e)
+        private void deleteButton_Click_1(object sender, EventArgs e)
         {
             var company = companiesDataGridView?.CurrentRow?.DataBoundItem as CompanyView;
             if (company == null || company.Id == 0)
@@ -103,7 +97,7 @@ namespace Sirius.Desktop.Views
             }
         }
 
-        private void inactivButton_Click(object sender, EventArgs e)
+        private void inactivButton_Click_1(object sender, EventArgs e)
         {
             var company = companiesDataGridView?.CurrentRow?.DataBoundItem as CompanyView;
             if (company == null || company.Id == 0)
@@ -131,7 +125,20 @@ namespace Sirius.Desktop.Views
             }
         }
 
-        private void filterButton_Click(object sender, EventArgs e)
+        private void contractsButton_Click_1(object sender, EventArgs e)
+        {
+            var company = companiesDataGridView?.CurrentRow?.DataBoundItem as CompanyView;
+
+            if (company == null || company.Id == 0)
+            {
+                return;
+            }
+
+            ListSmartContractsForm form = new ListSmartContractsForm(company);
+            form.ShowDialog();
+        }
+
+        private void filterButton_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(cnpjTextBox.Text.Replace(".", "").Replace(",", "").Replace("/", "").Replace("-", "").Trim()))
                 LoadCompanies(razaoSocialTextBox.Text);
@@ -140,3 +147,5 @@ namespace Sirius.Desktop.Views
         }
     }
 }
+
+
