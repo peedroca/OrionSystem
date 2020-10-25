@@ -81,7 +81,7 @@
             this.chartButton.Name = "chartButton";
             this.chartButton.Size = new System.Drawing.Size(157, 78);
             this.chartButton.TabIndex = 5;
-            this.chartButton.Text = "       Gráficos";
+            this.chartButton.Text = "     Gráficos";
             this.chartButton.UseVisualStyleBackColor = true;
             this.chartButton.Click += new System.EventHandler(this.chartButton_Click);
             // 
@@ -97,7 +97,7 @@
             this.userButton.Name = "userButton";
             this.userButton.Size = new System.Drawing.Size(157, 78);
             this.userButton.TabIndex = 4;
-            this.userButton.Text = "       Usuários";
+            this.userButton.Text = "      Usuários";
             this.userButton.UseVisualStyleBackColor = true;
             this.userButton.Click += new System.EventHandler(this.userButton_Click);
             // 
@@ -144,7 +144,7 @@
             this.clientButton.Name = "clientButton";
             this.clientButton.Size = new System.Drawing.Size(157, 78);
             this.clientButton.TabIndex = 1;
-            this.clientButton.Text = "       Clientes";
+            this.clientButton.Text = "   Clientes";
             this.clientButton.UseVisualStyleBackColor = true;
             this.clientButton.Click += new System.EventHandler(this.clientButton_Click);
             // 

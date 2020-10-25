@@ -229,12 +229,6 @@
     <Compile Include="Views\MainMenuForm.Designer.cs">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\MenuForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\MenuForm.Designer.cs">
-      <DependentUpon>MenuForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\ReportFormControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -304,9 +298,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\MainMenuForm.resx">
       <DependentUpon>MainMenuForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\MenuForm.resx">
-      <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ReportFormControl.resx">
       <DependentUpon>ReportFormControl.cs</DependentUpon>
