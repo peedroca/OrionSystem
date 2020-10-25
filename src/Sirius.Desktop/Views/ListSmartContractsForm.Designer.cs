@@ -86,9 +86,10 @@
             // 
             // createContractButton
             // 
+            this.createContractButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.createContractButton.ForeColor = System.Drawing.Color.Black;
             this.createContractButton.Image = ((System.Drawing.Image)(resources.GetObject("createContractButton.Image")));
-            this.createContractButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.createContractButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.createContractButton.Location = new System.Drawing.Point(451, 335);
             this.createContractButton.Margin = new System.Windows.Forms.Padding(4);
             this.createContractButton.Name = "createContractButton";
@@ -101,8 +102,9 @@
             // consultContractButton
             // 
             this.consultContractButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.consultContractButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.consultContractButton.Image = ((System.Drawing.Image)(resources.GetObject("consultContractButton.Image")));
-            this.consultContractButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.consultContractButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.consultContractButton.Location = new System.Drawing.Point(287, 335);
             this.consultContractButton.Margin = new System.Windows.Forms.Padding(4);
             this.consultContractButton.Name = "consultContractButton";
@@ -126,7 +128,7 @@
             this.companyContractTextBox.Enabled = false;
             this.companyContractTextBox.Location = new System.Drawing.Point(188, 10);
             this.companyContractTextBox.Name = "companyContractTextBox";
-            this.companyContractTextBox.Size = new System.Drawing.Size(275, 26);
+            this.companyContractTextBox.Size = new System.Drawing.Size(427, 26);
             this.companyContractTextBox.TabIndex = 5;
             this.companyContractTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -141,6 +143,7 @@
             this.Controls.Add(this.consultContractButton);
             this.Controls.Add(this.createContractButton);
             this.Controls.Add(this.smartContractsDataGridView);
+            this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);

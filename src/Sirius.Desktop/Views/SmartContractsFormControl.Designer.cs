@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SmartContractsFormControl));
             this.smartContractGridView = new System.Windows.Forms.DataGridView();
-            this.createContractButton = new System.Windows.Forms.Button();
-            this.consultContractButton = new System.Windows.Forms.Button();
             this.idColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contractorColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createContractButton = new System.Windows.Forms.Button();
+            this.consultContractButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.smartContractGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,30 +55,11 @@
             this.smartContractGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.smartContractGridView.Location = new System.Drawing.Point(13, 73);
             this.smartContractGridView.Name = "smartContractGridView";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.smartContractGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.smartContractGridView.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.smartContractGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.smartContractGridView.Size = new System.Drawing.Size(829, 348);
             this.smartContractGridView.TabIndex = 0;
-            // 
-            // createContractButton
-            // 
-            this.createContractButton.Location = new System.Drawing.Point(699, 427);
-            this.createContractButton.Name = "createContractButton";
-            this.createContractButton.Size = new System.Drawing.Size(143, 46);
-            this.createContractButton.TabIndex = 1;
-            this.createContractButton.Text = "Novo";
-            this.createContractButton.UseVisualStyleBackColor = true;
-            this.createContractButton.Click += new System.EventHandler(this.createContractButton_Click);
-            // 
-            // consultContractButton
-            // 
-            this.consultContractButton.Location = new System.Drawing.Point(550, 427);
-            this.consultContractButton.Name = "consultContractButton";
-            this.consultContractButton.Size = new System.Drawing.Size(143, 46);
-            this.consultContractButton.TabIndex = 2;
-            this.consultContractButton.Text = "Consultar";
-            this.consultContractButton.UseVisualStyleBackColor = true;
             // 
             // idColumn
             // 
@@ -110,6 +92,30 @@
             this.Column2.HeaderText = "Valor";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
+            // 
+            // createContractButton
+            // 
+            this.createContractButton.Image = ((System.Drawing.Image)(resources.GetObject("createContractButton.Image")));
+            this.createContractButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.createContractButton.Location = new System.Drawing.Point(699, 427);
+            this.createContractButton.Name = "createContractButton";
+            this.createContractButton.Size = new System.Drawing.Size(143, 46);
+            this.createContractButton.TabIndex = 1;
+            this.createContractButton.Text = "   Novo";
+            this.createContractButton.UseVisualStyleBackColor = true;
+            this.createContractButton.Click += new System.EventHandler(this.createContractButton_Click);
+            // 
+            // consultContractButton
+            // 
+            this.consultContractButton.Image = ((System.Drawing.Image)(resources.GetObject("consultContractButton.Image")));
+            this.consultContractButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.consultContractButton.Location = new System.Drawing.Point(550, 427);
+            this.consultContractButton.Name = "consultContractButton";
+            this.consultContractButton.Size = new System.Drawing.Size(143, 46);
+            this.consultContractButton.TabIndex = 2;
+            this.consultContractButton.Text = "   Consultar";
+            this.consultContractButton.UseVisualStyleBackColor = true;
+            this.consultContractButton.Click += new System.EventHandler(this.consultContractButton_Click);
             // 
             // SmartContractsFormControl
             // 

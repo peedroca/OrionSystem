@@ -120,11 +120,14 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(198, 280);
+            this.saveButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveButton.Image = ((System.Drawing.Image)(resources.GetObject("saveButton.Image")));
+            this.saveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.saveButton.Location = new System.Drawing.Point(177, 280);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(104, 36);
+            this.saveButton.Size = new System.Drawing.Size(125, 56);
             this.saveButton.TabIndex = 15;
-            this.saveButton.Text = "Salvar";
+            this.saveButton.Text = "   Salvar";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
@@ -206,7 +209,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(92)))));
-            this.ClientSize = new System.Drawing.Size(315, 323);
+            this.ClientSize = new System.Drawing.Size(315, 348);
             this.Controls.Add(this.telefoneTextBox);
             this.Controls.Add(this.cnpjTextBox);
             this.Controls.Add(this.emailLabel);

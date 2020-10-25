@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateContractForm));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.valueTextBox = new System.Windows.Forms.MaskedTextBox();
             this.valueLabel = new System.Windows.Forms.Label();
             this.conclusionConditionLabel = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.titleTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados do Contrato";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(482, 245);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(28, 18);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "R$";
             // 
             // valueTextBox
             // 
@@ -166,12 +176,15 @@
             // 
             // addNewContractButton
             // 
+            this.addNewContractButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.addNewContractButton.ForeColor = System.Drawing.Color.Black;
-            this.addNewContractButton.Location = new System.Drawing.Point(571, 250);
+            this.addNewContractButton.Image = ((System.Drawing.Image)(resources.GetObject("addNewContractButton.Image")));
+            this.addNewContractButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addNewContractButton.Location = new System.Drawing.Point(532, 250);
             this.addNewContractButton.Name = "addNewContractButton";
-            this.addNewContractButton.Size = new System.Drawing.Size(102, 61);
+            this.addNewContractButton.Size = new System.Drawing.Size(141, 61);
             this.addNewContractButton.TabIndex = 7;
-            this.addNewContractButton.Text = "Adicionar";
+            this.addNewContractButton.Text = "    Adicionar";
             this.addNewContractButton.UseVisualStyleBackColor = true;
             this.addNewContractButton.Click += new System.EventHandler(this.addNewContractButton_Click);
             // 
@@ -231,16 +244,6 @@
             this.label5.Size = new System.Drawing.Size(126, 18);
             this.label5.TabIndex = 1;
             this.label5.Text = "Titulo do contrato";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(482, 245);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 18);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "R$";
             // 
             // CreateContractForm
             // 
