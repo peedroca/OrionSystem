@@ -44,5 +44,18 @@ namespace Sirius.Infra.Data.Contexts
         /// </summary>
             
         public DbSet<CustomerEntity> Customers{ get; set; }
+
+        /// <summary>
+        /// Tabela Requisição de Cliente
+        /// </summary>
+
+        public DbSet<CustomerRequestEntity> RequestCustomers { get; set; }
+
+
+        // <summary>
+        /// Tabela recusa de Cliente
+        /// </summary>
+
+        public DbSet<CustomerRefusalEntity> RefusaltCustomers { get; set; }
     }
 }

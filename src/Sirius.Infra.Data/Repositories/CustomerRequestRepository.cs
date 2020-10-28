@@ -9,10 +9,7 @@ using System.Text;
 
 namespace Sirius.Infra.Data.Repositories
 {
-    /// <summary>
-    /// Repositorio de Clientes
-    /// </summary>
-    public class CustomerRepository : ICustomerRepository<CustomerEntity>
+    public class CustomerRequestRepository : ICustomerRequestRepository<CustomerRequestEntity>
     {
         private SiriusDbContext context;
 
@@ -20,14 +17,14 @@ namespace Sirius.Infra.Data.Repositories
         /// Construtor 
         /// </summary>
         /// <param name="context">Contexto do banco de dados do tipo <see cref="SiriusDbContext"/></param>
-        public CustomerRepository(SiriusDbContext context)
+        public CustomerRequestRepository(SiriusDbContext context)
         {
             this.context = context;
         }
 
-        public void DeleteCustomer(CustomerEntity customer)
+        public void DeleteCustomerRequest(CustomerRequestEntity customerRequest)
         {
-            context.Customers.Remove(customer);
+            context.RequestCustomers.Remove(customerRequest);
             context.SaveChanges();
         }
 
@@ -35,9 +32,9 @@ namespace Sirius.Infra.Data.Repositories
         /// Listar Clientes
         /// </summary>
         /// <returns></returns>
-        public IEnumerable<CustomerEntity> GetCustomer()
+        public IEnumerable<CustomerRequestEntity> GetCustomerRequests()
         {
-            return context.Customers.AsNoTracking().ToList();
+            return context.RequestCustomers.AsNoTracking().ToList();
         }
 
         /// <summary>
@@ -45,9 +42,9 @@ namespace Sirius.Infra.Data.Repositories
         /// </summary>
         /// <param name="id">Primary Key</param>
         /// <returns></returns>
-        public CustomerEntity GetCustomer(long id)
+        public CustomerRequestEntity GetCustomerRequest(long id)
         {
-            return context.Customers
+            return context.RequestCustomers
                 .Where(w => w.Id == id)
                 .AsNoTracking()
                 .FirstOrDefault();
@@ -56,13 +53,13 @@ namespace Sirius.Infra.Data.Repositories
         /// <summary>
         /// Salva Cliente
         /// </summary>
-        /// <param name="customer">Objeto do tipo CustomerEntity será salvo </param>
-        public void SaveCustomer(CustomerEntity customer)
+        /// <param name="customerRequest">Objeto do tipo CustomerRequestEntity será salvo </param>
+        public void SaveCustomerRequest(CustomerRequestEntity customerRequest)
         {
-            if (customer.Id == 0)
-                context.Add(customer);
+            if (customerRequest.Id == 0)
+                context.Add(customerRequest);
             else
-                context.Update(customer);
+                context.Update(customerRequest);
 
             context.SaveChanges();
         }
