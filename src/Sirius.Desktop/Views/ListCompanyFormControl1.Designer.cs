@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListCompanyFormControl1));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.contractsButton = new System.Windows.Forms.Button();
             this.filterButton = new System.Windows.Forms.Button();
             this.cnpjTextBox = new System.Windows.Forms.MaskedTextBox();
@@ -51,6 +52,9 @@
             // contractsButton
             // 
             this.contractsButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.contractsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.contractsButton.Image = ((System.Drawing.Image)(resources.GetObject("contractsButton.Image")));
+            this.contractsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.contractsButton.Location = new System.Drawing.Point(100, 417);
             this.contractsButton.Name = "contractsButton";
             this.contractsButton.Size = new System.Drawing.Size(143, 46);
@@ -62,6 +66,9 @@
             // filterButton
             // 
             this.filterButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.filterButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.filterButton.Image = ((System.Drawing.Image)(resources.GetObject("filterButton.Image")));
+            this.filterButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.filterButton.Location = new System.Drawing.Point(696, 36);
             this.filterButton.Name = "filterButton";
             this.filterButton.Size = new System.Drawing.Size(143, 48);
@@ -110,6 +117,9 @@
             // deleteButton
             // 
             this.deleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.deleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteButton.Image = ((System.Drawing.Image)(resources.GetObject("deleteButton.Image")));
+            this.deleteButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.deleteButton.Location = new System.Drawing.Point(398, 417);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(143, 46);
@@ -121,6 +131,9 @@
             // inactivButton
             // 
             this.inactivButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.inactivButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.inactivButton.Image = ((System.Drawing.Image)(resources.GetObject("inactivButton.Image")));
+            this.inactivButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.inactivButton.Location = new System.Drawing.Point(249, 417);
             this.inactivButton.Name = "inactivButton";
             this.inactivButton.Size = new System.Drawing.Size(143, 46);
@@ -132,6 +145,9 @@
             // editButton
             // 
             this.editButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.editButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.editButton.Image = ((System.Drawing.Image)(resources.GetObject("editButton.Image")));
+            this.editButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.editButton.Location = new System.Drawing.Point(547, 417);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(143, 46);
@@ -143,6 +159,9 @@
             // newButton
             // 
             this.newButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.newButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.newButton.Image = ((System.Drawing.Image)(resources.GetObject("newButton.Image")));
+            this.newButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.newButton.Location = new System.Drawing.Point(696, 417);
             this.newButton.Name = "newButton";
             this.newButton.Size = new System.Drawing.Size(143, 46);
@@ -172,8 +191,8 @@
             this.companiesDataGridView.Name = "companiesDataGridView";
             this.companiesDataGridView.RowHeadersVisible = false;
             this.companiesDataGridView.RowHeadersWidth = 62;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.companiesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companiesDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.companiesDataGridView.RowTemplate.Height = 28;
             this.companiesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.companiesDataGridView.Size = new System.Drawing.Size(819, 309);

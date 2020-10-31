@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginDesktopForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.RememberButton = new System.Windows.Forms.Button();
             this.LoginButton = new System.Windows.Forms.Button();
             this.RememberCheckBox = new System.Windows.Forms.CheckBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.RememberButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
@@ -64,6 +64,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(310, 389);
             this.panel1.TabIndex = 0;
+            // 
+            // RememberButton
+            // 
+            this.RememberButton.BackColor = System.Drawing.Color.Transparent;
+            this.RememberButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RememberButton.FlatAppearance.BorderSize = 0;
+            this.RememberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RememberButton.Location = new System.Drawing.Point(71, 309);
+            this.RememberButton.Name = "RememberButton";
+            this.RememberButton.Size = new System.Drawing.Size(177, 34);
+            this.RememberButton.TabIndex = 10;
+            this.RememberButton.Text = "Esqueceu a Senha";
+            this.RememberButton.UseVisualStyleBackColor = false;
+            this.RememberButton.Click += new System.EventHandler(this.RememberButton_Click);
             // 
             // LoginButton
             // 
@@ -174,19 +188,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // RememberButton
-            // 
-            this.RememberButton.BackColor = System.Drawing.Color.Transparent;
-            this.RememberButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RememberButton.FlatAppearance.BorderSize = 0;
-            this.RememberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RememberButton.Location = new System.Drawing.Point(67, 309);
-            this.RememberButton.Name = "RememberButton";
-            this.RememberButton.Size = new System.Drawing.Size(177, 34);
-            this.RememberButton.TabIndex = 10;
-            this.RememberButton.Text = "Esqueceu a Senha";
-            this.RememberButton.UseVisualStyleBackColor = false;
             // 
             // LoginDesktopForm
             // 

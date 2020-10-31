@@ -45,5 +45,10 @@ namespace Sirius.Desktop.Views
             else
                 smartContractGridView.DataSource = null;
         }
+
+        private void consultContractButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -34,5 +34,10 @@ namespace Sirius.Desktop.Views
             form1.ShowDialog();
             this.Close(); //Abrir Form
         }
+
+        private void RememberButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

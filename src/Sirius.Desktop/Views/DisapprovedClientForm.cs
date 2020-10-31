@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Sirius.Desktop.Views
 {
-    public partial class ClientFormControl : UserControl
+    public partial class DisapprovedClientForm : Form
     {
-        public ClientFormControl()
+        public DisapprovedClientForm()
         {
             InitializeComponent();
-        }
-
-        private void analyzesButton_Click(object sender, EventArgs e)
-        {
-            AnalyzeClientForm form = new AnalyzeClientForm();
-            form.ShowDialog();
         }
     }
 }
