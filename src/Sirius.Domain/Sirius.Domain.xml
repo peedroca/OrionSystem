@@ -135,6 +135,102 @@
             Usuário utilizado pelo cliente.
             </summary>
         </member>
+        <member name="T:Sirius.Domain.Entities.CustomerRefusalEntity">
+            <summary>
+            Entidade de Recusa do Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRefusalEntity.Id">
+            <summary>
+            Código da Recusa 
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRefusalEntity.RefusalReason">
+            <summary>
+            Motivo de rejeição
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRefusalEntity.Createdon">
+            <summary>
+            Data de criação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRefusalEntity.UpdatedOn">
+            <summary>
+            Data de atualização
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRefusalEntity.Rejected">
+            <summary>
+            Rejeição revogada
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Sirius.Domain.Entities.CustomerRequestEntity" -->
+        <member name="P:Sirius.Domain.Entities.CustomerRequestEntity.Id">
+            <summary>
+            Código de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRequestEntity.FirstName">
+            <summary>
+            Primeiro nome de Requisição Cliente
+            </summary>     
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRequestEntity.LastName">
+            <summary>
+            Ultimo nome de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRequestEntity.Nickname">
+             <summary>
+            Apelido de Requisição Cliente
+             </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRequestEntity.CPF">
+            <summary>
+            CPF de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRequestEntity.CNPJ">
+             <summary>
+            Cadastro de CNPJ de Requisição Cliente
+             </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRequestEntity.Phone">
+            <summary>
+            Telefone de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRequestEntity.Email">
+            <summary>
+            E mail de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRequestEntity.BirthDate">
+            <summary>
+            Data de Aniversário de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRequestEntity.CreatedOn">
+            <summary>
+            Data de criação de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRequestEntity.UpdatedOn">
+            <summary>
+            Data de Atualização Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRequestEntity.Deleted">
+            <summary>
+            Deletado
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.CustomerRequestEntity.CostumerRefusal">
+            <summary>
+            Rejeição da Requisição Cliente
+            </summary>  
+        </member>
         <member name="T:Sirius.Domain.Entities.SmartContractEntity">
             <summary>
             Entidade Contrato Inteligente
@@ -349,12 +445,59 @@
             Interface do Serviço de Empresa
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "T:Sirius.Domain.Interfaces.ICustomerRepository`1" -->
+        <member name="T:Sirius.Domain.Interfaces.ICostumerRefusalRepository`1">
+            <summary>
+            Interface de recusa de Clientes
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Sirius.Domain.Interfaces.ICostumerRefusalRepository`1.SaveRefusal(`0)" -->
+        <member name="T:Sirius.Domain.Interfaces.ICustomerRequestRepository`1">
+            <summary>
+            Interface de Requisição de Clientes
+            </summary>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.ICustomerRequestRepository`1.SaveCustomerRequest(`0)">
+            <summary>
+            Salvar Requisição Cliente
+            </summary>
+            <param name="customerR">Objeto do tipo CustomerRequest que será salvo.</param>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.ICustomerRequestRepository`1.DeleteCustomerRequest(`0)">
+            <summary>
+            Deletar Requisição de Cliente
+            </summary>
+            <param name="T"></param>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.ICustomerRequestRepository`1.GetCustomerRequest(System.Int64)">
+            <summary>
+            Obter Requisição de cliente
+            </summary>
+            <param name="id"> Id do customer Request</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.ICustomerRequestRepository`1.GetCustomerRequests">
+            <summary>
+            Listar REquisição de Clientes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sirius.Domain.Interfaces.ICustomerRepository`1">
+            <summary>
+            Interface de repositorios de Clientes
+            </summary>
+            <typeparam name="Customer"></typeparam>
+        </member>
         <member name="M:Sirius.Domain.Interfaces.ICustomerRepository`1.SaveCustomer(`0)">
             <summary>
             Salvar Cliente
             </summary>
             <param name="customer">Objeto do tipo Customer que será salvo.</param>
+        </member>
+        <member name="M:Sirius.Domain.Interfaces.ICustomerRepository`1.DeleteCustomer(`0)">
+            <summary>
+            Deletar Cliente
+            </summary>
+            <param name="customer"></param>
         </member>
         <member name="M:Sirius.Domain.Interfaces.ICustomerRepository`1.GetCustomer(System.Int64)">
             <summary>
@@ -363,11 +506,10 @@
             <param name="id"> Id do customer</param>
             <returns></returns>
         </member>
-        <member name="M:Sirius.Domain.Interfaces.ICustomerRepository`1.Getcustomer(System.Int64)">
+        <member name="M:Sirius.Domain.Interfaces.ICustomerRepository`1.GetCustomer">
             <summary>
-            Obter Clientes
+            Listar Clientes
             </summary>
-            <param name="id">Id do cliente</param>
             <returns></returns>
         </member>
         <member name="T:Sirius.Domain.Interfaces.ISmartContractRepository`1">
@@ -435,6 +577,11 @@
         <member name="T:Sirius.Domain.Mapper.CompanyMapper">
             <summary>
             Mapeamento de empresa
+            </summary>
+        </member>
+        <member name="T:Sirius.Domain.Mapper.CustomerMapper">
+            <summary>
+            Mapeamento de Cliente
             </summary>
         </member>
         <member name="T:Sirius.Domain.Mapper.SmartContractMapper">
@@ -627,6 +774,46 @@
             </summary>
             <param name="userModel"></param>
         </member>
+        <member name="P:Sirius.Domain.Models.CreateCustomerRequestModel.FirstName">
+            <summary>
+            Primeiro nome de Requisição Cliente
+            </summary>     
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateCustomerRequestModel.LastName">
+            <summary>
+            Ultimo nome de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateCustomerRequestModel.Nickname">
+             <summary>
+            Apelido de Requisição Cliente
+             </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateCustomerRequestModel.CPF">
+            <summary>
+            CPF de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateCustomerRequestModel.CNPJ">
+             <summary>
+            Cadastro de CNPJ de Requisição Cliente
+             </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateCustomerRequestModel.Phone">
+            <summary>
+            Telefone de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateCustomerRequestModel.Email">
+            <summary>
+            E mail de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateCustomerRequestModel.BirthDate">
+            <summary>
+            Data de Aniversário de Requisição Cliente
+            </summary>
+        </member>
         <member name="T:Sirius.Domain.Models.CreateSmartContractModel">
             <summary>
             Modelo de criação de contrato inteligente
@@ -736,6 +923,166 @@
             <summary>
             Bloqueado
             </summary>
+        </member>
+        <member name="T:Sirius.Domain.Models.CustomerModel">
+            <summary>
+            Modelo de Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerModel.Id">
+            <summary>
+            id Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerModel.FirstName">
+            <summary>
+             Primeiro Nome de cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerModel.LastName">
+            <summary>
+            Ultimo nome de cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerModel.Nickname">
+            <summary>
+            Apelido de Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerModel.Cpf">
+            <summary>
+            Cpf de Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerModel.CNPJ">
+            <summary>
+            Cadastro Nacional de Pessoa Jurídica
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerModel.Phone">
+            <summary>
+            Telefone do cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerModel.Email">
+            <summary>
+            E-mail do cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerModel.BirthDate">
+            <summary>
+            Data de nascimento
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerModel.CreatedOn">
+            <summary>
+            Data de Criação do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerModel.UpdatedOn">
+            <summary>
+            Data de Atualização do Registro
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerModel.Blocked">
+            <summary>
+            Cliente Bloqueado
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerModel.User">
+            <summary>
+            Usuário utilizado pelo cliente.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRefusalModel.Id">
+            <summary>
+            Código da Recusa 
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRefusalModel.RefusalReason">
+            <summary>
+            Motivo de rejeição
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRefusalModel.Createdon">
+            <summary>
+            Data de criação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRefusalModel.UpdatedOn">
+            <summary>
+            Data de atualização
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRefusalModel.Rejected">
+            <summary>
+            Rejeição revogada
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRequestModel.Id">
+            <summary>
+            Código de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRequestModel.FirstName">
+            <summary>
+            Primeiro nome de Requisição Cliente
+            </summary>     
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRequestModel.LastName">
+            <summary>
+            Ultimo nome de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRequestModel.Nickname">
+             <summary>
+            Apelido de Requisição Cliente
+             </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRequestModel.CPF">
+            <summary>
+            CPF de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRequestModel.CNPJ">
+             <summary>
+            Cadastro de CNPJ de Requisição Cliente
+             </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRequestModel.Phone">
+            <summary>
+            Telefone de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRequestModel.Email">
+            <summary>
+            E mail de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRequestModel.BirthDate">
+            <summary>
+            Data de Aniversário de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRequestModel.CreatedOn">
+            <summary>
+            Data de criação de Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRequestModel.UpdatedOn">
+            <summary>
+            Data de Atualização Requisição Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRequestModel.Deleted">
+            <summary>
+            Deletado
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CustomerRequestModel.CostumerRefusal">
+            <summary>
+            Rejeição da Requisição Cliente
+            </summary>  
         </member>
         <member name="T:Sirius.Domain.Models.LoginUserModel">
             <summary>
