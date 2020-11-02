@@ -30,6 +30,6 @@ namespace Sirius.Domain.Entities
         /// <summary>
         /// Rejeição revogada
         /// </summary>
-        public bool Repealed { get; set; }
+        public bool Rejected { get; set; }
     }
 }

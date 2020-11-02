@@ -54,6 +54,7 @@ namespace Sirius.API
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICompanyService, CompanyService>();
+            services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<ISmartContractService, SmartContractService>();
 
             services.AddSwaggerGen(c =>
