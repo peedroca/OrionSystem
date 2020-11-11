@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Sirius.Desktop.Controllers;
+using Sirius.Desktop.Models;
 
 namespace Sirius.Desktop.Views
 {
     public partial class ClientFormControl : UserControl
     {
+        private CostomerController CostomerController;
         public ClientFormControl()
         {
             InitializeComponent();
@@ -19,8 +22,43 @@ namespace Sirius.Desktop.Views
 
         private void analyzesButton_Click(object sender, EventArgs e)
         {
-            AnalyzeClientForm form = new AnalyzeClientForm();
+            RequestCostomerForm form = new RequestCostomerForm();
             form.ShowDialog();
+            LoadCostomer();
+        }
+
+        private void ClientFormControl_Load(object sender, EventArgs e)
+        {
+            CostomerController = new CostomerController();
+            LoadCostomer();
+        }
+        
+        public void LoadCostomer(long id = 0, string fristName = null)
+        {
+            var costomer = CostomerController.GetCustomer(id,fristName);
+
+            if (costomer != null && costomer.Count() > 0)
+            {
+                clientDataGridView.AutoGenerateColumns = false;
+                clientDataGridView.DataSource = costomer;
+            }
+            else
+                clientDataGridView.DataSource = null;
+
+        }
+
+        private void ConsultCostomerButton_Click(object sender, EventArgs e)
+        {
+            var costomer = clientDataGridView?.CurrentRow?.DataBoundItem as CostomerView;
+
+            ConsultCustomerForm form = new ConsultCustomerForm(costomer);
+            form.ShowDialog();
+            LoadCostomer();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

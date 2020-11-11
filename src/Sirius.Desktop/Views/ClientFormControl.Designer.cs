@@ -42,6 +42,7 @@
             this.razaoSocialTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.analyzesButton = new System.Windows.Forms.Button();
+            this.ConsultCostomerButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.clientDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +77,7 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "firstName";
+            this.Column1.DataPropertyName = "FristName";
             this.Column1.HeaderText = "Nome";
             this.Column1.MinimumWidth = 8;
             this.Column1.Name = "Column1";
@@ -84,14 +85,14 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "lastName";
+            this.Column2.DataPropertyName = "LastName";
             this.Column2.HeaderText = "Sobrenome";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
-            this.Column3.DataPropertyName = "cpf";
+            this.Column3.DataPropertyName = "CPF";
             this.Column3.HeaderText = "CPF";
             this.Column3.MinimumWidth = 8;
             this.Column3.Name = "Column3";
@@ -177,11 +178,26 @@
             this.analyzesButton.UseVisualStyleBackColor = true;
             this.analyzesButton.Click += new System.EventHandler(this.analyzesButton_Click);
             // 
+            // ConsultCostomerButton
+            // 
+            this.ConsultCostomerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ConsultCostomerButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ConsultCostomerButton.Image = ((System.Drawing.Image)(resources.GetObject("ConsultCostomerButton.Image")));
+            this.ConsultCostomerButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ConsultCostomerButton.Location = new System.Drawing.Point(547, 415);
+            this.ConsultCostomerButton.Name = "ConsultCostomerButton";
+            this.ConsultCostomerButton.Size = new System.Drawing.Size(143, 46);
+            this.ConsultCostomerButton.TabIndex = 75;
+            this.ConsultCostomerButton.Text = "Consultar";
+            this.ConsultCostomerButton.UseVisualStyleBackColor = true;
+            this.ConsultCostomerButton.Click += new System.EventHandler(this.ConsultCostomerButton_Click);
+            // 
             // ClientFormControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(92)))));
+            this.Controls.Add(this.ConsultCostomerButton);
             this.Controls.Add(this.analyzesButton);
             this.Controls.Add(this.filterButton);
             this.Controls.Add(this.cnpjTextBox);
@@ -193,6 +209,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ClientFormControl";
             this.Size = new System.Drawing.Size(856, 489);
+            this.Load += new System.EventHandler(this.ClientFormControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clientDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -202,16 +219,17 @@
         #endregion
 
         private System.Windows.Forms.DataGridView clientDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Button filterButton;
         private System.Windows.Forms.MaskedTextBox cnpjTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox razaoSocialTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button analyzesButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button ConsultCostomerButton;
     }
 }

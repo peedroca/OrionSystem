@@ -175,9 +175,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Controllers\CostomerController.cs" />
     <Compile Include="Controllers\SmartContractController.cs" />
     <Compile Include="Extesions\ExtensionMethods.cs" />
     <Compile Include="Models\CompanyView.cs" />
+    <Compile Include="Models\CostomerRequestView.cs" />
+    <Compile Include="Models\CostomerView.cs" />
     <Compile Include="Models\SmartContractViews.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -204,6 +207,12 @@
     </Compile>
     <Compile Include="Views\ConsultContractForm.Designer.cs">
       <DependentUpon>ConsultContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConsultCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConsultCustomerForm.Designer.cs">
+      <DependentUpon>ConsultCustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\CreateContractForm.cs">
       <SubType>Form</SubType>
@@ -246,6 +255,12 @@
     </Compile>
     <Compile Include="Views\ReportFormControl.Designer.cs">
       <DependentUpon>ReportFormControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RequestCostomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RequestCostomerForm.Designer.cs">
+      <DependentUpon>RequestCostomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\SmartContractsFormControl.cs">
       <SubType>UserControl</SubType>
@@ -299,6 +314,9 @@
     <EmbeddedResource Include="Views\ConsultContractForm.resx">
       <DependentUpon>ConsultContractForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConsultCustomerForm.resx">
+      <DependentUpon>ConsultCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CreateContractForm.resx">
       <DependentUpon>CreateContractForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -319,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ReportFormControl.resx">
       <DependentUpon>ReportFormControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RequestCostomerForm.resx">
+      <DependentUpon>RequestCostomerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SmartContractsFormControl.resx">
       <DependentUpon>SmartContractsFormControl.cs</DependentUpon>
