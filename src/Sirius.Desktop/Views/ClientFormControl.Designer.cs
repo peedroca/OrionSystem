@@ -37,9 +37,9 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filterButton = new System.Windows.Forms.Button();
-            this.cnpjTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.idCustomerTextBox = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.razaoSocialTextBox = new System.Windows.Forms.TextBox();
+            this.fristNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.analyzesButton = new System.Windows.Forms.Button();
             this.ConsultCostomerButton = new System.Windows.Forms.Button();
@@ -126,15 +126,15 @@
             this.filterButton.TabIndex = 73;
             this.filterButton.Text = "Filtrar";
             this.filterButton.UseVisualStyleBackColor = true;
+            this.filterButton.Click += new System.EventHandler(this.filterButton_Click);
             // 
-            // cnpjTextBox
+            // idCustomerTextBox
             // 
-            this.cnpjTextBox.Location = new System.Drawing.Point(313, 34);
-            this.cnpjTextBox.Mask = "999.999.999-99";
-            this.cnpjTextBox.Name = "cnpjTextBox";
-            this.cnpjTextBox.Size = new System.Drawing.Size(287, 26);
-            this.cnpjTextBox.TabIndex = 72;
-            this.cnpjTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.idCustomerTextBox.Location = new System.Drawing.Point(313, 34);
+            this.idCustomerTextBox.Name = "idCustomerTextBox";
+            this.idCustomerTextBox.Size = new System.Drawing.Size(73, 26);
+            this.idCustomerTextBox.TabIndex = 72;
+            this.idCustomerTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -142,16 +142,16 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(310, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 18);
+            this.label1.Size = new System.Drawing.Size(76, 18);
             this.label1.TabIndex = 71;
-            this.label1.Text = "CPF";
+            this.label1.Text = "ID Cliente";
             // 
-            // razaoSocialTextBox
+            // fristNameTextBox
             // 
-            this.razaoSocialTextBox.Location = new System.Drawing.Point(20, 34);
-            this.razaoSocialTextBox.Name = "razaoSocialTextBox";
-            this.razaoSocialTextBox.Size = new System.Drawing.Size(287, 26);
-            this.razaoSocialTextBox.TabIndex = 70;
+            this.fristNameTextBox.Location = new System.Drawing.Point(20, 34);
+            this.fristNameTextBox.Name = "fristNameTextBox";
+            this.fristNameTextBox.Size = new System.Drawing.Size(287, 26);
+            this.fristNameTextBox.TabIndex = 70;
             // 
             // label2
             // 
@@ -200,9 +200,9 @@
             this.Controls.Add(this.ConsultCostomerButton);
             this.Controls.Add(this.analyzesButton);
             this.Controls.Add(this.filterButton);
-            this.Controls.Add(this.cnpjTextBox);
+            this.Controls.Add(this.idCustomerTextBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.razaoSocialTextBox);
+            this.Controls.Add(this.fristNameTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.clientDataGridView);
             this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -220,9 +220,9 @@
 
         private System.Windows.Forms.DataGridView clientDataGridView;
         private System.Windows.Forms.Button filterButton;
-        private System.Windows.Forms.MaskedTextBox cnpjTextBox;
+        private System.Windows.Forms.MaskedTextBox idCustomerTextBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox razaoSocialTextBox;
+        private System.Windows.Forms.TextBox fristNameTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button analyzesButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

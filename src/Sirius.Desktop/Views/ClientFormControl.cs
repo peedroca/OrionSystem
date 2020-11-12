@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sirius.Desktop.Controllers;
 using Sirius.Desktop.Models;
+using System.Security.AccessControl;
 
 namespace Sirius.Desktop.Views
 {
@@ -33,9 +34,9 @@ namespace Sirius.Desktop.Views
             LoadCostomer();
         }
         
-        public void LoadCostomer(long id = 0, string fristName = null)
+        private void LoadCostomer(string fristName = null, long id = 0)
         {
-            var costomer = CostomerController.GetCustomer(id,fristName);
+            var costomer = CostomerController.GetCustomer(id, fristName);
 
             if (costomer != null && costomer.Count() > 0)
             {
@@ -59,6 +60,18 @@ namespace Sirius.Desktop.Views
         private void button1_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void filterButton_Click(object sender, EventArgs e)
+        {
+            long id = 0;
+            if(!string.IsNullOrEmpty(idCustomerTextBox.Text))    
+                 id = Convert.ToInt64(idCustomerTextBox.Text);
+
+            if (string.IsNullOrEmpty(idCustomerTextBox.Text.Trim()))
+                LoadCostomer(fristNameTextBox.Text);
+            else
+                LoadCostomer(fristNameTextBox.Text, id);
         }
     }
 }

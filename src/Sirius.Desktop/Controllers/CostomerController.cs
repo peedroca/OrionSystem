@@ -30,7 +30,11 @@ namespace Sirius.Desktop.Controllers
 
         public IEnumerable<CostomerView> GetCustomer(long id, string fristName = null)
         {
-            var customer = customerService.GetCustomers();
+            var customer = customerService.GetCustomers().Where(w => !w.Blocked);
+            if (!string.IsNullOrEmpty(fristName))
+                customer = customer.Where(w => w.FirstName.ToLower().Contains(fristName.ToLower()));
+            if (id != 0)
+                customer = customer.Where(w => w.Id.Equals(id));
             return customer?.ToCostomerViews();
         }
         public void  ApproveCustomer(CustomerModel customerModel) =>
