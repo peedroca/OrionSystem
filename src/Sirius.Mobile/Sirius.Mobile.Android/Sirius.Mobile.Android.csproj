@@ -74,16 +74,10 @@
     <AndroidResource Include="Resources\values\colors.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\ic_supervised_user_circle.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Sirius.Mobile\Sirius.Mobile.csproj">
       <Project>{61F116BD-9CFC-4EE8-B98D-BFCEF75AF1E8}</Project>
       <Name>Sirius.Mobile</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\logo_contracts_side.jpg" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\logo_sirius.png" />
@@ -122,16 +116,13 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\ic_supervised_user_circle.png" />
+    <AndroidResource Include="Resources\xml\network_security_config.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_supervised_user_circle.png" />
+    <AndroidResource Include="Resources\drawable\Background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_supervised_user_circle.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_supervised_user_circle.png" />
+    <AndroidResource Include="Resources\drawable\logo_contracts_side.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\ic_lock_outline.png" />
@@ -149,7 +140,19 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_lock_outline.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\xml\network_security_config.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_supervised_circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ic_supervised_circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_supervised_circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_supervised_circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_supervised_circle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

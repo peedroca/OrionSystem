@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Contratos"
+             x:Class="Sirius.Mobile.Views.ListContractsCustomerPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Contracts}" 
+                      HasUnevenRows="True" SelectionMode="Single"
+                      ItemSelected="ListView_ItemSelected"
+                      Margin="10">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="0, 12, 0, 0">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Título:" TextColor="Black" FontAttributes="Bold" />
+                                    <Label Text="{Binding Title}" TextColor="Black" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Descrição:" TextColor="Black" FontAttributes="Bold" />
+                                    <Label Text="{Binding Description}" TextColor="Black" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
