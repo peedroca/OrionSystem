@@ -12,5 +12,7 @@
   <ItemGroup>
     <PackageReference Include="Flunt" Version="1.0.5" />
   </ItemGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="..\Sirius.CrossCutting.Validations\Sirius.CrossCutting.Validations.csproj" />
+  </ItemGroup>
 </Project>

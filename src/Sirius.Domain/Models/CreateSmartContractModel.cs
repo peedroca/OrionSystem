@@ -37,7 +37,7 @@ namespace Sirius.Domain.Models
                 .IsNotNullOrEmpty(Description, "Descrição", "O contrato deve ter uma descrição.")
                 .IsNotNullOrEmpty(TerminationCondition, "Condição de Término", "A condição de término é obrigatória.")
                 .IsGreaterThan(Value, 0, "Valor", "O valor do contrato não pode ser igual a 0 (zero).")
-                .IsNull(CompanyModel, "Empresa", "Informe a empresa")
+                .IsNotNull(CompanyModel, "Empresa", "Informe a empresa")
                 .IsNotNullOrEmpty(ConclusionCondition, "Condição de Conclusão", "A condição de conclusão é obrigatória."));
         }
 

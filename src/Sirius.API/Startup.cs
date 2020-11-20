@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -47,12 +48,32 @@ namespace Sirius.API
 
             services.AddDbContext<SiriusDbContext>(o =>
             {
-                o.UseSqlServer(Configuration.GetConnectionString("LocalServer"),
+                o.UseSqlServer(Configuration.GetConnectionString("HostAzulDb"),
                     b => b.MigrationsAssembly("Sirius.API"));
             });
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICompanyService, CompanyService>();
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<ISmartContractService, SmartContractService>();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo() 
+                {
+                    Version = "v1",
+                    Title = "Swagger Demo",
+                    Description = "Swagger Demo for ValuesController",
+                    TermsOfService = null,
+                    Contact = new Microsoft.OpenApi.Models.OpenApiContact()
+                    {
+                        Name = "Joydip Kanjilal",
+                        Email = "joydipkanjilal@yahoo.com"
+                    }
+                });
+            });
+
+            services.AddAutoMapper(typeof(Startup));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,6 +95,12 @@ namespace Sirius.API
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
             });
         }
     }

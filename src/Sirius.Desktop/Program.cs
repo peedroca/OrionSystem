@@ -14,9 +14,7 @@ namespace Sirius.Desktop
         [STAThread]
         static void Main()
         {
-            string conn = "Server=\tbd.asp.hostazul.com.br,3433;Database=20447_siriusdb;User Id=20447_siriusdba;Password=Qaj7zj!NspMj;";
-
-            new Settings(conn, new SenderEmail("Sirius"
+            new Settings(Sirius.Desktop.Properties.Resources.dbPath, new SenderEmail("Sirius"
                 , "smtp.gmail.com"
                 , 587
                 , "orion.sirius.noreply@gmail.com"
@@ -24,7 +22,7 @@ namespace Sirius.Desktop
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ListCompanyForm());
+            Application.Run(new LoginDesktopForm());
         }
     }
 }

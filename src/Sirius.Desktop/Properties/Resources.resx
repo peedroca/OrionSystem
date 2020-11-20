@@ -120,4 +120,8 @@
   <data name="dbPath" xml:space="preserve">
     <value>Server=bd.asp.hostazul.com.br,3433;Database=20447_siriusdb;User Id=20447_siriusdba;Password=Qaj7zj!NspMj;</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="3507749-account-balance-bank-business-finance-iconoteka-money_107683 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3507749-account-balance-bank-business-finance-iconoteka-money_107683 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

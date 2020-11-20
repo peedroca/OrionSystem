@@ -1,4 +1,5 @@
 ﻿using Sirius.CrossCutting.Email;
+using Sirius.Domain.Entities;
 using Sirius.Domain.Interfaces;
 using Sirius.Domain.Mapper;
 using Sirius.Domain.Models;
@@ -14,6 +15,7 @@ namespace Sirius.Service
     public class SmartContractService : ISmartContractService
     {
         private static SmartContractRepository smartContractRepository;
+        private static CompanyRepository companyRepository;
 
         /// <summary>
         /// Construtor
@@ -21,25 +23,41 @@ namespace Sirius.Service
         public SmartContractService(SiriusDbContext siriusDbContext)
         {
             smartContractRepository = new SmartContractRepository(siriusDbContext);
+            companyRepository = new CompanyRepository(siriusDbContext);
         }
 
         public SmartContractModel CreateSmartContract(CreateSmartContractModel createSmartContract)
         {
-            if (createSmartContract.Invalid)
-                return default;
-
-            var smartContractEntity = createSmartContract.ToSmartContractEntity();
-            smartContractRepository.SaveSmartContract(smartContractEntity);
-
-            if (smartContractEntity != null && Settings.SenderEmail != null)
+            try
             {
-                string message = $"Novo Contrato Inteligente cadastrado para sua empresa!!\n\n{smartContractEntity.Title} Já está pronto para uso!";
+                if (createSmartContract.Invalid)
+                    return default;
 
-                new IntegrationEmail(Settings.SenderEmail)
-                    .SendEmailToUser(message, createSmartContract.CompanyModel.Email, createSmartContract.CompanyModel.Name);
+                var company = companyRepository.GetCompany(createSmartContract.CompanyModel.Id);
+                
+                if (company.SmartContracts == null)
+                    company.SmartContracts = new List<SmartContractEntity>();
+
+                var smartContractEntity = createSmartContract.ToSmartContractEntity();
+                company.SmartContracts.Add(smartContractEntity);
+
+                companyRepository.SaveCompany(company);
+
+                if (smartContractEntity != null && Settings.SenderEmail != null)
+                {
+                    string message = $"Novo Contrato Inteligente cadastrado para sua empresa!!\n\n{smartContractEntity.Title} Já está pronto para uso!";
+
+                    new IntegrationEmail(Settings.SenderEmail)
+                        .SendEmailToUser(message, createSmartContract.CompanyModel.Email, createSmartContract.CompanyModel.Name);
+                }
+
+                return smartContractEntity.ToSmartContractModel();
             }
+            catch (System.Exception e)
+            {
 
-            return smartContractEntity.ToSmartContractModel();
+                throw e; 
+            }
         }
 
         public SmartContractModel GetSmartContract(long id)
@@ -51,6 +69,12 @@ namespace Sirius.Service
         public IEnumerable<SmartContractModel> GetSmartContracts(long idCompany)
         {
             var smartContract = smartContractRepository.GetContracts(idCompany);
+            return smartContract?.ToSmartContractModel();
+        }
+
+        public IEnumerable<SmartContractModel> GetSmartContracts()
+        {
+            var smartContract = smartContractRepository.GetContracts();
             return smartContract?.ToSmartContractModel();
         }
 

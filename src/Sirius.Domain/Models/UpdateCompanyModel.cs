@@ -1,5 +1,6 @@
 ﻿using Flunt.Notifications;
 using Flunt.Validations;
+using Sirius.CrossCutting.Validations;
 using System;
 using System.Collections.Generic;
 
@@ -37,9 +38,10 @@ namespace Sirius.Domain.Models
                 .IsGreaterThan(Id, 0, "Id", "Id inválido")
                 .IsNotNullOrEmpty(Email, "Email", "O e-mail é obrigatório.")
                 .IsEmail(Email, "Email", "E-mail incorreto.")
+                .IsTrue(CpfCnpjUtils.IsValid(CNPJ), "CNPJ", "O CNPJ informado não é válido")
                 .IsNotNullOrEmpty(CNPJ, "CNPJ", "O CNPJ é obrigatório.")
-                .IsNotNullOrEmpty(Nickname, "Fantasia", "O nome fantasia é obrigatório.")
-                .IsNotNullOrEmpty(Name, "Razão Social", "A razão social é obrigatória."));
+                .IsNotNullOrEmpty(Nickname, "Nickname", "O nome fantasia é obrigatório.")
+                .IsNotNullOrEmpty(Name, "Name", "A razão social é obrigatória."));
         }
 
         /// <summary>
@@ -95,7 +97,7 @@ namespace Sirius.Domain.Models
         /// <summary>
         /// Lista com os contratos inteligentes da empresa.
         /// </summary>
-        public IEnumerable<SmartContractModel> SmartContracts { get; private set; }
+        public ICollection<SmartContractModel> SmartContracts { get; private set; }
 
         /// <summary>
         /// Usuário utilizado pela empresa.
@@ -105,7 +107,7 @@ namespace Sirius.Domain.Models
         public void LoadCreationDate(DateTime createdOn) =>
             this.CreatedOn = CreatedOn;
 
-        public void LoadSmartContracts(IEnumerable<SmartContractModel> smartContracts) =>
+        public void LoadSmartContracts(ICollection<SmartContractModel> smartContracts) =>
             this.SmartContracts = smartContracts;
 
         public void LoadUser(UserModel user) =>

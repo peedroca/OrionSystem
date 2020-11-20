@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Sirius.Domain.Models
 {
@@ -8,6 +9,11 @@ namespace Sirius.Domain.Models
     /// </summary>
     public class CompanyModel
     {
+        public CompanyModel(long id)
+        {
+            Id = id;
+        }
+
         /// <summary>
         /// Construtor
         /// </summary>
@@ -27,7 +33,7 @@ namespace Sirius.Domain.Models
             CNPJ = cNPJ;
             Phone = phone;
             Email = email;
-            SmartContracts = smartContracts;
+            SmartContracts = smartContracts?.ToList();
             User = user;
             CreatedOn = createdOn;
             UpdatedOn = updatedOn;
@@ -88,7 +94,7 @@ namespace Sirius.Domain.Models
         /// <summary>
         /// Lista com os contratos inteligentes da empresa.
         /// </summary>
-        public IEnumerable<SmartContractModel> SmartContracts { get; }
+        public ICollection<SmartContractModel> SmartContracts { get; }
 
         /// <summary>
         /// Usuário utilizado pela empresa.

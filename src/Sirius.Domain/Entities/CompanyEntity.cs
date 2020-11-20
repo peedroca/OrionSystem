@@ -61,7 +61,7 @@ namespace Sirius.Domain.Entities
         /// <summary>
         /// Lista com os contratos inteligentes da empresa.
         /// </summary>
-        public IEnumerable<SmartContractEntity> SmartContracts { get; set; }
+        public ICollection<SmartContractEntity> SmartContracts { get; set; }
 
         /// <summary>
         /// Usuário utilizado pela empresa.

@@ -12,10 +12,10 @@ namespace Sirius.Domain.Mapper
     public static class SmartContractMapper
     {
         public static SmartContractModel ToSmartContractModel(this SmartContractEntity smartContractEntity) =>
-            new SmartContractModel(smartContractEntity.Id, smartContractEntity.Title, smartContractEntity.Description, smartContractEntity.TerminationCondition, smartContractEntity.ConclusionCondition, smartContractEntity.Value, smartContractEntity.CompanyEntity?.ToCompanyModel());
+            new SmartContractModel(smartContractEntity.Id, smartContractEntity.Title, smartContractEntity.Description, smartContractEntity.TerminationCondition, smartContractEntity.ConclusionCondition, smartContractEntity.Value, null);
 
         public static IEnumerable<SmartContractModel> ToSmartContractModel(this IEnumerable<SmartContractEntity> smartContractEntities) =>
-            smartContractEntities.Select(s => s.ToSmartContractModel());
+            smartContractEntities.Select(s => s.ToSmartContractModel())?.ToList();
 
         public static SmartContractEntity ToSmartContractEntity(this SmartContractModel smartContractModel) =>
             new SmartContractEntity()
@@ -29,7 +29,7 @@ namespace Sirius.Domain.Mapper
                 Value = smartContractModel.Value
             };
 
-        public static IEnumerable<SmartContractEntity> ToSmartContractEntity(this IEnumerable<SmartContractModel> smartContractModels) =>
+        public static IEnumerable<SmartContractEntity> ToSmartContractEntity(this ICollection<SmartContractModel> smartContractModels) =>
             smartContractModels.Select(s => s.ToSmartContractEntity());
 
         public static SmartContractEntity ToSmartContractEntity(this CreateSmartContractModel smartContractModel) =>
@@ -45,7 +45,8 @@ namespace Sirius.Domain.Mapper
                 CreatedOn = DateTime.Now,
                 UpdatedOn = DateTime.Now,
                 Deleted = false,
-                Inactived = false
+                Inactived = false, 
+                CurrentCompanyEntityId = smartContractModel.Id
             };
 
         public static SmartContractEntity ToSmartContractEntity(this UpdateSmartContractModel smartContractModel) =>

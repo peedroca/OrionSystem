@@ -35,6 +35,9 @@ namespace Sirius.Desktop.Controllers
         public CompanyView GetCompanyView(long id) =>
             companyService.GetCompany(id).ToCompanyView();
 
+        public CompanyModel GetCompanyModel(long id) =>
+            companyService.GetCompany(id);
+
         public void UpdateCompany(UpdateCompanyModel updateCompanyModel) =>
             companyService.UpdateCompany(updateCompanyModel);
     }
