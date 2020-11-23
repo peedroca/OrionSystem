@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Sirius.Domain.Entities
 {
@@ -38,7 +37,7 @@ namespace Sirius.Domain.Entities
         /// E-mail de contato com a empresa
         /// </summary>
         public string Email { get; set; }
-                
+
         /// <summary>
         /// Data de Criação do Registro
         /// </summary>
@@ -62,7 +61,7 @@ namespace Sirius.Domain.Entities
         /// <summary>
         /// Lista com os contratos inteligentes da empresa.
         /// </summary>
-        public IEnumerable<SmartContractEntity> SmartContracts { get; set; }
+        public ICollection<SmartContractEntity> SmartContracts { get; set; }
 
         /// <summary>
         /// Usuário utilizado pela empresa.

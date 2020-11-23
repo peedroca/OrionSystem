@@ -1,12 +1,9 @@
-﻿using Sirius.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Sirius.Domain.Entities;
 using Sirius.Domain.Interfaces;
 using Sirius.Infra.Data.Contexts;
-using Sirius.Infra.Data.Migrations;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 
 namespace Sirius.Infra.Data.Repositories
 {
@@ -32,9 +29,9 @@ namespace Sirius.Infra.Data.Repositories
         /// <returns></returns>
         public IEnumerable<CompanyEntity> GetCompanies()
         {
-            return context.Companies.ToList();
+            return context.Companies.AsNoTracking().ToList();
         }
-                
+
         /// <summary>
         /// Obter empresa pelo Id 
         /// </summary>
@@ -42,7 +39,12 @@ namespace Sirius.Infra.Data.Repositories
         /// <returns></returns>
         public CompanyEntity GetCompany(long id)
         {
-            return context.Companies.Find(id);
+            return context.Companies
+                .Where(w => w.Id == id)
+                .Include(i => i.SmartContracts)
+                .Include(i => i.User)
+                .AsNoTracking()
+                .FirstOrDefault();
         }
 
         /// <summary>
@@ -55,7 +57,7 @@ namespace Sirius.Infra.Data.Repositories
                 context.Add(company);
             else
                 context.Update(company);
-            
+
             context.SaveChanges();
         }
     }

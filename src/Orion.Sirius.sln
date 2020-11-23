@@ -13,13 +13,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{7A57E19D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{E80087FC-3144-4ED0-AECA-21298CDFC20A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.Infra.Data", "Sirius.Infra.Data\Sirius.Infra.Data.csproj", "{13BD7F54-2D81-42B4-B440-D5E8DFD05C8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sirius.Infra.Data", "Sirius.Infra.Data\Sirius.Infra.Data.csproj", "{13BD7F54-2D81-42B4-B440-D5E8DFD05C8E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CrossCutting", "CrossCutting", "{1405F647-4270-40B2-99D9-9553C11788B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.Service", "Sirius.Service\Sirius.Service.csproj", "{257EAC24-C406-4D39-A166-9C6C0DB449C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sirius.Service", "Sirius.Service\Sirius.Service.csproj", "{257EAC24-C406-4D39-A166-9C6C0DB449C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.Domain", "Sirius.Domain\Sirius.Domain.csproj", "{CED3F69D-5851-4199-8E90-F25A09994710}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sirius.Domain", "Sirius.Domain\Sirius.Domain.csproj", "{CED3F69D-5851-4199-8E90-F25A09994710}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile", "Mobile", "{7CDFE51F-4DC2-471B-A54B-400F3EFC3494}"
 EndProject
@@ -29,15 +29,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{860B7F52-A5E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{58F346CE-848D-427E-AFC9-39943B5B8DD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.API", "Sirius.API\Sirius.API.csproj", "{27C605E6-1CDB-4100-B5C6-6C3F59B0AD3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sirius.API", "Sirius.API\Sirius.API.csproj", "{27C605E6-1CDB-4100-B5C6-6C3F59B0AD3F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.Desktop", "Sirius.Desktop\Sirius.Desktop.csproj", "{7FEECC03-27F7-4E6A-AFC5-6280F67F23B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.Mobile.Android", "Sirius.Mobile\Sirius.Mobile.Android\Sirius.Mobile.Android.csproj", "{009FA23F-8DA3-40FD-9E8E-61DF271FA10F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.Mobile", "Sirius.Mobile\Sirius.Mobile\Sirius.Mobile.csproj", "{A78698A6-9F36-4D37-9290-1766E922386B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sirius.Mobile", "Sirius.Mobile\Sirius.Mobile\Sirius.Mobile.csproj", "{A78698A6-9F36-4D37-9290-1766E922386B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.Web", "Sirius.Web\Sirius.Web.csproj", "{EE8C053D-DC6E-44CF-A1AC-C8BAC729E600}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sirius.Web", "Sirius.Web\Sirius.Web.csproj", "{EE8C053D-DC6E-44CF-A1AC-C8BAC729E600}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sirius.CrossCutting.Email", "Sirius.CrossCutting.Email\Sirius.CrossCutting.Email.csproj", "{69D5B68A-1E29-4D45-9BD8-4A0F42FAFEA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.CrossCutting.Validations", "Sirius.CrossCutting.Validations\Sirius.CrossCutting.Validations.csproj", "{388DBA33-4A92-47AF-B3CC-AA1273B20ADE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +83,14 @@ Global
 		{EE8C053D-DC6E-44CF-A1AC-C8BAC729E600}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE8C053D-DC6E-44CF-A1AC-C8BAC729E600}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE8C053D-DC6E-44CF-A1AC-C8BAC729E600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69D5B68A-1E29-4D45-9BD8-4A0F42FAFEA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69D5B68A-1E29-4D45-9BD8-4A0F42FAFEA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69D5B68A-1E29-4D45-9BD8-4A0F42FAFEA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69D5B68A-1E29-4D45-9BD8-4A0F42FAFEA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{388DBA33-4A92-47AF-B3CC-AA1273B20ADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{388DBA33-4A92-47AF-B3CC-AA1273B20ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{388DBA33-4A92-47AF-B3CC-AA1273B20ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{388DBA33-4A92-47AF-B3CC-AA1273B20ADE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,6 +110,8 @@ Global
 		{009FA23F-8DA3-40FD-9E8E-61DF271FA10F} = {7CDFE51F-4DC2-471B-A54B-400F3EFC3494}
 		{A78698A6-9F36-4D37-9290-1766E922386B} = {7CDFE51F-4DC2-471B-A54B-400F3EFC3494}
 		{EE8C053D-DC6E-44CF-A1AC-C8BAC729E600} = {860B7F52-A5EA-458F-B2C3-0653CA79B0D3}
+		{69D5B68A-1E29-4D45-9BD8-4A0F42FAFEA7} = {1405F647-4270-40B2-99D9-9553C11788B4}
+		{388DBA33-4A92-47AF-B3CC-AA1273B20ADE} = {1405F647-4270-40B2-99D9-9553C11788B4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A47DA3CB-5223-4910-B540-062C273F6422}

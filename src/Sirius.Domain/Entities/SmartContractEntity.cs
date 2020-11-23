@@ -1,7 +1,4 @@
-﻿using Sirius.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace Sirius.Domain.Entities
 {
@@ -13,7 +10,7 @@ namespace Sirius.Domain.Entities
         /// <summary>
         /// Identificação
         /// </summary>
-        public long Id  { get; set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// Título do contrato inteligente
@@ -36,35 +33,9 @@ namespace Sirius.Domain.Entities
         public string ConclusionCondition { get; set; }
 
         /// <summary>
-        /// Data de vencimento.
-        /// </summary>
-        public DateTime DueDate { get; set; }
-
-        /// <summary>
         /// Valor do contrato.
         /// </summary>
         public decimal Value { get; set; }
-
-
-        /// <summary>
-        /// Chave de autenticação do Contrato.
-        /// </summary>
-        public string AuthKey { get; set; }
-
-        /// <summary>
-        /// Código para pagamento do Contrato.
-        /// </summary>
-        public string CodePayment { get; set; }
-
-        /// <summary>
-        /// Status do contratos inteligentes: Payed, AwaitingPayment, Terminated, Finished, Expired
-        /// </summary>
-        public EStatusSmartContract Status { get; set; }
-
-        /// <summary>
-        /// Motivo da Rescisão
-        /// </summary>
-        public string ReasonTermination { get; set; }
 
         /// <summary>
         /// Data de Criação do Registro

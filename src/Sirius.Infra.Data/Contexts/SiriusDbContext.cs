@@ -1,11 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Sirius.Domain.Entities;
-using Sirius.Infra.Data.Migrations;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace Sirius.Infra.Data.Contexts 
+namespace Sirius.Infra.Data.Contexts
 {
     /// <summary>
     /// Contexto do banco de dados
@@ -42,5 +38,24 @@ namespace Sirius.Infra.Data.Contexts
         /// Tabela Empresas
         /// </summary>
         public DbSet<CompanyEntity> Companies { get; set; }
+
+        /// <summary>
+        /// Tabela Cliente
+        /// </summary>
+            
+        public DbSet<CustomerEntity> Customers{ get; set; }
+
+        /// <summary>
+        /// Tabela Requisição de Cliente
+        /// </summary>
+
+        public DbSet<CustomerRequestEntity> RequestCustomers { get; set; }
+
+
+        // <summary>
+        /// Tabela recusa de Cliente
+        /// </summary>
+
+        public DbSet<CustomerRefusalEntity> RefusaltCustomers { get; set; }
     }
 }

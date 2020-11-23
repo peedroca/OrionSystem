@@ -1,8 +1,5 @@
 ﻿using Sirius.Domain.Entities;
 using Sirius.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Sirius.Domain.Mapper
 {
@@ -17,7 +14,7 @@ namespace Sirius.Domain.Mapper
         /// <param name="userEntity">Objeto que será convertido</param>
         /// <returns>Objeto convertido.</returns>
         public static UserModel ToUserModel(this UserEntity userEntity) =>
-            new UserModel(userEntity.Username, userEntity.Password, userEntity.TypeUser, userEntity.TypeAccess);
+            new UserModel(userEntity.Id, userEntity.Username, string.Empty, userEntity.TypeUser, userEntity.TypeAccess);
 
         /// <summary>
         /// Converte para objeto do tipo <see cref="UserEntity"/>
@@ -36,6 +33,21 @@ namespace Sirius.Domain.Mapper
                 TypeAccess = createUserModel.TypeAccess,
                 TypeUser = createUserModel.TypeUser,
                 UpdatedOn = createUserModel.UpdatedOn
+            };
+
+        /// <summary>
+        /// Converte para objeto do tipo <see cref="UserEntity"/>
+        /// </summary>
+        /// <param name="userModel">Objeto que será convertido</param>
+        /// <returns>Objeto convertido.</returns>
+        public static UserEntity ToUserEntity(this UserModel userModel) =>
+            new UserEntity()
+            {
+                Id = userModel.Id,
+                Username = userModel.Username,
+                Password = userModel.Password,
+                TypeAccess = userModel.TypeAccess,
+                TypeUser = userModel.TypeUser
             };
     }
 }

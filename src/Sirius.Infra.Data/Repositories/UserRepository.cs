@@ -1,10 +1,8 @@
-﻿using Sirius.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Sirius.Domain.Entities;
 using Sirius.Domain.Interfaces;
 using Sirius.Infra.Data.Contexts;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Sirius.Infra.Data.Repositories
 {
@@ -33,6 +31,7 @@ namespace Sirius.Infra.Data.Repositories
         public UserEntity Login(string username, string password)
         {
             return context.Users
+                .AsNoTracking()
                 .Where(w => w.Username == username && w.Password == password)
                 .SingleOrDefault(); // Método p Verificar se há usuáros com o mesmo nome
         }

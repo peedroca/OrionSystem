@@ -1,48 +1,151 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+@RenderBody()
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Sirius.Web</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <meta charset="UTF-8" />
+    <title>Contracts Side</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
 </head>
+
 <body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Sirius.Web</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+        <div class="header">
+            <div class="logo">
+                <img class="logoimg" src="~/images/Contr.png" alt="">
+            </div>
+            <div class="menu">
+                <img class="menu-opener" src="~/images/menu.png" />
+                <nav>
+                    <ul>
+                        <li class="active"><a href="#banner">Home</a></li>
+                        <li><a href="#sobrenos">Sobre Nós</a></li>
+                        <li><a href="#contatenos">Contate-nos</a></li>
+                        <li><a href="#cadastrese">Cadastre-se</a></li>
                     </ul>
+                    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+                    <script type="text/javascript">
+                        $(document).on('click', 'ul li', function () {
+                            $(this).addClass('active').siblings().removeClass('active')
+                        })
+                    </script>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="banner" id="banner">
+            <div class="sliders" style="margin-left:0;">
+                <div class="slide">
+                    <div class="slidearea">
+                        <h1>Contracts Side<br /><span>Smart Contracts</span></h1>
+                        <h2>Solução Inteligente</h2>
+                        <a href="#contatenos" class="button">Contate-nos!</a>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+        </section>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - Sirius.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <section class="default light" id="sobrenos">
+            <div class="section-title">Sobre Nós</div>
+            <div class="section-desc">QUEM NÓS SOMOS?</div>
+            <div class="section-body">
+                <div class="section-aboutus">
+                    <div class="section-aboutus--left">
+                        <p>
+                            Somos uma empresa de gerenciamento de Smart Contracts, Trabalhamos para ajudar na organizaçao e implantação de seus contratos inteligentes de blockchain BLOCKCHAIN, seja nosso cliente e baixe ja nosso APP para acompanhar e gerir
+                            seus Smart Contracts.
+                        </p>
+                        <br />
+                        <a href="" class="button">Baixar APP</a>
+                    </div>
+                    <div class="section-aboutus--right">
+                        <img src="~/images/b848506a-4877-4ec4-86d3-e9e9989c48c7.jpg" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="default lightmin" id="contatenos">
+            <div class="section-title">CONTATE-NOS</div>
+            <div class="section-desc">CONTE PARA NÓS COMO PODEMOS TE AJUDAR</div>
+            <div class="section-body">
+                <div class="section-contact">
+                    <form method="POST">
+                        <div class="section-contact--split">
+                            <input type="text" name="name" id="name" placeholder="NOME" />
+                            <input type="text" name="email" id="email" placeholder="EMAIL" />
+                        </div>
+                        <input type="text" name="assunto" id="assunto" placeholder="ASSUNTO" />
+                        <textarea name="message" id="message" placeholder="MENSSAGEM"></textarea>
+                        <input type="submit" value="Enviar" class="button" />
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="default light" id="cadastrese">
+            <div class="section-title">Cadastre-se</div>
+            <div class="section-desc">SE ESTIVER INTERESSADO EM NOSSOS SERVIÇOS CADASTRE-SE E AGUARDE QUE ENTRAREMOS ENCONTATOPARA MAIORES INFORMAÇÕES</div>
+            <div class="section-body">
+                <div class="section-contact">
+                    <form method="POST">
+                        <div class="section-contact--split">
+                            <input type="text" name="name" placeholder="NOME" />
+                            <input type="text" name="sobrenome" placeholder="SOBRENOME" />
+                        </div>
+                        <div class="section-contact--split">
+                            <input type="text" name="CPF" placeholder="CPF" />
+                            <input type="text" name="email" placeholder="EMAIL" />
+                        </div>
+                        <div class="section-contact--split">
+                            <input type="text" name="CNPJ" placeholder="CNPJ" />
+                            <input type="text" name="telefone" placeholder="TELEFONE" />
+                        </div>
+                        <div class="section-contact--split">
+                            <input type="text" name="email" placeholder="EMAIL" />
+                            <input type="text" name="data de nascimento" placeholder="DATA DE NASCIMENTO" />
+                        </div>
+
+                        <input type="submit" value="Cadastra" class="button" />
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer--area">
+            <div class="footer--item area1">
+                <div class="footer-social">
+                    <a href=""><img src="~/images/twitter.png" /></a>
+                    <a href=""><img src="~/images/linkedin.png" /></a>
+                    <a href=""><img src="~/images/facebook.png" /></a>
+
+                </div>
+            </div>
+            <div class="footer--item area2">
+                <center id="footer"> © 2020 Orion Soluções em TI </center>
+            </div>
+            <div class="footer--item area3">
+
+            </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @RenderSection("Scripts", required: false)
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script type="text/javascript" src="~/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="~/js/app.js"></script>
 </body>
+
 </html>

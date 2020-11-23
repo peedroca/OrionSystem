@@ -1,5 +1,3 @@
-using System;
-
 namespace Sirius.Web.Models
 {
     public class ErrorViewModel
