@@ -107,5 +107,25 @@ namespace Sirius.Desktop.Extesions
             return customerModel.Select(s => s.ToCostomerViews()).ToList();
         }
         #endregion Conversão CostomerModel
+
+        #region Conversão UserModel
+
+        public static UserView ToUserView(this UserModel userModel)
+        {
+            return new UserView()
+            {
+                Id = userModel.Id,
+                Username = userModel.Username,
+                Password = userModel.Password,
+                TypeUser = userModel.TypeUser,
+                TypeAccess = userModel.TypeAccess
+            };
+        }
+        
+        public static IEnumerable<UserView> ToUserViews(this IEnumerable<UserModel> userModels)
+        {
+            return userModels.Select(s => s.ToUserView()).ToList();
+        }
+        #endregion Conversão UserModel
     }
 }

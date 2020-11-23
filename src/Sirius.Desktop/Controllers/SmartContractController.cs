@@ -29,5 +29,7 @@ namespace Sirius.Desktop.Controllers
 
         public void CreateSmartContract(CreateSmartContractModel createSmartContractModel) =>
             smartContractService.CreateSmartContract(createSmartContractModel);
+
+        
     }
 }
