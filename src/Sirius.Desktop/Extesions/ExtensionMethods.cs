@@ -54,5 +54,58 @@ namespace Sirius.Desktop.Extesions
             return smartContractModels.Select(s => s.ToSmartContractView()).ToList();
         }
         #endregion Conversão SmartContractModel
+
+        #region Conversão CostomerRequestModel
+        public static CostomerRequestView ToCostomerView(this CustomerRequestModel costomerModel)
+        {
+            return new CostomerRequestView()
+            {
+                Id = costomerModel.Id,
+                FristName = costomerModel.FirstName,
+                LastName = costomerModel.LastName,
+                Nickname = costomerModel.Nickname,
+                CPF = costomerModel.CPF,
+                CNPJ = costomerModel.CNPJ,
+                Phone = costomerModel.Phone,
+                Email = costomerModel.Email,
+                BirthDate = costomerModel.BirthDate,
+                CreateOn = costomerModel.CreatedOn,
+                UpdatedOn = costomerModel.UpdatedOn,
+                Deleted = costomerModel.Deleted,
+                costumerRefusal = costomerModel.CostumerRefusal
+            };         
+        }
+        public static IEnumerable<CostomerRequestView> ToCostomerView(this IEnumerable<CustomerRequestModel> costomerRequestModels)
+        {
+            return costomerRequestModels.Select(s => s.ToCostomerView()).ToList();
+        }
+        #endregion Conversão CostomerRequestModel
+
+        #region Conversão CostomerModel
+
+        public static CostomerView ToCostomerViews (this CustomerModel customerModels)
+        {
+            return new CostomerView()
+            {
+                Id = customerModels.Id,
+                FristName = customerModels.FirstName,
+                LastName = customerModels.LastName,
+                Nickname = customerModels.Nickname,
+                CPF = customerModels.Cpf,
+                CNPJ = customerModels.CNPJ,
+                Phone = customerModels.Phone,
+                Email = customerModels.Email,
+                BirthDate = customerModels.BirthDate,
+                CreateOn = customerModels.CreatedOn,
+                UpdatedOn = customerModels.UpdatedOn,
+                Blocked = customerModels.Blocked,
+                UserModel = customerModels.User
+            };
+        }
+        public static IEnumerable<CostomerView> ToCostomerViews(this IEnumerable<CustomerModel> customerModel)
+        {
+            return customerModel.Select(s => s.ToCostomerViews()).ToList();
+        }
+        #endregion Conversão CostomerModel
     }
 }
