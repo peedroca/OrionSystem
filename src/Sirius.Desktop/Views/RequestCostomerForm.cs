@@ -38,7 +38,7 @@ namespace Sirius.Desktop.Views
 
         public void LoadCostomer(long id = 0, string fristName = null)
         {
-            var costomer = CostomerController.GetCustomerRequests(id, fristName);
+            var costomer = CostomerController.GetCustomerRequests(id, fristName).Where(w => w.costumerRefusal == null)?.ToList();
 
             if (costomer != null && costomer.Count() > 0)
             {

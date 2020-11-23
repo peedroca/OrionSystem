@@ -16,5 +16,11 @@ namespace Sirius.Desktop.Views
         {
             InitializeComponent();
         }
+
+        private void newUserButton_Click(object sender, EventArgs e)
+        {
+            UserAddForm form = new UserAddForm();
+            form.ShowDialog();
+        }
     }
 }
