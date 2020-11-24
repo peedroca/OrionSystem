@@ -20,8 +20,10 @@ namespace Sirius.Desktop.Controllers
             userService = new UserService(Settings.SiriusDbContext);            
         }
 
-        public void CreateUser(LoginUserModel loginUserModel) =>
+        public UserModel LoginUser(LoginUserModel loginUserModel) =>
             userService.LogarUser(loginUserModel);
-        
+        public void CreateUser(string fullName, string name, string email)  =>
+            userService.CreateUser(fullName, name, email);
+
     }
 }
