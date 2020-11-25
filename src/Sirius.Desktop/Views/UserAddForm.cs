@@ -24,52 +24,41 @@ namespace Sirius.Desktop.Views
         private void UserAddForm_Load(object sender, EventArgs e)
         {
             UserController = new UserController();
+            
         }
 
         private void SaveUser()
         {
-            long id = Convert.ToInt64(idUserTextBox.Text);
-            var typeAccess = ETypeAccess.Comum;
-            var typeUser = ETypeUser.Employee;
-                       
-            if (typeAccessComboBox.Text == "Administrador")
+            try
             {
-                typeAccess = ETypeAccess.Admin;
-            }
-            if (typeAccessComboBox.Text == "Comum")
-            {
-                typeAccess = ETypeAccess.Comum;
-            }
-            if (typeUserComboBox.Text == "Empresa")
-            {
-                typeUser = ETypeUser.Company;
-            }
-            if (typeUserComboBox.Text == "Cliente")
-            {
-                typeUser = ETypeUser.Customer;
-            }
-            if (typeUserComboBox.Text == "Funcionario")
-            {
-                typeUser = ETypeUser.Employee;
-            }
+                string fullName = fullNameTextBox.Text;
+                string user = nameUserTextBox.Text;
+                string email = emailTextBox.Text;
 
+                if (string.IsNullOrEmpty(fullName))
+                    throw new ArgumentException("Nome deve estar Preenchido.");
+                if (string.IsNullOrEmpty(user))
+                    throw new ArgumentException("Nome de usuário deve estar Preenchido.");
+                if (string.IsNullOrEmpty(email))
+                    throw new ArgumentException("E-Mail deve estar Preenchido.");
 
-            UserModel userModel = new UserModel(id,
-                nameUserTextBox.Text,
-                passwordUserTextBox.Text,
-                typeUser,
-                typeAccess);
-            //UserController.CreateUser(userModel);
-            //ClearFields();
-            this.Close();
+                UserController.CreateUser(fullName, user, email);
+           
+                this.Close();
+            }
+            catch (ArgumentException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Ocorreu um erro: " + e.Message);
+            }
         }
 
-        private void ClearFields()
+        private void saveUserButton_Click(object sender, EventArgs e)
         {
-            idUserTextBox.Text = string.Empty;
-            nameUserTextBox.Text = string.Empty;
-            passwordUserTextBox.Text = string.Empty;
-            
+            SaveUser();
         }
     }
 }

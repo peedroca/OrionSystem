@@ -1,4 +1,5 @@
 ﻿using Flunt.Notifications;
+using Sirius.CrossCutting.Email;
 using Sirius.Domain.Entities;
 using Sirius.Domain.Enums;
 using Sirius.Domain.Interfaces;
@@ -34,6 +35,24 @@ namespace Sirius.Service
             return userEntity?.ToUserModel();
         }
 
+        public void CreateUser(string fullName, string name, string email)
+        {
+            try
+            {
+                var newUser = CreateUser(name, ETypeUser.Employee, ETypeAccess.Comum);
+
+                if (Settings.SenderEmail != null)
+                {
+                    new IntegrationEmail(Settings.SenderEmail)
+                        .SendEmailToUser(newUser, email, fullName);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         internal UserEntity CreateUser(string name, ETypeUser typeUser, ETypeAccess typeAccess)
         {
             string username = GenerateUsername(name);
@@ -65,13 +84,12 @@ namespace Sirius.Service
         private string GenerateUsername(string name)
         {
             string newName = name.ToLower().Replace(" ", "")
-                .Replace("a", "")
-                .Replace("e", "")
-                .Replace("i", "")
-                .Replace("o", "")
-                .Replace("u", "");
+                .Replace("a", "4")
+                .Replace("e", "3")
+                .Replace("i", "1")
+                .Replace("o", "0");
 
-            newName = $"{newName}     ".Substring(0, 4);
+            newName = $"{newName}sirius".Substring(0, 4);
             newName += $"@{new Random().Next(111, 999)}";
 
             return newName.Trim();
