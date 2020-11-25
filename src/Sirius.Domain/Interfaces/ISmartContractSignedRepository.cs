@@ -4,20 +4,20 @@ using System.Text;
 
 namespace Sirius.Domain.Interfaces
 {
-    public interface ISmartContractSignedRepository<CustomerSnd>
+    public interface ISmartContractSignedRepository<SmartContractSignedEntity>
     {
 
         /// <summary>
         /// Salvar contrato assinado
         /// </summary>
         ///<param name = "ustomerSnd> Objeto do Tipo CustomerRefusal que será salvo.</param>
-        void SaveRefusal(CustomerSnd customerSnd);
+        void SaveSign(SmartContractSignedEntity customerSnd);
 
         /// <summary>
         /// Listar Contratos assinados
         /// </summary>
         /// <returns></returns>
-        IEnumerable<T> GetSmartContractSigned();
+        IEnumerable<SmartContractSignedEntity> GetSmartContractSigned();
 
     }
 }

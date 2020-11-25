@@ -29,7 +29,7 @@ namespace Sirius.Infra.Data.Repositories
         /// <returns></returns>
         public IEnumerable<CompanyEntity> GetCompanies()
         {
-            return context.Companies.AsNoTracking().ToList();
+            return context.Companies.Include(i => i.User).AsNoTracking().ToList();
         }
 
         /// <summary>
