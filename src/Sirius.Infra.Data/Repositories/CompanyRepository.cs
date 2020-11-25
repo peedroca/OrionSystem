@@ -48,6 +48,21 @@ namespace Sirius.Infra.Data.Repositories
         }
 
         /// <summary>
+        /// Obter empresa pelo Id 
+        /// </summary>
+        /// <param name="id">Primary Key</param>
+        /// <returns></returns>
+        public CompanyEntity GetCompanyByIdUser(long id)
+        {
+            return context.Companies
+                .Where(w => w.User.Id == id)
+                .Include(i => i.SmartContracts)
+                .Include(i => i.User)
+                .AsNoTracking()
+                .FirstOrDefault();
+        }
+
+        /// <summary>
         /// Salva empresa
         /// </summary>
         /// <param name="company">Objeto do tipo CompanyEntity será salvo </param>

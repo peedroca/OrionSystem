@@ -48,7 +48,7 @@ namespace Sirius.API
 
             services.AddDbContext<SiriusDbContext>(o =>
             {
-                o.UseSqlServer(Configuration.GetConnectionString("HostAzulDb"),
+                o.UseSqlServer(Configuration.GetConnectionString("LocalServer"),
                     b => b.MigrationsAssembly("Sirius.API"));
             });
 
