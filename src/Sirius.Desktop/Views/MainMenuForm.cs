@@ -15,10 +15,9 @@ namespace Sirius.Desktop.Views
         public MainMenuForm()
         {
             InitializeComponent();
-            clientFormControl1.BringToFront();
-            //smartContractsFormControl1.BringToFront();
+            clientFormControl1.BringToFront();           
             reportFormControl1.BringToFront();
-            userFormControl1.BringToFront();
+            
             chartFormControl1.BringToFront();
             listCompanyFormControl11.BringToFront();
         }
@@ -50,7 +49,8 @@ namespace Sirius.Desktop.Views
 
         private void userButton_Click(object sender, EventArgs e)
         {
-            userFormControl1.BringToFront();
+            UserAddForm form = new UserAddForm();
+            form.ShowDialog();
         }
 
         private void chartButton_Click(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace Sirius.Desktop.Views
 
         private void companyButton_Click(object sender, EventArgs e)
         {
-            listCompanyFormControl11.BringToFront();
+           listCompanyFormControl11.BringToFront();
         }
     }
 }

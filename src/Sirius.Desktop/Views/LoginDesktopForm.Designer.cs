@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginDesktopForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.RememberButton = new System.Windows.Forms.Button();
             this.LoginButton = new System.Windows.Forms.Button();
-            this.RememberCheckBox = new System.Windows.Forms.CheckBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.userTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -51,9 +49,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.RememberButton);
             this.panel1.Controls.Add(this.LoginButton);
-            this.panel1.Controls.Add(this.RememberCheckBox);
             this.panel1.Controls.Add(this.passwordTextBox);
             this.panel1.Controls.Add(this.userTextBox);
             this.panel1.Controls.Add(this.label2);
@@ -66,43 +62,18 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // RememberButton
-            // 
-            this.RememberButton.BackColor = System.Drawing.Color.Transparent;
-            this.RememberButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RememberButton.FlatAppearance.BorderSize = 0;
-            this.RememberButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RememberButton.Location = new System.Drawing.Point(71, 309);
-            this.RememberButton.Name = "RememberButton";
-            this.RememberButton.Size = new System.Drawing.Size(177, 34);
-            this.RememberButton.TabIndex = 10;
-            this.RememberButton.Text = "Esqueceu a Senha";
-            this.RememberButton.UseVisualStyleBackColor = false;
-            this.RememberButton.Click += new System.EventHandler(this.RememberButton_Click);
-            // 
             // LoginButton
             // 
             this.LoginButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(81)))), ((int)(((byte)(91)))));
             this.LoginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.LoginButton.Location = new System.Drawing.Point(67, 260);
+            this.LoginButton.Location = new System.Drawing.Point(67, 286);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(177, 34);
+            this.LoginButton.Size = new System.Drawing.Size(177, 49);
             this.LoginButton.TabIndex = 9;
             this.LoginButton.Text = "Conectar-Se";
             this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
-            // 
-            // RememberCheckBox
-            // 
-            this.RememberCheckBox.AutoSize = true;
-            this.RememberCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RememberCheckBox.Location = new System.Drawing.Point(38, 232);
-            this.RememberCheckBox.Name = "RememberCheckBox";
-            this.RememberCheckBox.Size = new System.Drawing.Size(135, 22);
-            this.RememberCheckBox.TabIndex = 8;
-            this.RememberCheckBox.Text = "Lembrar Senha";
-            this.RememberCheckBox.UseVisualStyleBackColor = true;
             // 
             // passwordTextBox
             // 
@@ -229,11 +200,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button LoginButton;
-        private System.Windows.Forms.CheckBox RememberCheckBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox userTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button RememberButton;
     }
 }

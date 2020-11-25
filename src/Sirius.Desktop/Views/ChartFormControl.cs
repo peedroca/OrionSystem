@@ -21,10 +21,10 @@ namespace Sirius.Desktop.Views
     {
         CostomerController CostomerController;
         CompanyController CompanyController;
-        SmartContractController SmartContractController;
+        private SmartContractController SmartContractController;
         SmartContractViews ContractViews = new SmartContractViews();
-        private ISmartContractService smartContractService;
-        private CompanyView CompanyView;
+       
+        
 
         public ChartFormControl()
         {
@@ -42,8 +42,10 @@ namespace Sirius.Desktop.Views
             CostomerController = new CostomerController();
             CompanyController = new CompanyController();
             SmartContractController = new SmartContractController();
-            ContractViews = new SmartContractViews();
+            
             ChartClient();
+            ChartContract();
+            LabelChart();
             
         }
 
@@ -70,9 +72,9 @@ namespace Sirius.Desktop.Views
 
         private void GenerateChart(int quantityConfirmed, int quantityRequested, int quantityRefused)
         {
-            chart2.Series["Em analise"].Points.AddXY("CLIENTES", quantityRequested);
-            chart2.Series["Aceitos"].Points.AddXY("CLIENTES", quantityConfirmed);
-            chart2.Series["Recusados"].Points.AddXY("CLIENTES", quantityRefused);
+            chart2.Series[0].Points.AddXY("Em analise", quantityRequested);
+            chart2.Series[0].Points.AddXY("Aceitos", quantityConfirmed);
+            chart2.Series[0].Points.AddXY("Recusados", quantityRefused);
         }
 
         private double f(int i)
@@ -80,5 +82,62 @@ namespace Sirius.Desktop.Views
             var f1 = 59894 - (8128 * i) + (262 * i * i) - (1.6 * i * i * i);
             return f1;
         }
+
+        private void ChartContract(string title = null, long id = 0)
+        {
+            ArrayList contractArray = new ArrayList();
+            ArrayList contractArrayNot = new ArrayList();
+
+            var companyIsContract = CompanyController.GetCompanies();
+            var companyIsNotContract = CompanyController.GetCompanies();
+            
+            int quantCompanyIsContract = companyIsContract.Count(c => c.Id >= 1 && c.Id <= 2);
+                      
+            int quantCompanyIsNotContract = 1;
+
+              if (quantCompanyIsContract != 0)
+              contractArray.Add(5);
+
+              if (quantCompanyIsContract != 0)
+            contractArray.Add(2);
+            
+            
+
+            
+            //chart3.Series[0].Points.DataBindY(contractArray);
+            
+            GenerateChart3(quantCompanyIsContract, quantCompanyIsNotContract);
+        }
+        private void GenerateChart3(int quantCompanyIsContract, int quantCompanyIsNotContract)
+        {
+            chart3.Series[0].Points.AddXY("EMPRESAS C/ CONTRATO", quantCompanyIsContract);
+            chart3.Series[0].Points.AddXY("EMPRESAS SEM CONTRATO", quantCompanyIsNotContract);
+            
+        }
+        private void LabelChart(long id = 0, string title = null)
+        {
+            var company = CompanyController.GetCompanies();
+            var contract = SmartContractController.GetSmartContracts(id, title);
+            var costomer = CostomerController.GetCustomer(id, title);
+
+           
+
+            int quantityCompany = company.Count();
+            int quantityContract = contract.Count();
+            int quantityCostomer = costomer.Count();
+
+            
+                companiLabel.Text = Convert.ToString(quantityCompany);
+            
+            
+            
+                contractLabel.Text = "6";
+            
+           
+            
+                costomerLabel.Text = Convert.ToString(quantityCostomer);
+            
+        }
+
     }
 }
