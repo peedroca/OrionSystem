@@ -13,5 +13,7 @@ namespace Sirius.Domain.Interfaces
         /// <param name="loginUserModel"></param>
         /// <returns></returns>
         UserModel LogarUser(LoginUserModel loginUserModel);
+
+        void CreateUser(string fullName, string name, string email);
     }
 }
