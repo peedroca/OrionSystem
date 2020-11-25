@@ -8,7 +8,7 @@ namespace Sirius.Infra.Data.Mapping
 {
     class CustomerRefusalMap
     {
-        public void Configure(EntityTypeBuilder<CustomerRequestEntity> builder)
+        public void Configure(EntityTypeBuilder<CustomerRefusalEntity> builder)
         {
             builder.HasKey(k => k.Id);
         }
