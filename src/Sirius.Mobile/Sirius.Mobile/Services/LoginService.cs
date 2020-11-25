@@ -9,9 +9,13 @@ namespace Sirius.Mobile.Services
 {
     public static class LoginService
     { 
-        public static UserTest Logar(User user)
+        public static UserLogged Logar(string username, string password)
         {
-            var body = JsonConvert.SerializeObject(user);
+            var body = JsonConvert.SerializeObject(new 
+            {
+                Username = username,
+                Password = password
+            });
 
             HttpClient httpClient = new HttpClient();
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage(HttpMethod.Post, "http://www.orion.br.asp.hostazul.com.br/api/login");
@@ -24,7 +28,7 @@ namespace Sirius.Mobile.Services
             if (resp.IsSuccessStatusCode)
             {
                 var content = resp.Content.ReadAsStringAsync().Result;
-                var apiResponse = JsonConvert.DeserializeObject<UserTest>(content);
+                var apiResponse = JsonConvert.DeserializeObject<UserLogged>(content);
 
                 return apiResponse;
             }

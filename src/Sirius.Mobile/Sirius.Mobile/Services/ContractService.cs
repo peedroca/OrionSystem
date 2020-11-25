@@ -15,7 +15,7 @@ namespace Sirius.Mobile.Services
             HttpClient httpClient = new HttpClient();
             HttpRequestMessage httpRequestMessage = new HttpRequestMessage(HttpMethod.Get, "http://www.orion.br.asp.hostazul.com.br/api/SmartContracts");
 
-            httpRequestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", App.CurrentUser.token);
+            httpRequestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", App.CurrentUser.AccessToken);
 
             var resp = httpClient.SendAsync(httpRequestMessage).Result;
 

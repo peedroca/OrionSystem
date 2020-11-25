@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Sirius.Mobile.Views.Customer.DetailContractPage">
+             x:Class="Sirius.Mobile.Views.Company.DetailContractPage">
     <ContentPage.Content>
         <Frame Margin="30, 0, 30, 30">
             <StackLayout>
                 <Label Text="Contrato" FontSize="24" HorizontalTextAlignment="Center"
                        TextColor="Black" FontAttributes="Bold" />
                 <StackLayout Orientation="Horizontal">
-                    <Label Text="Título:" TextColor="Black" FontAttributes="Bold" />
+                    <Label Text="Titulo:" TextColor="Black" FontAttributes="Bold" />
                     <Label Text="{Binding Title}" TextColor="Black" />
                 </StackLayout>
                 <StackLayout HorizontalOptions="FillAndExpand">
@@ -27,8 +27,6 @@
                     <Label Text="Valor: " TextColor="Black" FontAttributes="Bold" />
                     <Label Text="{Binding Value, StringFormat='R$: {0}'}" TextColor="Black" HorizontalOptions="End" />
                 </StackLayout>
-
-                <Button Text="Assinar Contrato" />
             </StackLayout>
         </Frame>
     </ContentPage.Content>

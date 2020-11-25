@@ -7,15 +7,16 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Sirius.Mobile.Views.Customer
+namespace Sirius.Mobile.Views.Company
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NewContractsPage : ContentPage
+    public partial class ListContractsCustomerPage : ContentPage
     {
-        public NewContractsPage()
+        public ListContractsCustomerPage()
         {
             InitializeComponent();
         }
+
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {

@@ -1,4 +1,5 @@
 ﻿using MvvmHelpers;
+using Sirius.Domain.Enums;
 using Sirius.Mobile.Models;
 using Sirius.Mobile.Services;
 using Sirius.Mobile.Views;
@@ -33,16 +34,24 @@ namespace Sirius.Mobile.ViewModels
         {
             try
             {
-                var resp = LoginService.Logar(User);
+                var resp = LoginService.Logar(User.Username, User.Password);
 
                 if (resp != null)
                 {
                     App.CurrentUser = resp;
 
-                    if(resp.user.typeUser == 0) // É cliente
-                        App.Current.MainPage = new NavigationPage(new Views.Customer.MainTabbedPage());
-                    else // É empresa
-                        App.Current.MainPage = new NavigationPage(new Views.Company.MainTabbedPage());
+                    switch (resp.TypeUser)
+                    {
+                        case ETypeUser.Customer:
+                            App.Current.MainPage = new NavigationPage(new Views.Customer.MainTabbedPage());
+                            break;
+                        case ETypeUser.Company:
+                            App.Current.MainPage = new NavigationPage(new Views.Company.MainTabbedPage());
+                            break;
+                        case ETypeUser.Employee:
+                            App.Current.MainPage.DisplayAlert("Ocorreu um erro...", "Login inválido", "Ok");
+                            break;
+                    }                        
                 }
                 else
                 {

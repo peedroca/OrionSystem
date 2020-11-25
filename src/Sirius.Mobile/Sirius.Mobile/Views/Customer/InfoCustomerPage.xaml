@@ -20,6 +20,8 @@
                     </StackLayout>
                 </StackLayout>
             </Frame>
+
+            <Image Source="https://s3.amazonaws.com/kp-blog/wp-content/uploads/2019/10/21150322/metricas-de-customer-success-as-4-principais-e-como-melhora-las.jpg" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -8,7 +8,7 @@ namespace Sirius.Mobile
 {
     public partial class App : Application
     {
-        public static UserTest CurrentUser { get; set; }
+        public static UserLogged CurrentUser { get; set; }
 
         public App()
         {

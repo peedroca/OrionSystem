@@ -7,13 +7,13 @@ using System.Text;
 
 namespace Sirius.Mobile.ViewModels
 {
-    public class CustomerViewModel : BaseViewModel
+    public class CompanyViewModel : BaseViewModel
     {
         private List<Contract> contracts;
         private UserLogged user;
         private string typeUser;
 
-        public CustomerViewModel()
+        public CompanyViewModel()
         {
             Contracts = new List<Contract>();
             User = App.CurrentUser;
