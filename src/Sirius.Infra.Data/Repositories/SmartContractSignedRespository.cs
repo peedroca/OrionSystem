@@ -24,7 +24,7 @@ namespace Sirius.Infra.Data.Repositories
 
         public IEnumerable<SmartContractSignedEntity> GetSmartContractSigned()
         {
-            return context.SmartContractSigneds.AsNoTracking().ToList();
+            return context.SmartContractSigneds.AsNoTracking().Where(w => !w.Canceled).ToList();
         }
 
         public void SaveSign(SmartContractSignedEntity customerSnd)
