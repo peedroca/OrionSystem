@@ -12,7 +12,18 @@ namespace Sirius.Domain.Mapper
     public static class SmartContractMapper
     {
         public static SmartContractModel ToSmartContractModel(this SmartContractEntity smartContractEntity) =>
-            new SmartContractModel(smartContractEntity.Id, smartContractEntity.Title, smartContractEntity.Description, smartContractEntity.TerminationCondition, smartContractEntity.ConclusionCondition, smartContractEntity.Value, null);
+            new SmartContractModel(smartContractEntity.Id
+                , smartContractEntity.Title
+                , smartContractEntity.Description
+                , smartContractEntity.TerminationCondition
+                , smartContractEntity.ConclusionCondition
+                , smartContractEntity.Value
+                , new CompanyModel(smartContractEntity.CompanyEntity.Id, smartContractEntity.CompanyEntity.Name
+                    , smartContractEntity.CompanyEntity.Nickname, smartContractEntity.CompanyEntity.CNPJ
+                    , smartContractEntity.CompanyEntity.Phone, smartContractEntity.CompanyEntity.Email
+                    , null
+                    , null, smartContractEntity.CompanyEntity.CreatedOn, smartContractEntity.CompanyEntity.UpdatedOn
+                    , smartContractEntity.CompanyEntity.Deleted, smartContractEntity.CompanyEntity.Blocked));
 
         public static IEnumerable<SmartContractModel> ToSmartContractModel(this IEnumerable<SmartContractEntity> smartContractEntities) =>
             smartContractEntities.Select(s => s.ToSmartContractModel())?.ToList();

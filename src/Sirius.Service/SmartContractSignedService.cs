@@ -90,5 +90,10 @@ namespace Sirius.Service
 
             return contracts?.ToContractSigned();
         }
+
+        public SmartContractSignedModel GetSmartContractSigneds(long id)
+        {
+            return smartContractSignedRepository.GetSmartContractSigned().FirstOrDefault(w => w.Id == id)?.ToContractSigned();
+        }
     }
 }

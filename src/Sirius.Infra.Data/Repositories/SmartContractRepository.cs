@@ -43,6 +43,7 @@ namespace Sirius.Infra.Data.Repositories
         public IEnumerable<SmartContractEntity> GetContracts(long id)
         {
             return context.SmartContracts.AsNoTracking()
+                .Include(i => i.CompanyEntity)
                 .Where(w => w.CurrentCompanyEntityId == id)
                 .ToList(); //Busca pela chave primária
         }
