@@ -18,7 +18,7 @@ namespace Sirius.Domain.Mapper
                 , smartContractEntity.TerminationCondition
                 , smartContractEntity.ConclusionCondition
                 , smartContractEntity.Value
-                , new CompanyModel(smartContractEntity.CompanyEntity.Id, smartContractEntity.CompanyEntity.Name
+                , smartContractEntity.CompanyEntity == null ? null : new CompanyModel(smartContractEntity.CompanyEntity.Id, smartContractEntity.CompanyEntity.Name
                     , smartContractEntity.CompanyEntity.Nickname, smartContractEntity.CompanyEntity.CNPJ
                     , smartContractEntity.CompanyEntity.Phone, smartContractEntity.CompanyEntity.Email
                     , null
