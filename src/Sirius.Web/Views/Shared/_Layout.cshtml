@@ -97,22 +97,22 @@
             <div class="section-desc">SE ESTIVER INTERESSADO EM NOSSOS SERVIÇOS CADASTRE-SE E AGUARDE QUE ENTRAREMOS ENCONTATOPARA MAIORES INFORMAÇÕES</div>
             <div class="section-body">
                 <div class="section-contact">
-                    <form method="POST">
+                    <form method="POST" asp-action="Cadastrar" >
                         <div class="section-contact--split">
-                            <input type="text" name="name" placeholder="NOME" />
-                            <input type="text" name="sobrenome" placeholder="SOBRENOME" />
+                            <input type="text" name="FirstName" placeholder="NOME" />
+                            <input type="text" name="LastName" placeholder="SOBRENOME" />
                         </div>
                         <div class="section-contact--split">
                             <input type="text" name="CPF" placeholder="CPF" />
-                            <input type="text" name="email" placeholder="EMAIL" />
+                            <input type="text" name="Email" placeholder="EMAIL" />
                         </div>
                         <div class="section-contact--split">
                             <input type="text" name="CNPJ" placeholder="CNPJ" />
-                            <input type="text" name="telefone" placeholder="TELEFONE" />
+                            <input type="text" name="Phone" placeholder="TELEFONE" />
                         </div>
                         <div class="section-contact--split">
-                            <input type="text" name="email" placeholder="EMAIL" />
-                            <input type="text" name="data de nascimento" placeholder="DATA DE NASCIMENTO" />
+                            <input type="text" name="Nickname" placeholder="Apelido" />
+                            <input type="text" name="BirthDate" placeholder="DATA DE NASCIMENTO" />
                         </div>
 
                         <input type="submit" value="Cadastra" class="button" />

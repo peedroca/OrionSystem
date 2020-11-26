@@ -64,6 +64,37 @@ namespace Sirius.API.Controllers
             }
         }
 
+        [HttpDelete("{id}")]
+        [ProducesResponseType(statusCode: 201, Type = typeof(SmartContractSignedModel))]
+        [ProducesResponseType(statusCode: 412, Type = typeof(ICollection<Notification>))]
+        [ProducesResponseType(statusCode: 500, Type = typeof(string))]
+        [Authorize]
+        public IActionResult UpdateSigned(long id)
+        {
+            try
+            {
+                var contractSigned = _service.GetSmartContractSigneds(id);
+
+                if (contractSigned == null)
+                    return NotFound();
+
+                var model = new UpdateSmartContractSignedModel(id, contractSigned.SmartContractId
+                    , contractSigned.CompanyId
+                    , contractSigned.CustomerId
+                    , contractSigned.CreatedOn
+                    , true);
+
+                if (model.Invalid)
+                    return StatusCode(412, model.Notifications);
+
+                return StatusCode(200, _service.UpdateSmartContractSigned(model));
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e.Message);
+            }
+        }
+
         [HttpGet]
         [ProducesResponseType(statusCode: 200, Type = typeof(List<ContractSignedView>))]
         [ProducesResponseType(statusCode: 500, Type = typeof(string))]
@@ -85,7 +116,8 @@ namespace Sirius.API.Controllers
                 foreach (var item in contracts)
                 {
                     var signed = new ContractSignedView();
-                    
+                    signed.Id = item.Id;
+
                     var contract = _contractService.GetSmartContract(item.SmartContractId);
                     signed.IdContract = contract.Id;
                     signed.Title = contract.Title;

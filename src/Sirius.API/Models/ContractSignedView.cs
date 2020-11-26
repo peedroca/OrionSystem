@@ -8,7 +8,12 @@ namespace Sirius.API.Models
     public class ContractSignedView
     {
         /// <summary>
-        /// Identificação
+        /// Identificação do Contrato Assinado
+        /// </summary>
+        public long Id { get; set; }
+
+        /// <summary>
+        /// Identificação do Contrato
         /// </summary>
         public long IdContract { get; set; }
 

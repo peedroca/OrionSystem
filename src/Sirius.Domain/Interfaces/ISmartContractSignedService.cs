@@ -8,6 +8,7 @@ namespace Sirius.Domain.Interfaces
     {
         SmartContractSignedModel CreateSmartContractSigned(CreateSmartContractSignedModel createSmartContract);
         IEnumerable<SmartContractSignedModel> GetSmartContractSigneds(ETypeUser typeUser, long id = 0);
+        SmartContractSignedModel GetSmartContractSigneds(long id = 0);
         SmartContractSignedModel UpdateSmartContractSigned(UpdateSmartContractSignedModel updateSmartContract);
     }
 }
