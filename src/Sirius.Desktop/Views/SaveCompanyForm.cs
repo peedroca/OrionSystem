@@ -47,6 +47,8 @@ namespace Sirius.Desktop.Views
 
         private void SaveCompany()
         {
+
+            
             CreateCompanyModel createCompanyModel = new CreateCompanyModel(razaoSocialTextBox.Text
                 , fantasiaTextBox.Text
                 , cnpjTextBox.Text

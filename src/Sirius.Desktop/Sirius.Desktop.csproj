@@ -163,6 +163,7 @@
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -175,10 +176,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\CompanyController.cs" />
+    <Compile Include="Controllers\CostomerController.cs" />
     <Compile Include="Controllers\SmartContractController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Extesions\ExtensionMethods.cs" />
     <Compile Include="Models\CompanyView.cs" />
+    <Compile Include="Models\CostomerRequestView.cs" />
+    <Compile Include="Models\CostomerView.cs" />
     <Compile Include="Models\SmartContractViews.cs" />
+    <Compile Include="Models\UserView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\AnalyzeClientForm.cs">
@@ -204,6 +210,12 @@
     </Compile>
     <Compile Include="Views\ConsultContractForm.Designer.cs">
       <DependentUpon>ConsultContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConsultCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ConsultCustomerForm.Designer.cs">
+      <DependentUpon>ConsultCustomerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\CreateContractForm.cs">
       <SubType>Form</SubType>
@@ -247,6 +259,12 @@
     <Compile Include="Views\ReportFormControl.Designer.cs">
       <DependentUpon>ReportFormControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\RequestCostomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RequestCostomerForm.Designer.cs">
+      <DependentUpon>RequestCostomerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\SmartContractsFormControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -270,6 +288,12 @@
     </Compile>
     <Compile Include="Views\SaveCompanyForm.Designer.cs">
       <DependentUpon>SaveCompanyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\UserAddForm.Designer.cs">
+      <DependentUpon>UserAddForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\UserFormControl.cs">
       <SubType>UserControl</SubType>
@@ -299,6 +323,9 @@
     <EmbeddedResource Include="Views\ConsultContractForm.resx">
       <DependentUpon>ConsultContractForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConsultCustomerForm.resx">
+      <DependentUpon>ConsultCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CreateContractForm.resx">
       <DependentUpon>CreateContractForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -320,6 +347,9 @@
     <EmbeddedResource Include="Views\ReportFormControl.resx">
       <DependentUpon>ReportFormControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\RequestCostomerForm.resx">
+      <DependentUpon>RequestCostomerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\SmartContractsFormControl.resx">
       <DependentUpon>SmartContractsFormControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -331,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\SaveCompanyForm.resx">
       <DependentUpon>SaveCompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserAddForm.resx">
+      <DependentUpon>UserAddForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UserFormControl.resx">
       <DependentUpon>UserFormControl.cs</DependentUpon>

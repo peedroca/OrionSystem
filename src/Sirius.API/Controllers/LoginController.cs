@@ -2,8 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Sirius.API.Auth;
 using Sirius.API.Models;
+using Sirius.CrossCutting.Validations;
+using Sirius.Domain.Enums;
 using Sirius.Domain.Interfaces;
 using Sirius.Domain.Models;
+using Sirius.Service;
+using System.Linq;
 
 namespace Sirius.API.Controllers
 {
@@ -13,11 +17,18 @@ namespace Sirius.API.Controllers
     {
         private IUserService _userService;
         private IMapper _mapper;
-
-        public LoginController(IUserService userService, IMapper mapper)
+        private ICustomerService _customerService;
+        private ICompanyService _companyService;
+        
+        public LoginController(IUserService userService
+            , IMapper mapper
+            , ICustomerService customerService
+            , ICompanyService companyService)
         {
             _userService = userService;
             _mapper = mapper;
+            _customerService = customerService;
+            _companyService = companyService;
         }
 
         /// <summary>
@@ -26,7 +37,8 @@ namespace Sirius.API.Controllers
         /// <param name="model">Modelo de usuário.</param>
         /// <returns>Informações do usuário e token de acesso.</returns>
         [HttpPost]
-        public ActionResult<dynamic> Authenticate([FromBody] User model)
+        [ProducesResponseType(statusCode: 200, Type = typeof(UserView))]
+        public IActionResult Authenticate([FromBody] User model)
         {
             // Recupera o usuário
             var userModel = _userService.LogarUser(new LoginUserModel(model.Username, model.Password));
@@ -38,14 +50,31 @@ namespace Sirius.API.Controllers
             var user = _mapper.Map<UserView>(userModel);
 
             // Gera o Token
-            var token = TokenService.GenerateToken(user);
+            user.AccessToken = TokenService.GenerateToken(user);
 
-            // Retorna os dados
-            return new
+            switch (user.TypeUser)
             {
-                user,
-                token
-            };
+                case ETypeUser.Customer:
+                    var customer = _customerService.GetCustomers().FirstOrDefault(w => w.User.Id == user.Id);
+                    user.Name = customer.FirstName;
+                    user.Nickname = customer.LastName;
+                    user.Phone = customer.Phone;
+                    user.Email = customer.Email;
+                    user.Document = CpfCnpjUtils.IsValid(customer.Cpf) ? customer.Cpf : customer.CNPJ;
+                    break;
+                case ETypeUser.Company:
+                    var company = _companyService.GetCompanies().FirstOrDefault(w => w.User.Id == user.Id);
+                    user.Name = company.Name;
+                    user.Nickname = company.Nickname;
+                    user.Phone = company.Phone;
+                    user.Email = company.Email;
+                    user.Document = company.CNPJ;
+                    break;
+                case ETypeUser.Employee:
+                    break;
+            }
+
+            return Ok(user);
         }
     }
 }

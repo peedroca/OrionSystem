@@ -47,7 +47,8 @@ namespace Sirius.Desktop.Views
             CreateContractForm form = new CreateContractForm(SelectedCompany);
             this.Hide();
             form.ShowDialog();
-            this.Show();
+            
+            
         }
 
         private void smartContractsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

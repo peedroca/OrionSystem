@@ -231,6 +231,36 @@ namespace Sirius.API.Migrations
                     b.ToTable("SmartContracts");
                 });
 
+            modelBuilder.Entity("Sirius.Domain.Entities.SmartContractSignedEntity", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("Canceled")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("CompanyId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<long>("CustomerId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("SmartContractId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("UpdatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SmartContractSigneds");
+                });
+
             modelBuilder.Entity("Sirius.Domain.Entities.UserEntity", b =>
                 {
                     b.Property<long>("Id")

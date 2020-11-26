@@ -14,7 +14,7 @@ namespace Sirius.CrossCutting.Validations
             int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
             int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
 
-            cpf = cpf.Trim().Replace(".", "").Replace("-", "");
+            cpf = cpf.Trim().Replace(".", "").Replace(",", "").Replace(" ", "").Replace("-", "");
             if (cpf.Length != 11)
                 return false;
 

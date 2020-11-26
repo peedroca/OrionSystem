@@ -189,7 +189,7 @@
             // cnpjTextBox
             // 
             this.cnpjTextBox.Location = new System.Drawing.Point(15, 32);
-            this.cnpjTextBox.Mask = "99.999.999/9999-99";
+            this.cnpjTextBox.Mask = "99,999,999/9999-99";
             this.cnpjTextBox.Name = "cnpjTextBox";
             this.cnpjTextBox.Size = new System.Drawing.Size(287, 26);
             this.cnpjTextBox.TabIndex = 2;

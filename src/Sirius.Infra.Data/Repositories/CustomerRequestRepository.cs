@@ -34,7 +34,7 @@ namespace Sirius.Infra.Data.Repositories
         /// <returns></returns>
         public IEnumerable<CustomerRequestEntity> GetCustomerRequests()
         {
-            return context.RequestCustomers.AsNoTracking().ToList();
+            return context.RequestCustomers.Include(i => i.CostumerRefusal).AsNoTracking().ToList();
         }
 
         /// <summary>
@@ -46,6 +46,7 @@ namespace Sirius.Infra.Data.Repositories
         {
             return context.RequestCustomers
                 .Where(w => w.Id == id)
+                .Include(i => i.CostumerRefusal)
                 .AsNoTracking()
                 .FirstOrDefault();
         }

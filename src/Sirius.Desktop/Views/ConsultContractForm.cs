@@ -32,7 +32,11 @@ namespace Sirius.Desktop.Views
         private void ConsultContractForm_Load(object sender, EventArgs e)
         {
             
-
+            if (ContractViews == null)
+            {
+                MessageBox.Show("Empresa Não Tem Contratos Ativos!!");
+                return;
+            } 
             var contracts = SmartContractController.GetSmartContracts(ContractViews.Id) ;
 
             if (contracts != null)
