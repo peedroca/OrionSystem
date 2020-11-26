@@ -21,7 +21,7 @@ namespace Sirius.Mobile.Views
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            App.Current.MainPage.Navigation.PushAsync(new DetailContractPage() { BindingContext = e.SelectedItem });
+            App.Current.MainPage.Navigation.PushAsync(new DetailContractSignedPage() { BindingContext = this.BindingContext });
         }
     }
 }

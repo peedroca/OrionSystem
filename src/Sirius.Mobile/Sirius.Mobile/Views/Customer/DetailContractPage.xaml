@@ -9,26 +9,26 @@
                        TextColor="Black" FontAttributes="Bold" />
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Título:" TextColor="Black" FontAttributes="Bold" />
-                    <Label Text="{Binding Title}" TextColor="Black" />
+                    <Label Text="{Binding SelectedContract.Title}" TextColor="Black" />
                 </StackLayout>
                 <StackLayout HorizontalOptions="FillAndExpand">
                     <Label Text="Descrição:" TextColor="Black" FontAttributes="Bold" />
-                    <Label Text="{Binding Description}" TextColor="Black" />
+                    <Label Text="{Binding SelectedContract.Description}" TextColor="Black" />
                 </StackLayout>
                 <StackLayout>
                     <Label Text="Motivos de rescisão do contrato:" TextColor="Black" FontAttributes="Bold" />
-                    <Label Text="{Binding TerminationCondition}" TextColor="Black" />
+                    <Label Text="{Binding SelectedContract.TerminationCondition}" TextColor="Black" />
                 </StackLayout>
                 <StackLayout>
                     <Label Text="Motivos de conclusão do contrato:" TextColor="Black" FontAttributes="Bold" />
-                    <Label Text="{Binding ConclusionCondition}" TextColor="Black" />
+                    <Label Text="{Binding SelectedContract.ConclusionCondition}" TextColor="Black" />
                 </StackLayout>
                 <StackLayout VerticalOptions="EndAndExpand">
                     <Label Text="Valor: " TextColor="Black" FontAttributes="Bold" />
-                    <Label Text="{Binding Value, StringFormat='R$: {0}'}" TextColor="Black" HorizontalOptions="End" />
+                    <Label Text="{Binding SelectedContract.Value, StringFormat='R$: {0}'}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="End" />
                 </StackLayout>
 
-                <Button Text="Assinar Contrato" />
+                <Button BackgroundColor="#3CB371" Text="Assinar Contrato" Command="{Binding SignContractCommand}" />
             </StackLayout>
         </Frame>
     </ContentPage.Content>

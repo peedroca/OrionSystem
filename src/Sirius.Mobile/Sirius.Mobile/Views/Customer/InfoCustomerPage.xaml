@@ -11,7 +11,7 @@
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Usuário: " TextColor="Black" 
                        FontAttributes="Bold" />
-                        <Label Text="{Binding User.username}" TextColor="Black" />
+                        <Label Text="{Binding User.Username}" TextColor="Black" />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Tipo: " TextColor="Black" 

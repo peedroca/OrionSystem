@@ -5,8 +5,8 @@
     <ContentPage.Content>
         <Frame Margin="30, 0, 30, 30">
             <StackLayout>
-                <Label Text="Contrato" FontSize="24" HorizontalTextAlignment="Center"
-                       TextColor="Black" FontAttributes="Bold" />
+                <Label BackgroundColor="#000000" Text="CONTRATO" FontSize="24" HorizontalTextAlignment="Center"
+                       TextColor="White" FontAttributes="Bold" />
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Titulo:" TextColor="Black" FontAttributes="Bold" />
                     <Label Text="{Binding Title}" TextColor="Black" />
@@ -25,7 +25,7 @@
                 </StackLayout>
                 <StackLayout VerticalOptions="EndAndExpand">
                     <Label Text="Valor: " TextColor="Black" FontAttributes="Bold" />
-                    <Label Text="{Binding Value, StringFormat='R$: {0}'}" TextColor="Black" HorizontalOptions="End" />
+                    <Label Text="{Binding Value, StringFormat='R$: {0}'}" FontAttributes="Bold" TextColor="Black" HorizontalOptions="End" />
                 </StackLayout>
             </StackLayout>
         </Frame>

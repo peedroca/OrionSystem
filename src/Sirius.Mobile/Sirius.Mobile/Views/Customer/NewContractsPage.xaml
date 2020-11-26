@@ -9,7 +9,7 @@
                    FontSize="20" FontAttributes="Bold" />
             <ListView ItemsSource="{Binding Contracts}" 
                       HasUnevenRows="True" SelectionMode="Single"
-                      ItemSelected="ListView_ItemSelected"
+                      ItemSelected="ListView_ItemSelected" SelectedItem="{Binding SelectedContract}"
                       Margin="10">
                 <ListView.ItemTemplate>
                     <DataTemplate>

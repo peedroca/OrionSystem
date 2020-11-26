@@ -9,6 +9,7 @@ namespace Sirius.Mobile.ViewModels
 {
     public class CompanyViewModel : BaseViewModel
     {
+        private IEnumerable<ContractSignedView> contractSigneds;
         private List<Contract> contracts;
         private UserLogged user;
         private string typeUser;
@@ -21,6 +22,13 @@ namespace Sirius.Mobile.ViewModels
             TypeUser = User.TypeUser == Domain.Enums.ETypeUser.Customer ? "Cliente" : "Empresa";
 
             Contracts = ContractService.GetContracts();
+            ContractSigneds = ContractSignedService.GetContractSigneds();
+        }
+
+        public IEnumerable<ContractSignedView> ContractSigneds
+        {
+            get { return contractSigneds; }
+            set { SetProperty(ref contractSigneds, value); }
         }
 
         public List<Contract> Contracts

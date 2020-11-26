@@ -7,6 +7,29 @@
         <StackLayout Margin="10">
             <Label Text="Seus contratos, " TextColor="Black"
                    FontSize="20" FontAttributes="Bold" />
+            <ListView ItemsSource="{Binding ContractSigneds}" 
+                      HasUnevenRows="True" SelectionMode="Single"
+                      ItemSelected="ListView_ItemSelected" SelectedItem="{Binding SelectedContractSigned}"
+                      Margin="10">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="0, 12, 0, 0">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Título:" TextColor="Black" FontAttributes="Bold" />
+                                    <Label Text="{Binding Title}" TextColor="Black" />
+                                </StackLayout>
+                                <StackLayout>
+                                    <Label Text="Descrição:" HorizontalOptions="Fill" MaxLines="1"
+                                           TextColor="Black" FontAttributes="Bold" />
+                                    <Label Text="{Binding Description}" 
+                                           LineBreakMode="TailTruncation" TextColor="Black" />
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
