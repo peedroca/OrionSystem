@@ -43,6 +43,7 @@ namespace Sirius.Desktop.Views
                     throw new ArgumentException("E-Mail deve estar Preenchido.");
 
                 UserController.CreateUser(fullName, user, email);
+                MessageBox.Show("Usuário Cadastrado Com Sucesso!");
            
                 this.Close();
             }

@@ -32,8 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.chartButton = new System.Windows.Forms.Button();
             this.userButton = new System.Windows.Forms.Button();
-            this.reportButton = new System.Windows.Forms.Button();
-            this.smartContractsButton = new System.Windows.Forms.Button();
+            //this.reportButton = new System.Windows.Forms.Button();
+            //this.smartContractsButton = new System.Windows.Forms.Button();
             this.clientButton = new System.Windows.Forms.Button();
             this.companyButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -60,8 +60,8 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.chartButton);
             this.panel1.Controls.Add(this.userButton);
-            this.panel1.Controls.Add(this.reportButton);
-            this.panel1.Controls.Add(this.smartContractsButton);
+            //this.panel1.Controls.Add(this.reportButton);
+            //this.panel1.Controls.Add(this.smartContractsButton);
             this.panel1.Controls.Add(this.clientButton);
             this.panel1.Controls.Add(this.companyButton);
             this.panel1.Location = new System.Drawing.Point(1, 64);
@@ -79,9 +79,9 @@
             this.chartButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.chartButton.Location = new System.Drawing.Point(3, 423);
             this.chartButton.Name = "chartButton";
-            this.chartButton.Size = new System.Drawing.Size(157, 78);
+            this.chartButton.Size = new System.Drawing.Size(230, 78);
             this.chartButton.TabIndex = 5;
-            this.chartButton.Text = "     Gráficos";
+            this.chartButton.Text = "    Gráficos";
             this.chartButton.UseVisualStyleBackColor = true;
             this.chartButton.Click += new System.EventHandler(this.chartButton_Click);
             // 
@@ -93,44 +93,44 @@
             this.userButton.ForeColor = System.Drawing.Color.White;
             this.userButton.Image = ((System.Drawing.Image)(resources.GetObject("userButton.Image")));
             this.userButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.userButton.Location = new System.Drawing.Point(0, 339);
+            this.userButton.Location = new System.Drawing.Point(0, 280);
             this.userButton.Name = "userButton";
-            this.userButton.Size = new System.Drawing.Size(157, 78);
+            this.userButton.Size = new System.Drawing.Size(230, 78);
             this.userButton.TabIndex = 4;
-            this.userButton.Text = "      Usuários";
+            this.userButton.Text = "     Usuários";
             this.userButton.UseVisualStyleBackColor = true;
             this.userButton.Click += new System.EventHandler(this.userButton_Click);
             // 
             // reportButton
             // 
-            this.reportButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.reportButton.FlatAppearance.BorderSize = 0;
-            this.reportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reportButton.ForeColor = System.Drawing.Color.White;
-            this.reportButton.Image = ((System.Drawing.Image)(resources.GetObject("reportButton.Image")));
-            this.reportButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reportButton.Location = new System.Drawing.Point(0, 255);
-            this.reportButton.Name = "reportButton";
-            this.reportButton.Size = new System.Drawing.Size(157, 78);
-            this.reportButton.TabIndex = 3;
-            this.reportButton.Text = "       Relatórios";
-            this.reportButton.UseVisualStyleBackColor = true;
-            this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
+            //this.reportButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            //this.reportButton.FlatAppearance.BorderSize = 0;
+            //this.reportButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.reportButton.ForeColor = System.Drawing.Color.White;
+            //this.reportButton.Image = ((System.Drawing.Image)(resources.GetObject("reportButton.Image")));
+            //this.reportButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //this.reportButton.Location = new System.Drawing.Point(0, 255);
+            //this.reportButton.Name = "reportButton";
+            //this.reportButton.Size = new System.Drawing.Size(157, 78);
+            //this.reportButton.TabIndex = 3;
+            //this.reportButton.Text = "       Relatórios";
+            //this.reportButton.UseVisualStyleBackColor = true;
+            //this.reportButton.Click += new System.EventHandler(this.reportButton_Click);
             // 
             // smartContractsButton
             // 
-            this.smartContractsButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.smartContractsButton.FlatAppearance.BorderSize = 0;
-            this.smartContractsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.smartContractsButton.ForeColor = System.Drawing.Color.White;
-            this.smartContractsButton.Image = ((System.Drawing.Image)(resources.GetObject("smartContractsButton.Image")));
-            this.smartContractsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.smartContractsButton.Location = new System.Drawing.Point(0, 171);
-            this.smartContractsButton.Name = "smartContractsButton";
-            this.smartContractsButton.Size = new System.Drawing.Size(157, 78);
-            this.smartContractsButton.TabIndex = 2;
-            this.smartContractsButton.Text = "       Contratos";
-            this.smartContractsButton.UseVisualStyleBackColor = true;
+            //this.smartContractsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            //this.smartContractsButton.FlatAppearance.BorderSize = 0;
+            //this.smartContractsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            //this.smartContractsButton.ForeColor = System.Drawing.Color.White;
+            //this.smartContractsButton.Image = ((System.Drawing.Image)(resources.GetObject("smartContractsButton.Image")));
+            //this.smartContractsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //this.smartContractsButton.Location = new System.Drawing.Point(0, 171);
+            //this.smartContractsButton.Name = "smartContractsButton";
+            //this.smartContractsButton.Size = new System.Drawing.Size(157, 78);
+            //this.smartContractsButton.TabIndex = 2;
+            //this.smartContractsButton.Text = "       Contratos";
+            //this.smartContractsButton.UseVisualStyleBackColor = true;
             // 
             // clientButton
             // 
@@ -140,11 +140,11 @@
             this.clientButton.ForeColor = System.Drawing.Color.White;
             this.clientButton.Image = ((System.Drawing.Image)(resources.GetObject("clientButton.Image")));
             this.clientButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.clientButton.Location = new System.Drawing.Point(0, 87);
+            this.clientButton.Location = new System.Drawing.Point(0, 140);
             this.clientButton.Name = "clientButton";
-            this.clientButton.Size = new System.Drawing.Size(157, 78);
+            this.clientButton.Size = new System.Drawing.Size(230, 78);
             this.clientButton.TabIndex = 1;
-            this.clientButton.Text = "   Clientes";
+            this.clientButton.Text = "  Clientes";
             this.clientButton.UseVisualStyleBackColor = true;
             this.clientButton.Click += new System.EventHandler(this.clientButton_Click);
             // 
@@ -158,9 +158,9 @@
             this.companyButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.companyButton.Location = new System.Drawing.Point(0, 3);
             this.companyButton.Name = "companyButton";
-            this.companyButton.Size = new System.Drawing.Size(157, 78);
+            this.companyButton.Size = new System.Drawing.Size(230, 78);
             this.companyButton.TabIndex = 0;
-            this.companyButton.Text = "       Empresas";
+            this.companyButton.Text = "    Empresas";
             this.companyButton.UseVisualStyleBackColor = true;
             this.companyButton.Click += new System.EventHandler(this.companyButton_Click);
             // 
@@ -320,8 +320,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button clientButton;
-        private System.Windows.Forms.Button smartContractsButton;
-        private System.Windows.Forms.Button reportButton;
+        //private System.Windows.Forms.Button smartContractsButton;
+        //private System.Windows.Forms.Button reportButton;
         private System.Windows.Forms.Button userButton;
         private System.Windows.Forms.PictureBox minimizePictureBox;
         private System.Windows.Forms.PictureBox closePictureBox;
