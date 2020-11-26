@@ -29,7 +29,7 @@ namespace Sirius.Infra.Data.Repositories
         /// <returns></returns>
         public IEnumerable<CompanyEntity> GetCompanies()
         {
-            return context.Companies.AsNoTracking().ToList();
+            return context.Companies.Include(i => i.User).AsNoTracking().ToList();
         }
 
         /// <summary>
@@ -41,6 +41,21 @@ namespace Sirius.Infra.Data.Repositories
         {
             return context.Companies
                 .Where(w => w.Id == id)
+                .Include(i => i.SmartContracts)
+                .Include(i => i.User)
+                .AsNoTracking()
+                .FirstOrDefault();
+        }
+
+        /// <summary>
+        /// Obter empresa pelo Id 
+        /// </summary>
+        /// <param name="id">Primary Key</param>
+        /// <returns></returns>
+        public CompanyEntity GetCompanyByIdUser(long id)
+        {
+            return context.Companies
+                .Where(w => w.User.Id == id)
                 .Include(i => i.SmartContracts)
                 .Include(i => i.User)
                 .AsNoTracking()

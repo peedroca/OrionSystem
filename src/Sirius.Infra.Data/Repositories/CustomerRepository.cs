@@ -37,7 +37,7 @@ namespace Sirius.Infra.Data.Repositories
         /// <returns></returns>
         public IEnumerable<CustomerEntity> GetCustomer()
         {
-            return context.Customers.AsNoTracking().ToList();
+            return context.Customers.Include(i => i.User).AsNoTracking().ToList();
         }
 
         /// <summary>

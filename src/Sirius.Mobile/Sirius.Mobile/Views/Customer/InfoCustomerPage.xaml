@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Info"
+             x:Class="Sirius.Mobile.Views.Customer.InfoCustomerPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame Margin="10">
+                <StackLayout>
+                    <Label Text="Bem-vindo ao Sirius APP, " TextColor="Black" FontSize="24" />
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Usuário: " TextColor="Black" 
+                       FontAttributes="Bold" />
+                        <Label Text="{Binding User.Username}" TextColor="Black" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Tipo: " TextColor="Black" 
+                       FontAttributes="Bold" />
+                        <Label Text="{Binding TypeUser}" TextColor="Black" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+            <Image Source="https://s3.amazonaws.com/kp-blog/wp-content/uploads/2019/10/21150322/metricas-de-customer-success-as-4-principais-e-como-melhora-las.jpg" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

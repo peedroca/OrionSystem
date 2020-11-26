@@ -296,6 +296,41 @@
             Empresa dona do Contrato
             </summary>
         </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractSignedEntity.Id">
+            <summary>
+            Identificação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractSignedEntity.SmartContractId">
+            <summary>
+            Identificação do Contrato Inteligente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractSignedEntity.CompanyId">
+            <summary>
+            Identificação da empresa.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractSignedEntity.CustomerId">
+            <summary>
+            Identificação do Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractSignedEntity.CreatedOn">
+            <summary>
+            Data de criação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractSignedEntity.UpdatedOn">
+            <summary>
+            Data de atualização
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Entities.SmartContractSignedEntity.Canceled">
+            <summary>
+            Cancelado
+            </summary>
+        </member>
         <member name="T:Sirius.Domain.Entities.UserEntity">
             <summary>
             Entidade Usuario
@@ -542,6 +577,13 @@
             <summary>
             Interface do Serviço de Contrato inteligente
             </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Sirius.Domain.Interfaces.ISmartContractSignedRepository`1.SaveSign(`0)" -->
+        <member name="M:Sirius.Domain.Interfaces.ISmartContractSignedRepository`1.GetSmartContractSigned">
+            <summary>
+            Listar Contratos assinados
+            </summary>
+            <returns></returns>
         </member>
         <member name="T:Sirius.Domain.Interfaces.IUserRepository`1">
             <summary>
@@ -865,6 +907,26 @@
             Empresa dona do Contrato
             </summary>
         </member>
+        <member name="P:Sirius.Domain.Models.CreateSmartContractSignedModel.Id">
+            <summary>
+            Identificação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateSmartContractSignedModel.SmartContractId">
+            <summary>
+            Identificação do Contrato Inteligente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateSmartContractSignedModel.CompanyId">
+            <summary>
+            Identificação da empresa.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.CreateSmartContractSignedModel.CustomerId">
+            <summary>
+            Identificação do Cliente
+            </summary>
+        </member>
         <member name="T:Sirius.Domain.Models.CreateUserModel">
             <summary>
             Modelo de criação de usuário
@@ -1163,6 +1225,41 @@
             Empresa dona do Contrato
             </summary>
         </member>
+        <member name="P:Sirius.Domain.Models.SmartContractSignedModel.Id">
+            <summary>
+            Identificação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.SmartContractSignedModel.SmartContractId">
+            <summary>
+            Identificação do Contrato Inteligente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.SmartContractSignedModel.CompanyId">
+            <summary>
+            Identificação da empresa.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.SmartContractSignedModel.CustomerId">
+            <summary>
+            Identificação do Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.SmartContractSignedModel.CreatedOn">
+            <summary>
+            Data de criação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.SmartContractSignedModel.UpdatedOn">
+            <summary>
+            Data de atualização
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.SmartContractSignedModel.Canceled">
+            <summary>
+            Cancelado
+            </summary>
+        </member>
         <member name="T:Sirius.Domain.Models.UpdateCompanyModel">
             <summary>
             Modelo de Atualização de Empresa
@@ -1324,6 +1421,36 @@
             Carrega a empresa dona do contrato
             </summary>
             <param name="company">Empresa dona do contrato</param>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractSignedModel.Id">
+            <summary>
+            Identificação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractSignedModel.SmartContractId">
+            <summary>
+            Identificação do Contrato Inteligente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractSignedModel.CompanyId">
+            <summary>
+            Identificação da empresa.
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractSignedModel.CustomerId">
+            <summary>
+            Identificação do Cliente
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractSignedModel.CreatedOn">
+            <summary>
+            Data de criação
+            </summary>
+        </member>
+        <member name="P:Sirius.Domain.Models.UpdateSmartContractSignedModel.Canceled">
+            <summary>
+            Cancelado
+            </summary>
         </member>
         <member name="T:Sirius.Domain.Models.UserModel">
             <summary>

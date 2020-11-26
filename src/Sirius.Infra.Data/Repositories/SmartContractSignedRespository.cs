@@ -4,10 +4,12 @@ using Sirius.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Sirius.Infra.Data.Repositories
 {
-    public class SmartContractSignedRespository : SmartContractSignedEntity
+    public class SmartContractSignedRespository : ISmartContractSignedRepository<SmartContractSignedEntity>
     {
         private SiriusDbContext context;
 
@@ -19,12 +21,12 @@ namespace Sirius.Infra.Data.Repositories
         {
             this.context = context;
         }
-       
 
-        /// <summary>
-        /// Salva 
-        /// </summary>
-        /// <param name="customerSnd">Objeto do tipo SmartContractSigned será salvo </param>
+        public IEnumerable<SmartContractSignedEntity> GetSmartContractSigned()
+        {
+            return context.SmartContractSigneds.AsNoTracking().Where(w => !w.Canceled).ToList();
+        }
+
         public void SaveSign(SmartContractSignedEntity customerSnd)
         {
             if (customerSnd.Id == 0)
@@ -34,6 +36,5 @@ namespace Sirius.Infra.Data.Repositories
 
             context.SaveChanges();
         }
-
     }
 }

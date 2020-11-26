@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sirius.Mobile.Views.Customer.DetailContractSignedPage">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label BackgroundColor="#000000" Text="CONTRATO" FontSize="24" HorizontalTextAlignment="Center"
+                       TextColor="White" FontAttributes="Bold" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Título:" TextColor="Black" FontAttributes="Bold" />
+                <Label Text="{Binding SelectedContractSigned.Title}" TextColor="Black" />
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <Label Text="Descrição:" TextColor="Black" FontAttributes="Bold" />
+                <Label Text="{Binding SelectedContractSigned.Description}" TextColor="Black" />
+            </StackLayout>
+            <StackLayout > 
+                <Label Text="Motivos de rescisão do contrato:" TextColor="Black" FontAttributes="Bold" />
+                <Label Text="{Binding SelectedContractSigned.TerminationCondition}" TextColor="Black" />
+            </StackLayout>
+            <StackLayout >
+                <Label Text="Motivos de conclusão do contrato:" TextColor="Black" FontAttributes="Bold" />
+                <Label Text="{Binding SelectedContractSigned.ConclusionCondition}" TextColor="Black" />
+            </StackLayout>
+             <StackLayout VerticalOptions="EndAndExpand">
+                <Label Text="Valor:" TextColor="Black" FontAttributes="Bold"/>
+                <Label Text="{Binding SelectedContractSigned.Value, StringFormat='R$: {0}'}" TextColor="Black" FontAttributes="Bold" HorizontalOptions="End" />
+             </StackLayout>
+
+        <ScrollView VerticalOptions="FillAndExpand" Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
+                    <Frame>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Empresa:" TextColor="Black" FontAttributes="Bold" />
+                                <Label Text="{Binding SelectedContractSigned.NameCompany}" TextColor="Black" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Contato:" TextColor="Black" FontAttributes="Bold" />
+                                <Label Text="{Binding SelectedContractSigned.PhoneCompany}" TextColor="Black" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="E-mail:" TextColor="Black" FontAttributes="Bold" />
+                                <Label Text="{Binding SelectedContractSigned.EmailCompany}" TextColor="Black" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="CNPJ:" TextColor="Black" FontAttributes="Bold" />
+                                <Label Text="{Binding SelectedContractSigned.DocumentCompany}" TextColor="Black" />
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                    <Frame>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Cliente:" TextColor="Black" FontAttributes="Bold" />
+                                <Label Text="{Binding SelectedContractSigned.NameCustomer}" TextColor="Black" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Telefone:" TextColor="Black" FontAttributes="Bold" />
+                                <Label Text="{Binding SelectedContractSigned.PhoneCustomer}" TextColor="Black" />
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="E-mail:" TextColor="Black" FontAttributes="Bold" />
+                                <Label Text="{Binding SelectedContractSigned.EmailCustomer}" TextColor="Black" />
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+
+            <Button Text="Cancelar Contrato" BackgroundColor="#FFC0CB" Command="{Binding CancelSignContractCommand}"  />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
